@@ -1,0 +1,194 @@
+:root {
+    --theme1:#0066cc;
+}
+
+body , html{
+    font-family: "Roboto", sans-serif !important;
+}
+
+/***** common things start *****/
+.heading-main .heading {
+    font-size:28px;
+    text-align: center;
+}
+.common-gap {
+    margin-top: 45px;
+}
+.container {
+    max-width: 95% !important;
+}
+/***** common things end *****/
+
+/***** navbar start *****/
+.navbar {
+    background-color: var(--theme1);
+}
+.navbar .navbar-brand {
+    height: 55px;
+}
+.navbar .navbar-brand img {
+    filter: brightness(100);
+}
+.navbar .nav-link {
+    color: #fff;
+}
+.navbar .nav-whatsapp {
+    font-size: 14px;
+    color: #fff;
+    gap: 3px;
+}
+.navbar .nav-whatsapp img {
+    transition: all 0.3s ease-in-out;
+}
+/***** navbar end *****/
+
+
+/***** hero section *****/
+.hero-section {
+    padding: 130px 0 100px;
+    background-color: var(--theme1);
+}
+.hero-section .hero-heading {
+    font-size: 35px;
+    color: #fff;
+}
+.hero-section .hero-img {
+    height: 160px;
+    width: 315px;
+    clip-path: circle(63% at 50% 100%);
+}
+.hero-section .hero-review-title-main {
+    left: -10.5px;
+    width: 106%;
+    bottom: -40px;
+}
+.hero-section .hero-review-title {
+    font-size: 15px;
+    background-color: #fff;
+    margin: auto;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    padding-top: 28px;
+    font-weight: 500;
+    border-radius: 13px;
+    gap: 6px;
+}
+.hero-section .hero-searchbar {
+    height: 50px;
+    padding: 2px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border: 3px solid #ccc;
+}
+.hero-section .hero-searchbar .hero-searchbar-input {
+    font-size: 14px;
+}
+.hero-section .hero-searchbar .hero-searchbar-btn {
+    height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+    background-color: var(--theme1);
+    border:2px solid var(--theme1);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+.hero-section .hero-searchbar .hero-searchbar-btn:hover {
+    background-color: transparent;
+    color: var(--theme1);
+}
+/* .hero-section .hero-review-title::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: -12px;
+    height: 18px;
+    width: 12px;
+    background: #fff;
+    border-radius: 21px 0 0 0;
+}
+.hero-section .hero-review-title::after {
+    content: '';
+    position: absolute;
+    right: 0px;
+    top: -12px;
+    height: 18px;
+    width: 12px;
+    background: #fff;
+    border-radius: 0 21px  0 0;
+} */
+/***** hero section end *****/
+
+
+/***** country section start *****/
+.country-card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all .3s ease-in-out;
+    border-radius: 18px;
+}
+.country-card .country-img {
+    height: 220px;
+    border-radius: 14px 14px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+.country-card .country-img::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    background-color: rgba(255, 255, 255, .3);
+    transform: translate(-50%,  -50%) rotate(-45deg);
+    z-index: 1;
+}
+.country-card .country-img img {
+    object-fit: cover;
+}
+.country-card .country-card-content {
+    padding: 12px;
+    border-radius: 0 0 14px 14px;
+}
+.country-card .country-name {
+    font-size: 17px;
+    color: #000;
+    margin-left: 2px;
+}
+.country-card .country-name i {
+    color: var(--theme1);
+}
+.country-card .country-subheading {
+    font-size: 14px;
+}
+.country-card:hover .country-img::before {
+    height: 250%;
+    transition: all 600ms linear;
+    background-color: rgba(0, 0, 0, 0);
+}
+.country-card .country-card-title {
+    top: 15px;
+    left: -12px;
+    background: var(--theme1);
+    z-index: 2;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    padding: 7px 18px;
+    border-radius: 4px 4px 4px 0;
+}
+.country-card .country-card-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    border: 6px solid ;
+    border-color: var(--theme1) var(--theme1) transparent transparent;
+}
+.country-card .country-card-date {
+    font-size: 15px;
+    margin-block: 6px;
+}
+.country-card .country-card-date span {
+    color: var(--theme1);
+}
+/***** country section end *****/
