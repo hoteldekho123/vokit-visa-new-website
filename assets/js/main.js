@@ -31,3 +31,20 @@ for (let i = 1; i <= 100; i++) {
 // Add generated CSS to the <style> tag
 styleSheet.type = "text/css";
 styleSheet.textContent = css;
+
+
+// // on scorll navbar
+window.onscroll = function () {
+  scrollFunction();
+};
+var first = true;
+function scrollFunction() {
+  if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+      document.getElementById("navbar").classList.add('fixed-navbar');
+      document.getElementById("scrolltop").classList.add('fixed-scroll');
+  }
+  else {
+      document.getElementById("navbar").classList.remove('fixed-navbar');
+      document.getElementById("scrolltop").classList.remove('fixed-scroll');
+  }
+}

@@ -18,7 +18,7 @@
 <body>
 
     <!-- ***** navbar start ***** -->
-    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Offcanvas navbar large">
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Offcanvas navbar large" id="navbar">
         <div class="container">
             <a class="navbar-brand py-0" href="#">
                 <img src="assets/img/vokit-logo.svg" alt="navbar logo" class="h-100 w-100 img-fluid">
@@ -26,6 +26,12 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="searchbar-main ">
+                <div class="searchbar bg-white d-flex w-100 overflow-hidden align-items-center">
+                    <input type="text" class="searchbar-input h-100 form-control shadow-none rounded-0 border-0" placeholder="Search Country...">
+                    <button class="searchbar-btn d-flex align-items-center justify-content-center rounded-circle border-0 bg-transparent"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
             <div>
                 <a href="" class="d-flex align-items-center justify-content-center nav-whatsapp text-decoration-none">
                     <img src="assets/img/whatsapp-icon.svg" height="28" alt="whatsapp">
@@ -66,10 +72,10 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-searchbar-main position-absolute">
-                <div class="hero-searchbar bg-white d-flex w-100 overflow-hidden align-items-center">
-                    <input type="text" class="hero-searchbar-input h-100 form-control shadow-none rounded-0 border-0" placeholder="Search Country...">
-                    <button class="hero-searchbar-btn d-flex align-items-center justify-content-center rounded-circle border-0 bg-transparent"><i class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="searchbar-main position-absolute">
+                <div class="searchbar bg-white d-flex w-100 overflow-hidden align-items-center">
+                    <input type="text" class="searchbar-input h-100 form-control shadow-none rounded-0 border-0" placeholder="Search Country...">
+                    <button class="searchbar-btn d-flex align-items-center justify-content-center rounded-circle border-0 bg-transparent"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
             </div>
         </div>
@@ -77,7 +83,7 @@
     <!-- ***** hero section end ***** yes bro we can't do nothing but god is seeing everything-->
 
     <!-- ***** country section start ***** -->
-    <section class="country-section mb-5 pb-5">
+    <section class="country-section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -201,6 +207,102 @@
         </div>
     </section>
     <!-- ***** country section end ***** -->
+
+    <!-- ***** why choose us section start ***** -->
+    <section class="common-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="heading-main">
+                        <h2 class="heading mb-0">
+                            Why Choose us
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** why choose us section end ***** -->
+
+    <!-- ***** footer start ***** -->
+    <footer class="footer border-top common-gap">
+        <div class="container footer-inner">
+            <div class="row g-4">
+                <div class="col-4">
+                    <div class="footer-logo">
+                        <img src="assets/img/vokit-logo.svg" alt="logo" class="h-100 img-fluid">
+                    </div>
+                    <p class="footer-para">Your one-stop travel solution, from planning to discovering, booking, and sharing memories.</p>
+                    <ul class="list-unstyled mb-0 p-0 footer-social-list d-flex align-items-center ">
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <div class="footer-heading fw-semibold">
+                        Company
+                    </div>
+                    <ul class="list-unstyled mb-0 p-0 d-flex flex-column footer-list">
+                        <li><a href="" class="footer-link text-decoration-none">For Travel Agents</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Security</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Transparency</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Blog</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Newsroom</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Contact</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="col-2">
+                    <div class="footer-heading fw-semibold">
+                        Tools
+                    </div>
+                    <ul class="list-unstyled mb-0 p-0 d-flex flex-column footer-list">
+                        <li><a href="" class="footer-link text-decoration-none">For Travel Agents</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Security</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Transparency</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Blog</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Newsroom</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Contact</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <div class="footer-heading fw-semibold">
+                        Offices
+                    </div>
+                    <ul class="list-unstyled mb-0 p-0 d-flex flex-column footer-list">
+                        <li>
+                            <a href="" class="footer-link text-decoration-none">
+                                <i class="fa-solid fa-location-dot"></i>
+                                106, Building-4, Al Suq Al Kabeer, Opp. Concorde Palace Hotel, Bur Dubai, Dubai, UAE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-link text-decoration-none">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Office 169, 321 - 323 High Rd Chadwell Heath Dagenham RM6 6AX United Kingdom
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-section border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright-title text-center">
+                            © Vokit, All rights reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** footer end ***** -->
 
     <!-- js files -->
     <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>

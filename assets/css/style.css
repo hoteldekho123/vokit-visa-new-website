@@ -13,12 +13,13 @@ body , html{
     text-align: center;
 }
 .common-gap {
-    margin-top: 45px;
+    margin-top: 55px;
 }
 .container {
     max-width: 95% !important;
 }
 /***** common things end *****/
+
 
 /***** navbar start *****/
 .navbar {
@@ -41,6 +42,36 @@ body , html{
 .navbar .nav-whatsapp img {
     transition: all 0.3s ease-in-out;
 }
+.navbar .searchbar-main {
+    width: 35%;
+    opacity: 0;
+    visibility: hidden;
+}
+.navbar.fixed-navbar .searchbar-main {
+    opacity: 1;
+    visibility: visible;
+}
+.fixed-navbar {
+    top: 0;
+    // position: fixed !important;
+    animation-name: fixedAnim;
+    animation-duration: 1s;
+    background-color: $black !important;
+    animation-fill-mode: forwards;
+    -webkit-box-shadow: 0 12px 6px rgba(0, 0, 0, 0.06);
+    -moz-box-shadow: 0 12px 6px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.06);
+}
+
+  @keyframes fixedAnim {
+    from {
+        top: -50px;
+    }
+  
+    to {
+        top: 0;
+    }
+  }
 /***** navbar end *****/
 
 
@@ -80,23 +111,23 @@ body , html{
     border-radius: 13px;
     gap: 6px;
 }
-.hero-section .hero-searchbar-main {
+.hero-section .searchbar-main {
     bottom: -22px;
     left: 50%;
     transform: translateX(-50%);
     width: 35%;
 }
-.hero-section .hero-searchbar {
+.searchbar-main .searchbar {
     height: 55px;
     padding: 2px;
     border: 4px solid var(--theme1);
     border-radius: 13px;
 }
-.hero-section .hero-searchbar .hero-searchbar-input {
+.searchbar-main .searchbar-input {
     font-size: 14px;
     font-weight: 500;
 }
-.hero-section .hero-searchbar .hero-searchbar-btn {
+.searchbar-main .searchbar .searchbar-btn {
     height: 40px;
     min-width: 40px;
     max-width: 40px;
@@ -105,7 +136,7 @@ body , html{
     color: #6d6d6d;
     transition: all 0.3s ease-in-out;
 }
-.hero-section .hero-searchbar .hero-searchbar-btn:hover {
+.searchbar-main .searchbar .searchbar-btn:hover {
     background-color: transparent;
     color: var(--theme1);
 }
@@ -143,7 +174,7 @@ body , html{
     border-radius: 18px;
 }
 .country-card .country-img {
-    height: 220px;
+    height: 230px;
     border-radius: 14px 14px 0 0;
     overflow: hidden;
     position: relative;
@@ -209,3 +240,62 @@ body , html{
     color: var(--theme1);
 }
 /***** country section end *****/
+
+
+/***** footer start *****/
+.footer .footer-inner {
+    padding-block: 45px;
+}
+.footer .footer-logo {
+    height: 60px;
+}
+.footer .footer-para {
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 28px;
+    color: #6d6d6d;
+    /* font-weight: 500; */
+}
+.footer .footer-social-list {
+    gap: 20px;
+    margin-top: 25px;
+}
+.footer .footer-social-link {
+    font-size: 18px;
+    color: #8a8a8a;
+    transition: all 0.3s ease-in-out;
+}
+.footer .footer-social-link:hover {
+    color: var(--theme1);
+    transform: translateY(-5px);
+}
+.footer .footer-heading {
+    font-size: 16px;
+}
+.footer .footer-list {
+    gap: 10px;
+    margin-top: 20px;
+}
+.footer .footer-link {
+    font-size: 14px;
+    color: #6d6d6d;
+    transition: all 0.3s ease-in-out;
+    /* font-weight: 500; */
+    line-height: 26px;
+}
+.footer .footer-link:hover {
+    color: var(--theme1);
+}
+.footer .footer-contact-list {
+    gap: 12px;
+    margin-top: 20px;
+}
+.copyright-section {
+    padding-block: 22px;
+}
+.copyright-section .copyright-title {
+    font-size: 14px;
+    color: #575757;
+    font-weight: 500;
+}
+/***** footer end *****/
