@@ -90,8 +90,8 @@ body , html{
     font-size: 18px;
 }
 .hero-section .hero-img {
-    height: 160px;
-    width: 315px;
+    height: 190px;
+    width: 375px;
     clip-path: circle(63% at 50% 100%);
 }
 .hero-section .hero-review-title-main {
@@ -105,8 +105,8 @@ body , html{
     margin: auto;
     font-size: 14px;
     text-align: center;
-    padding: 10px;
-    padding-top: 28px;
+    padding: 13px;
+    padding-top: 32px;
     font-weight: 500;
     border-radius: 13px;
     gap: 6px;
@@ -299,3 +299,29 @@ body , html{
     font-weight: 500;
 }
 /***** footer end *****/
+
+/***** review customer section start *****/
+.review-detail-card {
+    background-color: var(--theme1);
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.review-detail-card .review-detail-card-heading {
+    font-size: 30px;
+    color: #fff;
+}
+.review-detail-card .review-detail-card-title {
+    color: #ffffffd8;
+    margin-top: 4px;
+}
+.review-detail-card .review-detail-userimg-list {
+    display: flex;
+    margin-top: 30px;
+}
+.review-detail-card .review-detail-userimg {
+    height: 65px;
+    width: 65px;
+    border: 3px solid #fff;
+}
+/***** review customer section end *****/
