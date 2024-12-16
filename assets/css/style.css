@@ -13,7 +13,7 @@ body , html{
     text-align: center;
 }
 .common-gap {
-    margin-top: 55px;
+    margin-top: 65px;
 }
 .container {
     max-width: 95% !important;
@@ -112,7 +112,7 @@ body , html{
     gap: 6px;
 }
 .hero-section .searchbar-main {
-    bottom: -0px;
+    bottom: 3px;
     left: 50%;
     transform: translateX(-50%);
     width: 35%;
@@ -215,7 +215,7 @@ body , html{
 
 /***** country section start *****/
 .country-section {
-    padding-top: 67px;
+    padding-top: 85px;
     margin-top: -30px;
     border-radius: 40px 40px 0 0;
 }
@@ -513,3 +513,32 @@ body , html{
     color: #fff;
 }
 /***** review customer section end *****/
+
+
+/***** why choose us section start *****/
+.why-choose-section::before {
+    content: '';
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    height: 200px;
+    width: 250px;
+    background: url(../img/airplane-fly.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.2;
+}
+.why-choose-card {
+    gap: 13px;
+}
+.why-choose-card .why-choose-card-title {
+    font-size: 18px;
+    line-height: normal;
+}
+.why-choose-card .why-choose-card-detail {
+    color: #6b7280;
+    margin-top: 10px;
+    line-height: 28px;
+}
+/***** why choose us section end *****/
