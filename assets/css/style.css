@@ -1,6 +1,6 @@
 :root {
     --theme1:#0066cc;
-    --theme2:#ffcd38;
+    --theme2:#e9b826;
 }
 
 body , html{
@@ -123,6 +123,55 @@ body , html{
     border: 4px solid var(--theme1);
     border-radius: 13px;
 }
+.searchbar-main .searchbar-menus {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    top: 105%;
+    border-radius: 12px;
+    padding-bottom: 10px;
+}
+.searchbar-menus .searchbar-menus-heading {
+    font-size: 17px;
+    padding: 12px 14px;
+}
+.searchbar-main .searchbar-country-name {
+    color: #000;
+    font-size: 16px;
+}
+.searchbar-menus .searchbar-visa-time {
+    font-size: 14px;
+    margin-top: 1px;
+}
+.searchbar-menus .searchbar-menus-img {
+    height: 47px;
+    width: 47px;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+.searchbar-menus .searchbar-menus-link {
+    padding: 9px 12px;
+    transition: all 0.3s ease-in-out;
+}
+.searchbar-menus .searchbar-menus-link:hover {
+    background-color: #cfcfcfa9;
+}
+.searchbar-menus .searchbar-link-arrow {
+    font-size: 18px;
+    color: var(--theme1);
+    position: absolute;
+    right: 10px ;
+    top: 0;
+    transform: scaleY(0); 
+    transition: all 0.3s ease-in-out;
+}
+.searchbar-menus .searchbar-menus-link:hover .searchbar-link-arrow {
+    top: 50%; 
+    transform: translateY(-50%) ; 
+}
+.searchbar-menus .searchbar-menus-link:hover:after .searchbar-link-arrow {
+    top: auto; 
+    bottom: 0; 
+    opacity: 0; 
+}
 .searchbar-main .searchbar-input {
     font-size: 14px;
     font-weight: 500;
@@ -230,7 +279,7 @@ body , html{
     left: 0;
     bottom: -12px;
     border: 6px solid ;
-    border-color: var(--theme1) var(--theme1) transparent transparent;
+    border-color: #034d97 #034d97 transparent transparent;
 }
 .country-card .country-card-date {
     font-size: 15px;
@@ -303,9 +352,32 @@ body , html{
 /***** review customer section start *****/
 .review-detail-card {
     background-color: var(--theme1);
-    padding: 35px;
+    padding: 25px;
     border-radius: 14px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.review-detail-card::before {
+    content: '';
+    position: absolute;
+    right: -15%;
+    top: -15%;
+    height: 250px;
+    width: 250px;
+    background: url(../img/airplane-shape.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.review-detail-card::after {
+    content: '';
+    position: absolute;
+    right: -15%;
+    top: -15%;
+    height: 320px;
+    width: 320px;
+    background: url(../img/card-shape.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.15;
 }
 .review-detail-card .review-detail-card-heading {
     font-size: 30px;
@@ -315,13 +387,127 @@ body , html{
     color: #ffffffd8;
     margin-top: 4px;
 }
-.review-detail-card .review-detail-userimg-list {
-    display: flex;
+.review-detail-card .review-detail-card-clients {
     margin-top: 30px;
+    gap: 15px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px dashed #b8b8b8;
 }
 .review-detail-card .review-detail-userimg {
     height: 65px;
     width: 65px;
     border: 3px solid #fff;
+    transition: all 0.3s ease-in-out;
+}
+.review-detail-card .review-detail-userimg:nth-child(2){
+    margin-left: -16px;
+}
+.review-detail-card .review-detail-userimg:nth-child(3){
+    margin-left: -16px;
+}
+.review-detail-card .review-detail-userimg:nth-child(4){
+    margin-left: -16px;
+}
+.review-detail-card .review-detail-userimg:nth-child(5){
+    margin-left: -16px;
+}
+.review-detail-card .review-detail-userimg:nth-child(6){
+    margin-left: -16px;
+}
+.review-detail-card .review-detail-total-client {
+    font-size: 24px;
+}
+.review-detail-card .review-detail-client-title {
+    color: #fff;
+}
+.review-detail-card .review-detail-userimg:hover {
+    z-index: 2;
+}
+.review-detail-card .review-detail-card-img {
+    height: 45px;
+}
+.review-detail-card .review-detail-card-google-logo {
+    height: 35px;
+}
+.review-detail-card .review-detail-card-rating-title {
+    margin-top: 10px;
+    line-height: normal;
+    font-size: 30px;
+}
+.review-main-card {
+    border: 2px solid #cfcfcf;
+    padding: 20px;
+    border-radius: 14px;
+}
+.review-main-card::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -12px;
+    height: 24px;
+    width: 70%;
+    border: 2px solid #cfcfcf;
+    z-index: -1;
+    border-radius: 14px;    
+}
+.review-main-card::after {
+    content: '';
+    position: absolute;
+    right: 6%;
+    top: 6%;
+    opacity: 0.1;
+    background: url(../img/double-qoute.svg) no-repeat;
+    background-position: center;
+    background-size:contain;
+    height: 95px;
+    width: 110px;
+}
+.review-card .reviewer-img {
+    height: 90px;
+    width: 90px;
+}
+.review-card .reviewer-name {
+    font-size: 16px ;
+    margin-top: 7px;
+    color: #000;
+}
+.review-card .reivew-date {
+    font-size: 14px;
+    color: #464646;
+    margin-top: 1px;
+}
+.review-card .review-card-para {
+    margin-top: 4px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.review-card .review-card-para p {
+    font-size: 15px;
+    margin-bottom: 0;
+    line-height: 26px;
+    color: #535353;
+}
+.review-card .review-card-title {
+    font-size: 18px;
+    color: #000;
+    margin-top: 12px;
+}
+.review-main-card .review-slider-btn {
+    height: 38px;
+    width: 38px;
+    border-radius: 6px;
+    border: 1.4px solid var(--theme1);
+    font-size: 15px;
+    color: var(--theme1);
+    transition: all 0.3s ease-in-out;
+}
+.review-main-card .review-slider-btn:hover {
+    background-color: var(--theme1);
+    color: #fff;
 }
 /***** review customer section end *****/
