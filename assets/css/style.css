@@ -77,11 +77,11 @@ body , html{
 
 /***** hero section *****/
 .hero-section {
-    padding: 130px 0 100px;
+    padding: 120px 0 130px;
     background-color: var(--theme1);
 }
 .hero-section .hero-heading {
-    font-size: 42px;
+    font-size: 39px;
     color: #fff;
     margin-top: 8px;
 }
@@ -112,7 +112,7 @@ body , html{
     gap: 6px;
 }
 .hero-section .searchbar-main {
-    bottom: -22px;
+    bottom: -0px;
     left: 50%;
     transform: translateX(-50%);
     width: 35%;
@@ -215,7 +215,9 @@ body , html{
 
 /***** country section start *****/
 .country-section {
-    margin-top: 67px;
+    padding-top: 67px;
+    margin-top: -30px;
+    border-radius: 40px 40px 0 0;
 }
 .country-card {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

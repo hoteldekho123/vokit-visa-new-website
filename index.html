@@ -112,7 +112,9 @@
                             </div>
                         </div>
                         <div class="col-12">
-                            <div class="hero-heading fw-bold">Your Passport To The World</div>
+                            <div class="hero-heading fw-semibold">
+                                <span id="animated-text"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -195,7 +197,7 @@
     <!-- ***** hero section end ***** yes bro we can't do nothing but god is seeing everything-->
 
     <!-- ***** country section start ***** -->
-    <section class="country-section">
+    <section class="country-section bg-white position-relative">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -625,5 +627,25 @@
         });
 
     </script> 
+
+    <!-- hero text change -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const textElement = document.getElementById('animated-text');
+            const messages = [
+                'Your Trusted Visa Partner',
+                'Visas Simplified, Globally',
+                'Hassle-Free Visa Services',
+                'On Time, Every Time'
+            ];
+            let currentIndex = 0;
+            function changeText() {
+                textElement.textContent = messages[currentIndex];
+                currentIndex = (currentIndex + 1) % messages.length;
+            }
+            setInterval(changeText, 2000);
+        });
+
+    </script>
 </body>
 </html>
