@@ -547,14 +547,14 @@ body , html{
 .step-apply-card .step-card-count-main {
     right: -20px;
     top: -20px;
-    border: 2px dashed var(--theme2);
+    border: 2px dashed var(--theme1);
     height: 115px;
     width: 115px;
 }
 .step-apply-card .step-card-count {
     height: 90px;
     width: 90px;
-    background-color: var(--theme2);
+    background-color: var(--theme1);
     font-size: 22px;
     padding: 10px;
     line-height: 28px;
@@ -591,3 +591,62 @@ body , html{
     display: none;
 }
 /***** step to apply section end *****/
+
+
+/***** process section start *****/
+.process-card-main {
+    background: linear-gradient(180deg, #0E9384 0%, #F8FAFB 100%);
+    padding: 1px;
+    border-radius: 7px;
+}
+.process-card {
+    padding: 18px;
+    border-radius: 7px;
+}
+.process-card .process-count {
+    font-size: 50px;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: 1px #0E9384;
+    position: relative;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.process-card .process-card-title {
+    font-size: 18px;
+    margin-top: 18px;
+    color: #000;
+}
+.process-card .process-card-title-detail {
+    font-size: 15px;
+    margin-top: 3px;
+    line-height: 26px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.process-section .col-md-3:nth-child(2) .process-card-main {
+    background: linear-gradient(180deg, #E04F16 0%, #F8FAFB 100%);
+}
+.process-section .col-md-3:nth-child(2) .process-count{
+    -webkit-text-stroke: 1px #E04F16;
+}
+.process-section .col-md-3:nth-child(3) .process-card-main {
+    background: linear-gradient(180deg, #6938EF 0%, #F8FAFB 100%);
+}
+.process-section .col-md-3:nth-child(3) .process-count{
+    -webkit-text-stroke: 1px #6938EF;
+}
+.process-section .col-md-3:nth-child(4) .process-card-main {
+    background: linear-gradient(180deg, #e9b826 0%, #F8FAFB 100%);
+}
+.process-section .col-md-3:nth-child(4) .process-count{
+    -webkit-text-stroke: 1px #e9b826;
+}
