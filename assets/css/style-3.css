@@ -1,10 +1,10 @@
 :root {
-    --theme1:#0066cc;
+    --theme1:#034833;
     --theme2:#e9b826;
 }
 
 body , html{
-    font-family: "Roboto", sans-serif !important;
+    font-family: "Roboto", sans-serif  !important;
 }
 
 /***** common things start *****/
