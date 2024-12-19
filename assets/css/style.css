@@ -1,6 +1,6 @@
 :root {
     --theme1:#D4483B;
-    --theme2:#e9b826;
+    --theme2:#2C3E50;
 }
 
 body , html{
@@ -706,45 +706,26 @@ body , html{
 
 
 /***** visa slider main section start *****/
-.visa-slider-section .visa-slider-img {
+.visa-hero-section .visa-hero-img {
     height: 400px;
-    border-radius: 8px;
-    overflow: hidden;
+    border-radius: 14px;
 }
-.visa-slider-section .visa-slider-thumb-img {
-    height: 110px;
-    overflow: hidden;
-    border-radius: 8px;
-}
-.visa-slider-section .visalider .swiper-slide {
-    opacity: 0.5;
-}
-.visa-slider-section .visalider .swiper-slide-thumb-active {
-    opacity: 1;
-}
-.visa-slider-section .section-main-heading {
+.visa-hero-section .visa-hero-heading-main {
     position: absolute;
     left: 50%;
     bottom: 20px;
     transform: translateX(-50%);
-    color: white;
+    background-color: #ffff;
+    border-radius: 8px;
+    padding: 8px 20px ;
     z-index: 3;
+    gap: 13px;
+}
+.visa-hero-section .visa-hero-heading {
     margin-bottom: 0;
-}
-.visa-slider-section .visa-slider-btn::after {
-    display: none;
-}
-.visa-slider-section .visa-slider-btn {
-    height: 45px;
-    width: 45px;
-    background-color: var(--theme1);
-    font-size: 16px;
-    color: #fff;
-    transition: all 0.3s ease-in-out;
-}
-.visa-slider-section .visa-slider-btn:hover {
-    background-color: #fff;
-    color: var(--theme1);
+    white-space: nowrap;
+    font-size: 35px;
+    color: black;
 }
 /***** visa slider main section end *****/
 
@@ -752,9 +733,9 @@ body , html{
 /***** visa sidebar start *****/
 .visa-sidebar {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    padding: 15px;
+    padding: 18px;
     border-radius: 13px;
-    padding-top: 190px;
+    padding-top: 85px;
     border: 1px solid #dadada;
 }
 .visa-sidebar .visa-sidebar-header-main {
@@ -792,10 +773,191 @@ body , html{
     color:#eee;
     font-size: 14px;
 }
+.visa-sidebar .visa-sidebar-traveller-details {
+    margin-top: 20px;
+}
+.visa-sidebar .visa-sidebar-traveller-title {
+    font-size: 16px;
+}
+.visa-sidebar .visa-sidebar-traveller-title .visa-sidebar-traveller-icon {
+    color: #777777;
+    margin-right: 2px;
+}
+.visa-sidebar .visa-sidebar-traveller-data {
+    border: 1px solid #d4d4d4;
+    height: 35px;
+    border-radius: 30px;
+    padding-inline: 5px;
+}
+.visa-sidebar .visa-sidebar-traveller-data .visa-sidebar-data-input {
+    font-size: 14px;
+    padding-inline: 8px;
+    width:50px;
+}
+.visa-sidebar .visa-sidebar-traveller-data .visa-sidebar-data-btn {
+    border: 0;
+    background-color: transparent;
+    font-size: 13px;
+}
+
 .visa-sidebar .visa-sidebar-icon {
     margin-right: 12px;
 }
 .visa-sidebar .visa-sidebar-icon img{
     filter: invert(1);
 }
+.visa-sidebar .nav-tabs {
+    gap: 12px;
+}
+.visa-sidebar .nav-link {
+    border: 1px solid #eee !important;
+    border-radius: 3px 25px 3px 25px;
+    font-size: 14px;
+    padding: 7px 20px;
+    color: #333;
+}
+.visa-sidebar .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--theme1);
+    height: 0%;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.visa-sidebar .nav-link.active {
+    color: #fff;
+    border: 1px solid var(--theme1) !important;
+}
+.visa-sidebar .nav-link.active::before {
+    height: 100%;
+}
+.visa-sidebar .nav-link i {
+    margin-right: 2px;
+}
+.visa-sidebar .visa-sidebar-title {
+    font-size: 17px;
+    line-height: normal;
+}
+.visa-sidebar .visa-sidebar-detail-title {
+    color:#000;
+    font-size: 15px;
+    gap:8px;
+}
+.custom-tooltip .tooltip-icon {
+    font-size: 15px;
+    color: var(--theme1);
+    cursor: pointer;
+}
+.custom-tooltip .tooltip-detail-main {
+    width: 250px;
+    left: -20px;
+    top: 135%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+.custom-tooltip .tooltip-details {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.custom-tooltip .tooltip-details::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: -7px;
+    background: #fff;
+    height: 14px;
+    width: 14px;
+    border: 1px solid;
+    border-color: #eee transparent transparent #eee;
+    transform: rotate(45deg);
+}
+.custom-tooltip .tooltip-title {
+    font-size: 17px;
+}
+.custom-tooltip .tooltip-details .tooltip-para {
+    font-size: 14px;
+    margin-bottom: 0;
+    line-height: 25px;
+    color: #494949;
+}
+.custom-tooltip:hover .tooltip-detail-main {
+    opacity: 1;
+    visibility: visible;
+}
+.visa-sidebar .visa-sidebar-detail {
+    gap: 15px;
+    margin-top: 18px;
+}
+.visa-sidebar .visa-sidebar-detail-subtitle {
+    font-size: 15px;
+    gap: 8px;
+}
+.visa-sidebar .visa-sidebar-detail-price {
+    font-size: 16px;
+}
+.visa-sidebar .visa-sidebar-price-main {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1.5px dashed var(--theme1);
+}
+.visa-sidebar .visa-sidebar-price-title {
+    font-size: 18px;
+}
+.visa-sidebar .visa-sidebar-total-price {
+    font-size: 19px;
+}
+.visa-sidebar .visa-sidebar-btn-main {
+    margin-top: 25px;
+}
+.visa-sidebar .visa-sidebar-btn {
+    background-color: var(--theme1) ;
+    color: #ffff;
+    padding: 11px;
+    gap: 5px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    line-height: normal;
+}
+.visa-sidebar .visa-sidebar-btn:hover {
+    background-color: var(--theme2);
+}
+.visa-sidebar .visa-sidebar-btn img {
+    filter: invert(1);
+}
 /***** visa sidebar end *****/
+
+
+/***** visa detail section start *****/
+.visa-detail-section .authorized-title {
+    background-color: var(--theme1);
+    color: #fff;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    height: 40px;
+    gap: 5px;
+    border-radius: 6px 0 0 6px;
+}
+.visa-detail-section .authorized-title .authorized-icon {
+    height: 50px;
+    width: 50px;
+    background-color: var(--theme1);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    margin-left: -5px;
+}
+.visa-detail-section .authorized-title::before {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: 0;
+    border: 20px solid;
+    border-color: var(--theme1) transparent var(--theme1) var(--theme1);
+}
+/***** visa detail section end *****/
+
+
