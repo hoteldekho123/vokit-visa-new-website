@@ -8,9 +8,16 @@ body , html{
 }
 
 /***** common things start *****/
+.heading-main {
+    gap: 7px;
+}
 .heading-main .heading {
     font-size:28px;
     text-align: center;
+    line-height: normal;
+}
+.heading-main img {
+    margin-top: 5px;
 }
 .common-gap {
     margin-top: 65px;
@@ -123,7 +130,7 @@ body , html{
     margin-top: 8px;
 }
 .hero-section .hero-title {
-    color: var(--theme2);
+    color: #e9b826;
     font-size: 18px;
 }
 .hero-section .hero-img {
