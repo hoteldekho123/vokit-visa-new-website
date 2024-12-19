@@ -15,6 +15,7 @@ body , html{
     font-size:28px;
     text-align: center;
     line-height: normal;
+    font-weight: 600;
 }
 .heading-main img {
     margin-top: 5px;
@@ -734,6 +735,18 @@ body , html{
     font-size: 35px;
     color: black;
 }
+.visa-hero-section .guarantee-title {
+    top: 10px;
+    left: 10px;
+    background-color: var(--theme1);
+    color: #fff;
+    font-size: 15px;
+    padding: 8px 12px;
+    border-radius: 3px 20px 3px 20px;
+}
+.visa-hero-section .guarantee-title img {
+    filter: invert(1);
+}
 /***** visa slider main section end *****/
 
 
@@ -959,10 +972,36 @@ body , html{
 .visa-detail-section .authorized-title::before {
     content: '';
     position: absolute;
-    right: -40px;
+    right: -38px;
     top: 0;
-    border: 20px solid;
+    border: 19px solid;
     border-color: var(--theme1) transparent var(--theme1) var(--theme1);
+}
+
+.visa-info-section {
+    margin-top: 55px;
+}
+.visa-info-section .visa-info-card {
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
+    padding: 7px 10px;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.visa-info-section .visa-info-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.visa-info-section .visa-info-card .visa-info-card-icon {
+    height: 42px;
+    width: 42px;
+    background-color: #d4483b28;
+    border-radius: 8px;
+}
+.visa-info-section .visa-info-card .visa-info-card-title {
+    font-size: 15px;
+}
+.visa-info-section .visa-info-card .visa-info-card-subtitle {
+    font-size: 14px;
 }
 /***** visa detail section end *****/
 
