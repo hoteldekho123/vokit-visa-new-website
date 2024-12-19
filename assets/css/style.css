@@ -717,7 +717,7 @@ body , html{
     transform: translateX(-50%);
     background-color: #ffff;
     border-radius: 8px;
-    padding: 8px 20px ;
+    padding: 9px 25px ;
     z-index: 3;
     gap: 13px;
 }
@@ -799,7 +799,6 @@ body , html{
     background-color: transparent;
     font-size: 13px;
 }
-
 .visa-sidebar .visa-sidebar-icon {
     margin-right: 12px;
 }
