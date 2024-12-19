@@ -751,6 +751,9 @@ body , html{
 
 
 /***** visa sidebar start *****/
+.visa-sidebar-main {
+    top: 100px;
+}
 .visa-sidebar {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 18px;
