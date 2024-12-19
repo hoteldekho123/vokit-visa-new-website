@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+
+.tab {
+    height: 40px;
+    width: 100px;
+    border-bottom: 4px solid black;
+    line-height: 40px;
+    text-align: center;
+    font-size: 20pt;
+    float: left;
+    cursor: pointer;
+}
+
+.selected {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    clear: left;
+}
+
+.box {
+    display: inline-block;
+    white-space: nowrap;
+    position: absolute;
+    width: 400px;
+    height: 200px;
+
+    line-height: 200px;
+    text-align: center;
+    font-size: 28pt;
+    cursor: pointer;
+}
+
+#first {
+    top: 0px;
+    left: 0px;
+}
+
+#second {
+    top: 0px;
+    left: 400px;
+}
+
+#third {
+    top: 0px;
+    left: 800px;
+}
+
+#four {
+    top: 0px;
+    left: 1200px;
+}
+
+#slide {
+    transition: transform 1s ease-in-out 0s;
+    -moz-transition: -moz-transform 1s ease-in-out 0s;
+    -webkit-transition: -webkit-transform 1s ease-in-out 0s;
+}
+
+.move-to-second {
+    transform: translateX(-400px);
+    -moz-transform: translateX(-400px);
+    -webkit-transform: translateX(-400px);
+}
+.move-to-first {
+    transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -webkit-transform: translateX(0px);    
+}
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="tab1" class="tab selected">Tab 1</div>
+        <div id="tab2" class="tab">Tab 2</div>
+        <div id="container">
+            <div id="slide" class="">
+                <div id="first" class="box">Check this Out</div>
+                <div id="second" class="box">TAB TWO</div>
+            </div>
+         </div>
+    </div>
+      <script>
+        $("#tab1").click(moveToFirst);
+        $("#tab2").click(moveToSecond);
+
+        function moveToFirst() {
+            $("#slide").attr('class', 'move-to-first');
+            $(".tab").attr('class', 'tab');
+            $("#tab1").attr('class', 'tab selected');
+        }
+
+        function moveToSecond() {
+            $("#slide").attr('class', 'move-to-second');
+            $(".tab").attr('class', 'tab');
+            $("#tab2").attr('class', 'tab selected');
+        }
+      </script>
+</body>
+</html>
