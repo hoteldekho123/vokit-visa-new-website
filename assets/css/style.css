@@ -970,12 +970,35 @@ body , html{
 .visa-sidebar .visa-sidebar-btn img {
     filter: invert(1);
 }
+.country-time-card {
+    background-color: var(--theme1);
+    padding: 12px;
+    border-radius: 14px;
+    margin-top: 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    gap: 12px;
+}
+.country-time-card .time-country-name {
+    font-size: 18px;
+}
+.country-time-card .country-time {
+    font-size: 17px;
+}
+.country-time-card .country-time-icon-main {
+    height: 70px;
+    width: 70px;
+    border: 1px dashed #fff;
+}
+.country-time-card .country-time-icon {
+    height: 55px;
+    width: 55px;
+}
 /***** visa sidebar end *****/
 
 
 /***** visa detail section start *****/
 .visa-gap {
-    margin-top: 45px;
+    margin-top: 50px;
 }
 .visa-detail-section .authorized-title {
     background-color: var(--theme1);
@@ -1192,6 +1215,7 @@ body , html{
     border: 1px solid #4e4e4e2f;
     border-radius: 14px;
     padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 .timeline-detail-card .timeline-detail-heading {
     font-size: 18px;
@@ -1263,7 +1287,7 @@ body , html{
     border: 1px solid var(--theme1);
     font-weight: 500;
     font-size: 16px;
-    padding: 12px 40px;
+    padding: 13px 40px;
     color: var(--theme1);
     border-radius: 8px;
     gap: 12px;
@@ -1306,7 +1330,8 @@ body , html{
 }
 .visa-faq-section .accordion-button {
     color: black;
-    transition: all 0.3se ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-size: 17px;
 }
 .visa-faq-section .accordion-button:not(.collapsed){
     color: var(--theme1);
@@ -1314,6 +1339,16 @@ body , html{
 .visa-faq-section .accordion-button:not(.collapsed)::before {
     border-color: var(--theme1);
     transform:translateY(-50%) rotate(90deg);
+}
+.visa-faq-section .accordion-body {
+    border-top: 1px solid #57575752;
+    margin-top: 12px;
+}
+.visa-faq-section .accordion-body p {
+    font-size: 15px;
+    color: #424242;
+    line-height: 28px;
+    margin-bottom: 10px;
 }
 /* visa faq section end */
 

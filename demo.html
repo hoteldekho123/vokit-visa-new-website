@@ -1,137 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    
-@mixin tablet-and-up {
-    @media screen and (min-width: 769px) { @content; }
-}
-@mixin mobile-and-up {
-    @media screen and (min-width: 601px) { @content; }
-}
-@mixin tablet-and-down  {
-    @media screen and (max-width: 768px) { @content; }
-}
-@mixin mobile-only {
-    @media screen and (max-width: 600px) { @content; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Date & Time</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
 }
 
-
-ul, li{
-  list-style: none;
-  padding: 0;
+#visa-page {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
 }
 
-h1{
-  font-size: 1.1rem;
-  font-family: sans-serif;
-}
-.sessions{
-  margin-top: 2rem;
-  border-radius: 12px;
-  position: relative;
-}
-li{
-  padding-bottom: 1.5rem;
-  border-left: 1px solid #abaaed;
-  position: relative;
-  padding-left: 20px;
-  margin-left: 10px;
-  &:last-child{
-    border: 0px;
-    padding-bottom: 0;
-  }
-  &:before{
-    content: '';
-    width: 15px;
-    height: 15px;
-    background: white;
-    border: 1px solid #4e5ed3;
-    box-shadow: 3px 3px 0px #bab5f8;
-    box-shadow: 3px 3px 0px #bab5f8;
-    border-radius: 50%;
-    position: absolute;
-    left: -10px;
-    top: 0px;
-  }
-}
-.time{
-  color: #2a2839;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  @include mobile-and-up{
-    font-size: .9rem;
-  }
-  @include mobile-only{
-    margin-bottom: .3rem;
-    font-size: 0.85rem;
-  }
-
-}
-p{
-  color: #4f4f4f;
-      font-family: sans-serif;
-  line-height: 1.5;
-  margin-top:0.4rem;
-  @include mobile-only{
-    font-size: .9rem;
-  }
-}
-  </style>
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="timeline-main">
-      <ul class="timeline-list">
-        <li>
-          <div class="time">09:00 AM</div>
-          <p>How is it already 9:00? Just how??? 🤯🤯</p>
-        </li>
-        <li>
-          <div class="time">09:05 AM</div>
-          <p>Few more minutes of sleep won't do anyone any harm 🤷..</p>
-        </li>
-        <li>
-          <div class="time">09:30 AM</div>
-          <p>Get up 🙄</p>
-        </li>
-        <li>
-          <div class="time">1:00 PM</div>
-          <p>How can I feel sleepy again?😵</p>
-        </li>
-        <li>
-          <div class="time">01:30 PM</div>
-          <p>Lunch time after which sleep just doesn't want to let go of me. 🤝</p>
-        </li>
-        <li>
-          <div class="time">3:30 PM</div>
-          <p>Drink the magical chai, it will ward off sleep they said. 🤷‍</p>
-        </li>
-        <li>
-          <div class="time">4:30 PM </div>
-          <p>The only time I don't feel sleepy cause it's work out time. I mean walking time. 😹</p>
-        </li>
-        <li>
-          <div class="time">07:00 PM </div>
-          <p>Food my tummy needs, sleep my body needs.👿</p>
-        </li>
-        <li>
-          <div class="time">07:30 PM </div>
-          <p>My tummy's happy time 🍝</p>
-        </li>
-        <li>
-          <div class="time">10:00 PM </div>
-          <p>uh oh!!! fuel low, get some snacks but wait should I just take a quick nap?🤓 </p>
-        </li>
-        <li>
-          <div class="time">2:30 PM </div>
-          <p>All hail! The time to sleep has finally arrived.😴😴😴😴😴 </p>
-        </li>
-      </ul>
+    <div id="visa-page">
+        <h1>Visa Page</h1>
+        <p id="country">Country: <span id="country-name">Loading...</span></p>
+        <p id="date-time">Date & Time: <span id="current-time">Loading...</span></p>
     </div>
-  </div> 
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const country = "UAE"; // Example static country, replace with dynamic data from backend
+        const timezone = "Asia/Dubai"; // Example timezone, replace with backend response
+        document.getElementById('country-name').textContent = country;
+        function updateTime() {
+            const options = {
+                timeZone: timezone,
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+            };
+
+            const formatter = new Intl.DateTimeFormat('en-US', options);
+            document.getElementById('current-time').textContent = formatter.format(new Date());
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+      });
+    </script>
 </body>
 </html>
