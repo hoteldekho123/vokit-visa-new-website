@@ -1190,11 +1190,16 @@ body , html{
 }
 .timeline-main .timeline-detail-card {
     border: 1px solid #4e4e4e2f;
-    border-radius: 8px;
+    border-radius: 14px;
     padding: 20px;
 }
 .timeline-detail-card .timeline-detail-heading {
     font-size: 18px;
+    margin-bottom: 8px;
+}
+.timeline-detail-card .timeline-detail-para p { 
+    color: #6d6d6d;
+    margin-bottom: 0;
 }
 /* timelines section end */
 
