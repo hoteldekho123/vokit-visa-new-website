@@ -23,7 +23,7 @@
     <nav class="navbar navbar-two navbar-expand-lg" aria-label="Offcanvas navbar large" id="navbar">
         <div class="container">
             <a class="navbar-brand py-0" href="index.html">
-                <img src="assets/img/vokit-logo.svg" alt="navbar logo" class="h-100 w-100 img-fluid">
+                <img src="assets/img/logo.svg" alt="navbar logo" class="h-100 w-100 img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,7 +42,7 @@
     <main class="mt-4">
         <div class="container">
             <div class="row gx-5">
-                <div class="col-md-8">
+                <div class="col-md-8 pe-5">
                     <div class="visa-hero-section position-relative">
                         <div class="visa-hero-img overflow-hidden">
                             <img src="assets/img/dubai-image-1.jpg" alt="dubai" class="h-100 w-100 img-fluid">
@@ -65,6 +65,7 @@
                             Guarantee On Time
                         </div>
                     </div>
+
                     <div class="visa-detail-section">
 
                         <div class="d-flex align-items-center mt-4 pt-1">
@@ -76,10 +77,10 @@
                             </div>
                         </div>
 
-                        <div class="visa-info-section">
-                            <div class="heading-main d-inline-flex align-items-center">
-                                <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="23">
-                                <h2 class="heading mb-0">
+                        <div class="visa-info-section visa-gap">
+                            <div class="visa-heading-main d-inline-flex align-items-center">
+                                <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="19">
+                                <h2 class="visa-heading mb-0">
                                     Dubai Visa Information
                                 </h2>
                             </div>
@@ -139,37 +140,272 @@
                             </div>
                         </div>
 
-                        <div class="visa-guarantee-section">
-                            <div class="heading-main d-inline-flex align-items-center">
-                                <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="23">
-                                <h2 class="heading mb-0">
+                        <div class="visa-guarantee-section visa-gap">
+                            <div class="visa-heading-main d-inline-flex align-items-center">
+                                <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="19">
+                                <h2 class="visa-heading mb-0">
                                     Get a Guaranteed Visa on
                                 </h2>
                             </div>
-                            <div class="row mt-3 px-4">
+                            <div class="row mt-3 px-4 justify-content-center">
                                 <div class="col-4">
-                                    <div class="visa-guarantee-card text-center position-relative">
+                                    <input type="radio" name="visa_type" id="regular_visa_card" hidden class="visa-guarantee-input">
+                                    <label for="regular_visa_card" class="visa-guarantee-card d-block text-center position-relative">
                                         <div class="visa-guarantee-card-title-main">
                                             <div class="visa-guarantee-card-title position-relative">
+                                                <img src="assets/img/guarantee-icon.svg" alt="guarantee icon" height="16">
                                                 Guaranteed on time
                                             </div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-center visa-guarantee-card-icon ms-auto">
-                                            <i class="fa-regular fa-clock"></i>
+                                        <div class="visa-guarantee-card-checkbox d-flex align-items-center justify-content-center rounded-circle position-absolute">
+                                            <i class="fa-solid fa-check"></i>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center visa-guarantee-card-icon mx-auto">
+                                            <i class="fa-solid fa-briefcase"></i>
                                         </div>
                                         <div class="visa-guarantee-visa-type">
                                             Regular Visa
                                         </div>
-                                        <div class="visa-guarentee-time fw-semibold">
+                                        <div class="visa-guarentee-time d-flex align-items-center justify-content-center fw-semibold">
+                                            <i class="fa-regular fa-clock"></i>
                                             30 Dec 2024
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="radio" name="visa_type" id="regular_visa_card2" hidden class="visa-guarantee-input">
+                                    <label for="regular_visa_card2" class="visa-guarantee-card d-block text-center position-relative">
+                                        <div class="visa-guarantee-card-title-main">
+                                            <div class="visa-guarantee-card-title position-relative">
+                                                <img src="assets/img/guarantee-icon.svg" alt="guarantee icon" height="16">
+                                                in 3 days
+                                            </div>
+                                        </div>
+                                        <div class="visa-guarantee-card-checkbox d-flex align-items-center justify-content-center rounded-circle position-absolute">
+                                            <i class="fa-solid fa-check"></i>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-center visa-guarantee-card-icon mx-auto">
+                                            <i class="fa-solid fa-bolt"></i>
+                                        </div>
+                                        <div class="visa-guarantee-visa-type">
+                                            Express Visa
+                                        </div>
+                                        <div class="visa-guarentee-time d-flex align-items-center justify-content-center fw-semibold">
+                                            <i class="fa-regular fa-clock"></i>
+                                            30 Dec 2024
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="visa-docs-section visa-gap">
+                            <div class="visa-heading-main d-inline-flex align-items-center">
+                                <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="19">
+                                <h2 class="visa-heading mb-0">
+                                    Dubai Visa Requirements
+                                </h2>
+                            </div>
+                            <div class="row row-cols-6 mt-0 g-3">
+                                <div class="col">
+                                    <div class="d-flex align-items-center visa-docs-card border">
+                                        <div class="visa-docs-card-icon"><i class="fa-regular fa-image"></i></div>
+                                        <div class="visa-docs-card-title fw-medium">Photo</div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center visa-docs-card border">
+                                        <div class="visa-docs-card-icon"><i class="fa-solid fa-passport"></i></div>
+                                        <div class="visa-docs-card-title fw-medium">Passport</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="visa-partner-section visa-gap">
+                            <div class="visa-heading-main d-inline-flex align-items-center">
+                                <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="19">
+                                <h2 class="visa-heading mb-0">
+                                    Partners We Work With
+                                </h2>
+                            </div>
+                            <div class="swiper partner-slider p-1 mt-3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide h-auto">
+                                        <div class="visa-partner-card h-100">
+                                            <img src="assets/img/partner1.webp" alt="partner" class="h-100 w-100 img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide h-auto">
+                                        <div class="visa-partner-card h-100">
+                                            <img src="assets/img/partner2.webp" alt="partner" class="h-100 w-100 img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide h-auto">
+                                        <div class="visa-partner-card h-100">
+                                            <img src="assets/img/partner3.webp" alt="partner" class="h-100 w-100 img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide h-auto">
+                                        <div class="visa-partner-card h-100">
+                                            <img src="assets/img/partner4.webp" alt="partner" class="h-100 w-100 img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide h-auto">
+                                        <div class="visa-partner-card h-100">
+                                            <img src="assets/img/partner5.webp" alt="partner" class="h-100 w-100 img-fluid">
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide h-auto">
+                                        <div class="visa-partner-card h-100">
+                                            <img src="assets/img/partner6.webp" alt="partner" class="h-100 w-100 img-fluid">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="visa-timeline-section visa-gap">
+                            <div class="visa-heading-main d-inline-flex align-items-center">
+                                <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="19">
+                                <h2 class="visa-heading mb-0">
+                                    How Dubai Visa Process Works
+                                </h2>
+                            </div>
+                            <div class="timeline-main">
+                                <ul class="timeline-list list-unstyled m-0 p-0">
+                                    <li class="d-flex align-items-start">
+                                        <div class="timeline-title fw-semibold text-nowrap">STEP - 1</div>
+                                        <div class="timeline-detail-card w-100">
+                                            <div class="fw-medium text-black timeline-detail-heading">Apply on Visacommit</div>
+                                            <p>Submit your documents on Atlys — only pay government fee.</p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="time">09:05 AM</div>
+                                        <p>Few more minutes of sleep won't do anyone any harm 🤷..</p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="time">09:30 AM</div>
+                                        <p>Get up 🙄</p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="time">1:00 PM</div>
+                                        <p>How can I feel sleepy again?😵</p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="time">01:30 PM</div>
+                                        <p>Lunch time after which sleep just doesn't want to let go of me. 🤝</p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="time">3:30 PM</div>
+                                        <p>Drink the magical chai, it will ward off sleep they said. 🤷‍</p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="time">4:30 PM </div>
+                                        <p>The only time I don't feel sleepy cause it's work out time. I mean walking time. 😹</p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="time">07:00 PM </div>
+                                        <p>Food my tummy needs, sleep my body needs.👿</p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="time">07:30 PM </div>
+                                        <p>My tummy's happy time 🍝</p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="time">10:00 PM </div>
+                                        <p>uh oh!!! fuel low, get some snacks but wait should I just take a quick nap?🤓 </p>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="time">2:30 PM </div>
+                                        <p>All hail! The time to sleep has finally arrived.😴😴😴😴😴 </p>
+                                    </li>
+                                </ul>
+                              </div>
+                        </div>
+
+                        <div class="visa-reviews-section visa-gap">
+                            <div class="visa-heading-main d-inline-flex align-items-center">
+                                <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="19">
+                                <h2 class="visa-heading mb-0">
+                                    Reviews
+                                </h2>
+                            </div>
+                            <div class="row mt-4 visa-reviews-wrapper">
+                                <div class="col-12">
+                                    <div class="visa-review-card h-100">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                                <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                                    L
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                                <div class="visa-review-date">14 Dec, 2024 </div>
+                                            </div>
+                                        </div>
+                                        <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                            The visa service was exceptional
+                                        </div>
+                                        <div class="visa-review-details">
+                                            <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="visa-review-card h-100">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                                <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                                    L
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                                <div class="visa-review-date">14 Dec, 2024 </div>
+                                            </div>
+                                        </div>
+                                        <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                            The visa service was exceptional
+                                        </div>
+                                        <div class="visa-review-details">
+                                            <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="visa-review-card h-100">
+                                        <div class="d-flex align-items-center gap-2">
+                                            <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                                <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                                    L
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                                <div class="visa-review-date">14 Dec, 2024 </div>
+                                            </div>
+                                        </div>
+                                        <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                            The visa service was exceptional
+                                        </div>
+                                        <div class="visa-review-details">
+                                            <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 d-flex align-items-center justify-content-center">
+                                <button class="visa-review-btn d-flex align-items-center justify-content-center" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    See More Reviews
+                                    <i class="fa-solid fa-location-arrow"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <div class="col-md-4">
                     <div class="sticky-top visa-sidebar-main">
                         <div class="visa-sidebar position-relative">
@@ -380,7 +616,7 @@
             <div class="row g-4">
                 <div class="col-4">
                     <div class="footer-logo">
-                        <img src="assets/img/vokit-logo.svg" alt="logo" class="h-100 img-fluid">
+                        <img src="assets/img/logo.svg" alt="logo" class="h-100 img-fluid">
                     </div>
                     <p class="footer-para">Your one-stop travel solution, from planning to discovering, booking, and sharing memories.</p>
                     <ul class="list-unstyled mb-0 p-0 footer-social-list d-flex align-items-center ">
@@ -534,5 +770,167 @@
         });
         });
     </script>
+
+    <!-- partner slider -->
+    <script>
+        var swiper = new Swiper(".partner-slider", {
+          slidesPerView: 1,
+          spaceBetween: 15,
+          loop:true,
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          },
+        });
+    </script>
+
+    <!-- review modal -->
+    <div class="modal fade visa-reviews-section review-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title fs-5 fw-semibold" id="exampleModalLabel">Customer Reviews</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row visa-reviews-wrapper">
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

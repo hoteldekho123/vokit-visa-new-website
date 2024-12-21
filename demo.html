@@ -1,109 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <style>
-        body
-{
-  background-color:#f1f1f2;
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+@mixin tablet-and-up {
+    @media screen and (min-width: 769px) { @content; }
 }
-.tile
-{
-  width:80%;
-  margin:60px auto;
+@mixin mobile-and-up {
+    @media screen and (min-width: 601px) { @content; }
 }
-#tile-1 .tab-pane
-{
-  padding:15px;
-  height:80px;
+@mixin tablet-and-down  {
+    @media screen and (max-width: 768px) { @content; }
 }
-#tile-1 .nav-tabs
-{
-  position:relative;
-  border:none!important;
-  background-color:#fff;
-/*   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2); */
-  border-radius:6px;
+@mixin mobile-only {
+    @media screen and (max-width: 600px) { @content; }
 }
-#tile-1 .nav-tabs li
-{
-  margin:0px!important;
+
+
+ul, li{
+  list-style: none;
+  padding: 0;
 }
-#tile-1 .nav-tabs li a
-{
-  position:relative;
-  margin-right:0px!important;
-  padding: 20px 40px!important;
-  font-size:16px;
-  border:none!important;
-  color:#333;
+
+h1{
+  font-size: 1.1rem;
+  font-family: sans-serif;
 }
-#tile-1 .nav-tabs a:hover
-{
-  background-color:#fff!important;
-  border:none;
+.sessions{
+  margin-top: 2rem;
+  border-radius: 12px;
+  position: relative;
 }
-#tile-1 .slider
-{
-  display:inline-block;
-  width:30px;
-  height:4px;
-  border-radius:3px;
-  background-color:#39bcd3;
-  position:absolute;
-  z-index:1200;
-  bottom:0;
-  transition:all .4s linear;
-  
+li{
+  padding-bottom: 1.5rem;
+  border-left: 1px solid #abaaed;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 10px;
+  &:last-child{
+    border: 0px;
+    padding-bottom: 0;
+  }
+  &:before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 1px solid #4e5ed3;
+    box-shadow: 3px 3px 0px #bab5f8;
+    box-shadow: 3px 3px 0px #bab5f8;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+  }
 }
-#tile-1 .nav-tabs .active
-{
-  background-color:transparent!important;
-  border:none!important;
-  color:#39bcd3!important;
+.time{
+  color: #2a2839;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  @include mobile-and-up{
+    font-size: .9rem;
+  }
+  @include mobile-only{
+    margin-bottom: .3rem;
+    font-size: 0.85rem;
+  }
+
 }
-    </style>
+p{
+  color: #4f4f4f;
+      font-family: sans-serif;
+  line-height: 1.5;
+  margin-top:0.4rem;
+  @include mobile-only{
+    font-size: .9rem;
+  }
+}
+  </style>
 </head>
 <body>
-    <div class="tile" id="tile-1">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
-            </li>
-        </ul>
-        <!-- Tab panes -->
-        <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
-            <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
-        </div>
+  <div class="container">
+    <div class="timeline-main">
+      <ul class="timeline-list">
+        <li>
+          <div class="time">09:00 AM</div>
+          <p>How is it already 9:00? Just how??? 🤯🤯</p>
+        </li>
+        <li>
+          <div class="time">09:05 AM</div>
+          <p>Few more minutes of sleep won't do anyone any harm 🤷..</p>
+        </li>
+        <li>
+          <div class="time">09:30 AM</div>
+          <p>Get up 🙄</p>
+        </li>
+        <li>
+          <div class="time">1:00 PM</div>
+          <p>How can I feel sleepy again?😵</p>
+        </li>
+        <li>
+          <div class="time">01:30 PM</div>
+          <p>Lunch time after which sleep just doesn't want to let go of me. 🤝</p>
+        </li>
+        <li>
+          <div class="time">3:30 PM</div>
+          <p>Drink the magical chai, it will ward off sleep they said. 🤷‍</p>
+        </li>
+        <li>
+          <div class="time">4:30 PM </div>
+          <p>The only time I don't feel sleepy cause it's work out time. I mean walking time. 😹</p>
+        </li>
+        <li>
+          <div class="time">07:00 PM </div>
+          <p>Food my tummy needs, sleep my body needs.👿</p>
+        </li>
+        <li>
+          <div class="time">07:30 PM </div>
+          <p>My tummy's happy time 🍝</p>
+        </li>
+        <li>
+          <div class="time">10:00 PM </div>
+          <p>uh oh!!! fuel low, get some snacks but wait should I just take a quick nap?🤓 </p>
+        </li>
+        <li>
+          <div class="time">2:30 PM </div>
+          <p>All hail! The time to sleep has finally arrived.😴😴😴😴😴 </p>
+        </li>
+      </ul>
     </div>
-
-    <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
-    <!-- <script>
-        $("#tile-1 .nav-tabs a").click(function() {
-        var position = $(this).parent().position();
-        var width = $(this).parent().width();
-            $("#tile-1 .slider").css({"left":+ position.left,"width":width});
-        });
-        var actWidth = $("#tile-1 .nav-tabs").find(".active").parent("li").width();
-        var actPosition = $("#tile-1 .nav-tabs .active").position();
-        $("#tile-1 .slider").css({"left":+ actPosition.left,"width": actWidth});
-    </script> -->
+  </div> 
 </body>
 </html>
