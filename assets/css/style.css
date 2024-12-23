@@ -55,6 +55,7 @@ body , html{
 }
 .navbar-two {
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    height: 65px;
 }
 .navbar .navbar-brand {
     height: 35px;
@@ -765,7 +766,8 @@ body , html{
 
 /***** visa sidebar start *****/
 .visa-sidebar-main {
-    top: 100px;
+    top: 70px;
+    z-index: 0;
 }
 .visa-sidebar {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -953,7 +955,7 @@ body , html{
     font-size: 19px;
 }
 .visa-sidebar .visa-sidebar-btn-main {
-    margin-top: 25px;
+    margin-top: 20px;
 }
 .visa-sidebar .visa-sidebar-btn {
     background-color: var(--theme1) ;
@@ -974,7 +976,7 @@ body , html{
     background-color: var(--theme1);
     padding: 12px;
     border-radius: 14px;
-    margin-top: 25px;
+    margin-top: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     gap: 12px;
 }
@@ -1042,6 +1044,9 @@ body , html{
     background-color: #d4483b28;
     border-radius: 8px;
 }
+.visa-info-section .visa-info-card .tooltip-icon {
+    color: #333;
+}
 .visa-info-section .visa-info-card-main:nth-child(2) .visa-info-card-icon {
     background-color: #0d6dfd2c;
     fill: #0d6efd;
@@ -1059,6 +1064,8 @@ body , html{
 }
 .visa-info-section .visa-info-card .visa-info-card-subtitle {
     font-size: 14px;
+    gap: 5px;
+    margin-top: 2px;
 }
 /* visa info seciton end */
 
@@ -1291,6 +1298,11 @@ body , html{
     color: var(--theme1);
     border-radius: 8px;
     gap: 12px;
+    transition: all 0.3s ease-in-out;
+}
+.visa-reviews-section .visa-review-btn:hover {
+    background-color: var(--theme1);
+    color: #fff;
 }
 /* visa review section end */
 
@@ -1301,32 +1313,33 @@ body , html{
 /* review modal end */
 
 /* visa faq section start */
+.visa-faq-section .accordion {
+    gap: 5px;
+}
 .visa-faq-section .accordion-item {
     border: none;
-    border-bottom: 1px dashed var(--theme1);
-    padding: 6px 0;
 }
 .visa-faq-section .accordion-button::after {
     display: none;
 }
 .visa-faq-section .accordion-button::before {
-    content: '\f061';
+    content: '\2b';
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     transition: all 0.3s ease-in-out;
-    height: 37px;
-    width: 37px;
-    border: 1px dashed #000;
+    height: 28px;
+    width: 28px;
     border-radius: 50%;
     font-family: 'font awesome 6 free';
     font-weight:900;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 13px;
     line-height: normal;
+    background-color: #eee;
 }
 .visa-faq-section .accordion-button {
     color: black;
@@ -1337,19 +1350,92 @@ body , html{
     color: var(--theme1);
 }
 .visa-faq-section .accordion-button:not(.collapsed)::before {
-    border-color: var(--theme1);
-    transform:translateY(-50%) rotate(90deg);
+    content: '\f068';
+    /* transform:translateY(-50%) rotate(90deg); */
+    background-color: var(--theme1);
+    color: #fff;
 }
 .visa-faq-section .accordion-body {
     border-top: 1px solid #57575752;
-    margin-top: 12px;
 }
 .visa-faq-section .accordion-body p {
     font-size: 15px;
     color: #424242;
     line-height: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 /* visa faq section end */
+
+/* Statistics on visa section start */
+.statistics-data-card {
+    border: 1px solid #eee;
+    border-radius: 14px;
+    /* padding: 20px; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.statistics-data-card .nav-link {
+    font-weight: 500;
+}
+.statistics-data-card .statistics-data-card-header {
+    padding: 15px;
+    background-color: #eee;
+}
+.statistics-data-tab{
+    margin-top: 18px;
+    background-color: #eee;
+    border-radius: 8px;
+    padding: 8px;
+    gap: 6px;
+}
+.statistics-data-tab .nav-link {
+    border: 0;
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 11px 22px;
+    color: #000;
+}
+.statistics-data-tab .nav-link.active {
+    background-color: var(--theme1);
+    color: #ffff;
+}
+.statistics-data-card .statistics-data-card-heading {
+    font-size: 18px;
+}
+.statistics-data-card .form-select {
+    font-size: 15px;
+}
+/* Statistics on visa section end */
+
+/* visa rejection reason section start */
+.rejection-card {
+    background-color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #33333321;
+}
+.rejection-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.rejection-card .rejection-icon {
+    font-size: 22px;
+    color: var(--theme1);
+    margin-bottom: 10px;
+}
+.rejection-card .rejection-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+}
+.rejection-card .rejection-text {
+    font-size: 14px;
+    color: #7f8c8d;
+    margin-top: 5px;
+    line-height: 26px;
+}
+/* visa rejection reason section end */
 
 /***** visa detail section end *****/

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- swiper css -->
     <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font family -->
@@ -95,7 +96,7 @@
                                         </div>
                                         <div>
                                             <div class="fw-medium text-black visa-info-card-title">Visa Type:</div>
-                                            <div class="visa-info-card-subtitle">E-Visa</div>
+                                            <div class="visa-info-card-subtitle d-flex align-items-center">E-Visa </div>
                                         </div>
                                     </div>
                                 </div>
@@ -108,7 +109,22 @@
                                         </div>
                                         <div>
                                             <div class="fw-medium text-black visa-info-card-title">Length of Stay:</div>
-                                            <div class="visa-info-card-subtitle">30 days</div>
+                                            <div class="visa-info-card-subtitle d-flex align-items-center">
+                                                30 days 
+                                                <div class="custom-tooltip position-relative">
+                                                    <div class="tooltip-icon">
+                                                        <i class="fa-solid fa-circle-info"></i>
+                                                    </div>
+                                                    <div class="tooltip-detail-main position-absolute">
+                                                        <div class="tooltip-details position-relative">
+                                                            <div class="tooltip-title fw-medium">
+                                                                Government Fee 
+                                                            </div>
+                                                            <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -121,7 +137,22 @@
                                         </div>
                                         <div>
                                             <div class="fw-medium text-black visa-info-card-title">Validity:</div>
-                                            <div class="visa-info-card-subtitle">60 days</div>
+                                            <div class="visa-info-card-subtitle d-flex align-items-center">
+                                                60 days 
+                                                <div class="custom-tooltip position-relative">
+                                                    <div class="tooltip-icon">
+                                                        <i class="fa-solid fa-circle-info"></i>
+                                                    </div>
+                                                    <div class="tooltip-detail-main position-absolute">
+                                                        <div class="tooltip-details position-relative">
+                                                            <div class="tooltip-title fw-medium">
+                                                                Government Fee 
+                                                            </div>
+                                                            <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -134,7 +165,22 @@
                                         </div>
                                         <div>
                                             <div class="fw-medium text-black visa-info-card-title">Entry:</div>
-                                            <div class="visa-info-card-subtitle">Single</div>
+                                            <div class="visa-info-card-subtitle d-flex align-items-center">
+                                                Single
+                                                <div class="custom-tooltip position-relative">
+                                                    <div class="tooltip-icon">
+                                                        <i class="fa-solid fa-circle-info"></i>
+                                                    </div>
+                                                    <div class="tooltip-detail-main position-absolute">
+                                                        <div class="tooltip-details position-relative">
+                                                            <div class="tooltip-title fw-medium">
+                                                                Government Fee 
+                                                            </div>
+                                                            <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             </div>
                                         </div>
                                     </div>
                                 </div>                       
@@ -326,19 +372,42 @@
                         <!-- visa timeline section end -->
 
                         <!-- Statistics on visa section start -->
-                        <div class="reject-reason-section visa-gap">
+                        <div class="statistics-data-section visa-gap">
                             <div class="visa-heading-main d-inline-flex align-items-center">
                                 <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="19">
                                 <h2 class="visa-heading mb-0">
-                                    Dubai Visa Rejection Reasons
+                                    Statistics on Egypt Visa
                                 </h2>
                             </div>
-                            <div>
-
+                            <!-- <ul class="nav nav-tabs statistics-data-tab border-0" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link fw-medium active " id="visa-time-tab" data-bs-toggle="tab" data-bs-target="#visa-time-tab-pane" type="button" role="tab" aria-controls="visa-time-tab-pane" aria-selected="true">Visa Processing Time</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                  <button class="nav-link fw-medium" id="approve-rating" data-bs-toggle="tab" data-bs-target="#approve-rating-pane" type="button" role="tab" aria-controls="approve-rating-pane" aria-selected="false">Approval Rating</button>
+                                </li>
+                            </ul> -->
+                            <div class="statistics-data-card mt-3">
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="statistics-data-card-header border-bottom d-flex align-items-center justify-content-between">
+                                        <div class="fw-semibold statistics-data-card-heading">
+                                            Approval Rating
+                                        </div>
+                                        <select id="timeRange" class="form-select w-auto shadow-none">
+                                            <option value="daily">Daily</option>
+                                            <option value="weekly">Weekly</option>
+                                            <option value="monthly">Monthly</option>
+                                            <option value="yearly">Yearly</option>
+                                        </select>
+                                    </div>
+                                    <div class="tab-pane fade show active" id="visa-time-tab-pane" role="tabpanel" aria-labelledby="visa-time-tab" tabindex="0">
+                                        <div id="chart"></div>
+                                    </div>
+                                    <div class="tab-pane fade" id="approve-rating-pane" role="tabpanel" aria-labelledby="approve-rating" tabindex="0">...</div>
+                                </div>
                             </div>
                         </div>
                         <!-- Statistics on visa section end -->
-
 
                         <!-- visa review section start -->
                         <div class="visa-reviews-section visa-gap">
@@ -422,6 +491,46 @@
                         </div>
                         <!-- visa review section end -->
 
+                        <!-- visa rejection reason start -->
+                        <div class="visa-reject-reason-section visa-gap">
+                            <div class="visa-heading-main d-inline-flex align-items-center">
+                                <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="19">
+                                <h2 class="visa-heading mb-0">
+                                    Egypt Visa Rejection Reasons
+                                </h2>
+                            </div>
+                            <div class="row g-3 mt-2">
+                                <div class="col-md-4">
+                                    <div class="rejection-card h-100">
+                                        <div class="rejection-icon">
+                                            <i class="fas fa-times-circle"></i>
+                                        </div>
+                                        <div class="rejection-title">Expired Passport</div>
+                                        <div class="rejection-text">Submitting a passport that has expired or is about to expire within 6 months.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="rejection-card h-100">
+                                        <div class="rejection-icon">
+                                            <i class="fas fa-user-slash"></i>
+                                        </div>
+                                        <div class="rejection-title">Criminal Record</div>
+                                        <div class="rejection-text">A criminal history can prevent you from obtaining a visa.</div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="rejection-card h-100">
+                                      <div class="rejection-icon">
+                                        <i class="fas fa-ban"></i>
+                                      </div>
+                                      <div class="rejection-title">Previous Visa Violations</div>
+                                      <div class="rejection-text">Violating visa rules or overstaying may result in rejection.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- visa rejection reason end -->
+
                         <!-- visa faq section start -->
                         <div class="visa-faq-section visa-gap">
                             <div class="visa-heading-main d-inline-flex align-items-center">
@@ -474,6 +583,7 @@
                             </div>
                         </div>
                         <!-- visa faq section end -->
+
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -521,7 +631,7 @@
                                         <button class="visa-sidebar-data-btn plus-btn h-100 border-start"><i class="fa-solid fa-plus"></i></button>
                                     </div>
                                 </div>
-                                <div class="tab-content mt-4" id="myTabContent">
+                                <div class="tab-content mt-3" id="myTabContent">
                                     <div class="tab-pane fade show active" id="regular-tab-pane" role="tabpanel" aria-labelledby="regular-tab" tabindex="0">
                                         <div class="visa-sidebar-title fw-semibold">
                                             Price
@@ -666,7 +776,7 @@
                                     </div>
                                 </div>
                                 <div class="visa-sidebar-btn-main">
-                                    <a href="" class="visa-sidebar-btn d-flex align-items-center justify-content-center text-decoration-none">
+                                    <a href="demo.html" class="visa-sidebar-btn d-flex align-items-center justify-content-center text-decoration-none">
                                         <span class="visa-sidebar-btn-icon "><img src="assets/img/guarantee-icon.svg" height="20" alt="guarantee"></span>
                                         Start Application
                                     </a>
@@ -770,107 +880,6 @@
         </div>
     </footer>
     <!-- ***** footer end ***** -->
-
-    <!-- js files -->
-    <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
-
-    <!-- hero input  -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const pairs = [
-                { inputId: 'searchinput1', cardId: 'searchcard1' },
-                { inputId: 'searchinput2', cardId: 'searchcard2' }
-            ];
-
-            pairs.forEach(function (pair) {
-                const input = document.getElementById(pair.inputId);
-                const div = document.getElementById(pair.cardId);
-
-                function toggleSearchCard() {
-                    if (div.classList.contains('d-none')) {
-                        div.classList.remove('d-none');
-                    } else {
-                        div.classList.add('d-none');
-                    }
-                }
-
-                input.addEventListener('click', function (event) {
-                    event.stopPropagation(); // Prevent bubbling
-                    toggleSearchCard();
-                });
-
-                document.addEventListener('click', function (event) {
-                    if (!input.contains(event.target) && !div.contains(event.target)) {
-                        div.classList.add('d-none');
-                    }
-                });
-            });
-        });
-
-    </script> 
-
-    <!-- hero text change -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const textElement = document.getElementById('animated-text');
-            const messages = [
-                'Your Trusted Visa Partner',
-                'Visas Simplified, Globally',
-                'Hassle-Free Visa Services',
-                'On Time, Every Time'
-            ];
-            let currentIndex = 0;
-            function changeText() {
-                textElement.textContent = messages[currentIndex];
-                currentIndex = (currentIndex + 1) % messages.length;
-            }
-            setInterval(changeText, 2000);
-        });
-
-    </script>
-
-    <!-- minus plus input -->
-    <script>
-        document.querySelectorAll('.visa-sidebar-traveller-data').forEach((inputContainer) => {
-        const minusBtn = inputContainer.querySelector('.minus-btn');
-        const plusBtn = inputContainer.querySelector('.plus-btn');
-        const inputField = inputContainer.querySelector('.visa-sidebar-data-input');
-        minusBtn.addEventListener('click', () => {
-            let currentValue = parseInt(inputField.value);
-            if (currentValue > parseInt(inputField.min)) {
-            inputField.value = currentValue - 1;
-            }
-        });
-        plusBtn.addEventListener('click', () => {
-            let currentValue = parseInt(inputField.value);
-            if (currentValue < parseInt(inputField.max)) {
-            inputField.value = currentValue + 1;
-            }
-        });
-        });
-    </script>
-
-    <!-- partner slider -->
-    <script>
-        var swiper = new Swiper(".partner-slider", {
-          slidesPerView: 1,
-          spaceBetween: 15,
-          loop:true,
-          breakpoints: {
-            640: {
-              slidesPerView: 2,
-            },
-            768: {
-              slidesPerView: 4,
-            },
-            1024: {
-              slidesPerView: 5,
-            },
-          },
-        });
-    </script>
 
     <!-- review modal -->
     <div class="modal fade visa-reviews-section review-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -1014,28 +1023,201 @@
         </div>
     </div>
 
+    <!-- js files -->
+    <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+
+    <!-- hero input  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const pairs = [
+                { inputId: 'searchinput1', cardId: 'searchcard1' },
+                { inputId: 'searchinput2', cardId: 'searchcard2' }
+            ];
+
+            pairs.forEach(function (pair) {
+                const input = document.getElementById(pair.inputId);
+                const div = document.getElementById(pair.cardId);
+
+                function toggleSearchCard() {
+                    if (div.classList.contains('d-none')) {
+                        div.classList.remove('d-none');
+                    } else {
+                        div.classList.add('d-none');
+                    }
+                }
+
+                input.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Prevent bubbling
+                    toggleSearchCard();
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!input.contains(event.target) && !div.contains(event.target)) {
+                        div.classList.add('d-none');
+                    }
+                });
+            });
+        });
+
+    </script> 
+
+    <!-- hero text change -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const textElement = document.getElementById('animated-text');
+            const messages = [
+                'Your Trusted Visa Partner',
+                'Visas Simplified, Globally',
+                'Hassle-Free Visa Services',
+                'On Time, Every Time'
+            ];
+            let currentIndex = 0;
+            function changeText() {
+                textElement.textContent = messages[currentIndex];
+                currentIndex = (currentIndex + 1) % messages.length;
+            }
+            setInterval(changeText, 2000);
+        });
+
+    </script>
+
+    <!-- minus plus input -->
+    <script>
+        document.querySelectorAll('.visa-sidebar-traveller-data').forEach((inputContainer) => {
+        const minusBtn = inputContainer.querySelector('.minus-btn');
+        const plusBtn = inputContainer.querySelector('.plus-btn');
+        const inputField = inputContainer.querySelector('.visa-sidebar-data-input');
+        minusBtn.addEventListener('click', () => {
+            let currentValue = parseInt(inputField.value);
+            if (currentValue > parseInt(inputField.min)) {
+            inputField.value = currentValue - 1;
+            }
+        });
+        plusBtn.addEventListener('click', () => {
+            let currentValue = parseInt(inputField.value);
+            if (currentValue < parseInt(inputField.max)) {
+            inputField.value = currentValue + 1;
+            }
+        });
+        });
+    </script>
+
+    <!-- partner slider -->
+    <script>
+        var swiper = new Swiper(".partner-slider", {
+          slidesPerView: 1,
+          spaceBetween: 15,
+          loop:true,
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          },
+        });
+    </script>
+
     <!-- country time -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-          const country = "Dubai"; // Example static country, replace with dynamic data from backend
-          const timezone = "Asia/Dubai"; // Example timezone, replace with backend response
-          document.getElementById('country-name').textContent = country;
-          function updateTime() {
-              const options = {
-                  timeZone: timezone,
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                  hour: '2-digit',
-                  minute: '2-digit',
-                  second: '2-digit',
-              };
-  
-              const formatter = new Intl.DateTimeFormat('en-US', options);
-              document.getElementById('current-time').textContent = formatter.format(new Date());
+            const country = "Dubai"; // Example static country, replace with dynamic data from backend
+            const timezone = "Asia/Dubai"; // Example timezone, replace with backend response
+            document.getElementById('country-name').textContent = country;
+            function updateTime() {
+                const options = {
+                    timeZone: timezone,
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                };
+                const formatter = new Intl.DateTimeFormat('en-US', options);
+                document.getElementById('current-time').textContent = formatter.format(new Date());
+            }
+            updateTime();
+            setInterval(updateTime, 1000);
+        });
+    </script>
+
+    <!-- chart js -->
+    <script>
+        const getDailyCategories = () => {
+          const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+          const today = new Date();
+          let categories = ["Today"];
+          
+          for (let i = 1; i <= 6; i++) {
+            const dayIndex = (today.getDay() - i + 7) % 7; 
+            categories.push(daysOfWeek[dayIndex]); 
           }
-          updateTime();
-          setInterval(updateTime, 1000);
+          return categories.reverse();
+        };
+        const dataSets = {
+          daily: [15, 18, 12, 20, 25, 10, 30],
+          weekly: [70, 120, 90, 100, 130, 150, 180, 200],
+          monthly: [300, 400, 500, 600, 700, 800, 900, 1000, 1100],
+          yearly: [5000, 6000, 7000, 8000, 9000, 10000],
+        };
+        const categories = {
+          daily: getDailyCategories(),
+          weekly: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8'],
+          monthly: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+          yearly: ['2018', '2019', '2020', '2021', '2022', '2023'],
+        };
+        var options = {
+          chart: {
+            type: 'line',
+            height: 350,
+            toolbar: { show: false },
+          },
+          series: [
+            {
+              name: 'Visa Approve',
+              data: dataSets.daily,
+            },
+          ],
+          xaxis: {
+            categories: categories.daily,
+          },
+          title: {
+            align: 'center',
+            style: {
+              fontSize: '18px',
+              color: '#333',
+            },
+          },
+          colors: ['#1E90FF'],
+          stroke: {
+            curve: 'smooth',
+            width: 2,
+          },
+        };
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+        document.querySelector("#timeRange").addEventListener("change", function (e) {
+          const range = e.target.value;
+    
+          // Update chart data
+          chart.updateOptions({
+            series: [
+              {
+                name: 'Sales',
+                data: dataSets[range],
+              },
+            ],
+            xaxis: {
+              categories: categories[range],
+            },
+          });
         });
     </script>
 </body>
