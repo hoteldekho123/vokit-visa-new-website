@@ -44,7 +44,41 @@
         <div class="container">
             <div class="row gx-5">
                 <div class="col-md-8 pe-5">
-                    
+                    <div class="form-card">
+                        <div class="form-card-heading fw-bold position-relative">Passport Scan</div>
+                        <div class="upload-card-main">
+                            <div class="upload-card-title text-center fw-semibold">
+                                The Dubai government requires front page of your Passport
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-5 mx-auto">
+                                    <div class="upload-card">
+                                        <div class="preview-container position-relative text-center rounded-3 overflow-hidden" id="preview-container">
+                                            <div class="row">
+                                                <div class="col-8 mx-auto" id="placeholder">
+                                                    <img src="assets/img/upload-doc-pc.svg" alt="Default Placeholder" class="placeholder-img d-sm-block d-none mx-auto w-100 h-100">
+                                                    <img src="assets/img/scan-photo.svg" alt="Default Placeholder" class="placeholder-img d-sm-none d-block mx-auto w-100 h-100">
+                                                </div>
+                                            </div>
+                                            <div class="preview" id="preview"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="upload-options d-flex align-items-center justify-content-center" id="upload-options">
+                                <button class="upload-button d-flex align-items-center justify-content-center" onclick="triggerFileUpload()">
+                                    <img src="assets/img/upload-document.svg" alt="upload document" height="18">
+                                    Upload File
+                                </button>
+                                <button class="upload-button d-flex align-items-center justify-content-center" onclick="triggerCamera()">
+                                    <img src="assets/img/camera-icon.svg" alt="click icon" height="18">
+                                    Take Photo
+                                </button>
+                            </div>
+                            <input type="file" id="file-input" accept=".png, .jpg, .jpeg, .pdf" style="display: none;" onchange="handleFileUpload(event)">
+                            <input type="file" id="camera-input" accept="image/*" capture="environment" style="display: none;" onchange="handleFileUpload(event)">
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="sticky-top visa-sidebar-main">
@@ -55,7 +89,7 @@
                                         <img src="assets/img/guarantee-icon.svg" alt="guarantee" height="40">
                                     </div>
                                     <div>
-                                        <div class="visa-sidebar-header-title fw-medium">Dubai Visa For Indians</div>
+                                        <div class="visa-sidebar-header-title fw-medium">Visa guaranteed on</div>
                                         <div class="visa-sidebar-header-time">24 Dec 2024 at 06:00 PM</div>
                                     </div>
                                 </div>

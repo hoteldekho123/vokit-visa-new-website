@@ -1439,3 +1439,83 @@ body , html{
 /* visa rejection reason section end */
 
 /***** visa detail section end *****/
+
+
+/***** form section start *****/
+.form-card{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 20px;
+    border: 1px solid #c5c5c5;
+    border-radius: 14px;
+}
+.form-card .form-card-heading {
+    font-size: 20px;
+    line-height: normal;
+}
+.form-card .form-card-heading::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 4px;
+    width: 2px;
+    height: 15px;
+    background-color: var(--theme1);
+}
+
+.upload-card-main .upload-card-title {
+    font-size: 17px;
+    margin-top: 30px;
+}
+.upload-card {
+    background-color: #eee;
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 15px;
+}
+.upload-card-main .preview {
+    display: none;
+}
+.upload-card-main .upload-options {
+    gap: 10px;
+    margin-top: 25px;
+}
+.upload-card-main .upload-button {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #D4483B;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 6px;
+}
+.upload-card-main .upload-button:hover {
+    background-color: #B7382A;
+}
+
+.upload-card-main .preview-actions {
+    margin-top: 10px;
+  }
+
+.upload-card-main .preview-actions button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+.upload-card-main .btn-edit {
+    background-color: #4285F4;
+}
+.upload-card-main .btn-remove {
+    background-color: #D4483B;
+}
+.upload-card-main .btn-edit:hover {
+    background-color: #3367D6;
+}
+.upload-card-main .btn-remove:hover {
+    background-color: #B7382A;
+}
+/***** form section end *****/

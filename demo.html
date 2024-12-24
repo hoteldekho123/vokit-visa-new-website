@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobile File and Camera Upload</title>
+  <title>File Upload with Preview</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,6 +18,25 @@
       border-radius: 10px;
       text-align: center;
       margin: 0 auto;
+    }
+
+    .preview-container {
+      position: relative;
+      text-align: center;
+    }
+
+    .preview-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .placeholder {
+      display: block;
+    }
+
+    .preview {
+      display: none;
     }
 
     .upload-options {
@@ -38,18 +57,6 @@
 
     .upload-button:hover {
       background-color: #B7382A;
-    }
-
-    .preview-container {
-      display: none;
-      margin-top: 20px;
-      text-align: center;
-    }
-
-    .preview-container img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 10px;
     }
 
     .preview-actions {
@@ -86,7 +93,11 @@
 
   <div class="upload-box">
     <h2>Upload Your File</h2>
-    <div class="upload-options">
+    <div class="preview-container " id="preview-container">
+      <img src="https://via.placeholder.com/400x200.png?text=Default+Image" alt="Default Placeholder" class="placeholder" id="placeholder">
+      <div class="preview" id="preview"></div>
+    </div>
+    <div class="upload-options" id="upload-options">
       <button class="upload-button" onclick="triggerFileUpload()">Upload File</button>
       <button class="upload-button" onclick="triggerCamera()">Take Photo</button>
     </div>
@@ -94,21 +105,12 @@
     <input type="file" id="camera-input" accept="image/*" capture="environment" style="display: none;" onchange="handleFileUpload(event)">
   </div>
 
-  <div class="preview-container" id="preview-container">
-    <div id="preview">
-      <!-- File preview (image or file name) will be shown here -->
-    </div>
-    <div class="preview-actions">
-      <button class="btn-edit" onclick="triggerFileUpload()">Edit</button>
-      <button class="btn-remove" onclick="removeFile()">Remove</button>
-    </div>
-  </div>
-
   <script>
     const fileInput = document.getElementById('file-input');
     const cameraInput = document.getElementById('camera-input');
-    const previewContainer = document.getElementById('preview-container');
+    const placeholder = document.getElementById('placeholder');
     const preview = document.getElementById('preview');
+    const uploadOptions = document.getElementById('upload-options');
 
     // Trigger file input for file upload
     function triggerFileUpload() {
@@ -124,8 +126,9 @@
     function handleFileUpload(event) {
       const file = event.target.files[0];
       if (file) {
-        // Show preview container
-        previewContainer.style.display = 'block';
+        // Hide placeholder
+        placeholder.style.display = 'none';
+        preview.style.display = 'block';
 
         // Check if the uploaded file is an image
         if (file.type.startsWith('image/')) {
@@ -145,7 +148,9 @@
     function removeFile() {
       fileInput.value = ''; // Clear file input
       cameraInput.value = ''; // Clear camera input
-      previewContainer.style.display = 'none'; // Hide preview
+      placeholder.style.display = 'block'; // Show placeholder
+      preview.style.display = 'none'; // Hide preview
+      preview.innerHTML = ''; // Clear preview content
     }
   </script>
 
