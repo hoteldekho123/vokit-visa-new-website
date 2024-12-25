@@ -1314,10 +1314,12 @@ body , html{
 
 /* visa faq section start */
 .visa-faq-section .accordion {
-    gap: 5px;
+    gap: 15px;
 }
 .visa-faq-section .accordion-item {
     border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 6px;
 }
 .visa-faq-section .accordion-button::after {
     display: none;
@@ -1325,7 +1327,7 @@ body , html{
 .visa-faq-section .accordion-button::before {
     content: '\2b';
     position: absolute;
-    right: 0;
+    right: 12px;
     top: 50%;
     transform: translateY(-50%);
     transition: all 0.3s ease-in-out;
@@ -1345,6 +1347,7 @@ body , html{
     color: black;
     transition: all 0.3s ease-in-out;
     font-size: 17px;
+    padding: 16px;
 }
 .visa-faq-section .accordion-button:not(.collapsed){
     color: var(--theme1);
@@ -1357,6 +1360,7 @@ body , html{
 }
 .visa-faq-section .accordion-body {
     border-top: 1px solid #57575752;
+    padding: 16px;
 }
 .visa-faq-section .accordion-body p {
     font-size: 15px;
@@ -1449,10 +1453,13 @@ body , html{
     border-radius: 14px;
 }
 .form-card .form-card-heading {
-    font-size: 20px;
+    gap: 10px;
+}
+.form-card .form-heading {
+    font-size: 27px;
     line-height: normal;
 }
-.form-card .form-card-heading::before {
+/* .form-card .form-card-heading::before {
     content: '';
     position: absolute;
     left: -9px;
@@ -1460,62 +1467,499 @@ body , html{
     width: 2px;
     height: 15px;
     background-color: var(--theme1);
+} */
+.form-card .visa-form-price {
+    font-size: 18px;
+    color: var(--theme1);
 }
-
-.upload-card-main .upload-card-title {
-    font-size: 17px;
-    margin-top: 30px;
+.form-group .form-input {
+    font-size: 14px;
+    height: 42px;
+    margin-top: 2px;
 }
-.upload-card {
-    background-color: #eee;
-    border-radius: 15px;
-    padding: 15px;
-    margin-top: 15px;
+.form-input-group .input-label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    padding-left: 2px;
 }
-.upload-card-main .preview {
-    display: none;
+.form-input-group .form-input {
+    height: 44px;
+    font-size: 14px;
+    border-color: #b3b3b3;
+    border-radius: 8px;
 }
-.upload-card-main .upload-options {
-    gap: 10px;
-    margin-top: 25px;
+.form-input-group .select2-selection {
+    height: 42px !important;
+    display: flex !important;
+    align-items: center;
+    border-radius: 8px !important;
 }
-.upload-card-main .upload-button {
-    display: inline-block;
-    padding: 10px 25px;
-    background-color: #D4483B;
-    color: white;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    gap: 6px;
+.form-input-group .select2-selection__rendered {
+    font-size: 14px !important;
 }
-.upload-card-main .upload-button:hover {
-    background-color: #B7382A;
+.form-input-group .select2-selection__arrow {
+    height: 42px !important;
+    top: 0 !important;
 }
-
-.upload-card-main .preview-actions {
-    margin-top: 10px;
-  }
-
-.upload-card-main .preview-actions button {
-    padding: 5px 10px;
-    margin: 0 5px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.form-input-group .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+.form-input-group .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+.form-card .form-btn-main {
+    margin-top: 35px;
+    gap: 15px;
+}
+.form-card .form-btn {
+    background-color: var(--theme1);
     color: #fff;
+    border: 1px solid var(--theme1);
+    padding: 9px 30px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 6px;
+    gap: 8px;
+    transition: all 0.3s ease-in-out;
 }
-.upload-card-main .btn-edit {
-    background-color: #4285F4;
+.form-card .form-btn:hover {
+    background-color: transparent;
+    color: var(--theme1);
 }
-.upload-card-main .btn-remove {
-    background-color: #D4483B;
+.form-card .form-btn-one {
+    background-color: var(--theme2);
+    border-color: var(--theme2);
 }
-.upload-card-main .btn-edit:hover {
-    background-color: #3367D6;
-}
-.upload-card-main .btn-remove:hover {
-    background-color: #B7382A;
+.form-card .form-btn-one:hover {
+    color: var(--theme2);
 }
 /***** form section end *****/
+
+
+/***** page heading section start *****/
+.page-heading {
+    height: 320px;
+    background: url(../img/page-heading.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 60px;
+}
+.page-heading .hero-img {
+    z-index: -1;
+}
+.page-heading::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+.page-heading .heading-section-heading>* {
+    font-size: 35px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: normal;
+}
+.page-heading .breadcrumb {
+    gap: 10px;
+}
+.page-heading .breadcrumb .breadcrumb-item {
+    font-size: 15px;
+    padding: 0;
+}
+.page-heading .breadcrumb .breadcrumb-item a {
+    color: #fff;
+    gap: 7px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.page-heading .breadcrumb .breadcrumb-item::before {
+    display: none;
+}
+.page-heading .breadcrumb .breadcrumb-item.active {
+    color: rgba(255, 255, 255, .8);
+    padding: 0;
+}
+.page-heading .breadcrumb .breadcrumb-item i {
+    font-size: 12px;
+}
+/***** page heading section end *****/
+
+
+/***** eligible country search start *****/
+.eligible-single-search-section .visa-search-card {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 13px;
+}
+.search-hero-section .visa-search-card .serach-heading-main {
+    gap: 9px;
+}
+.search-hero-section .visa-search-card .serach-heading {
+    font-size: 28px;
+    line-height: normal;
+}
+.search-hero-section .visa-search-card .select2-container {
+    height: 48px;
+}
+.search-hero-section .visa-search-card .select2-container .selection {
+    height: 100%;
+    display: block;
+}
+.search-hero-section .visa-search-card .select2-container .select2-selection {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.search-hero-section .visa-search-card .select2-container .select2-selection__arrow {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+.search-hero-section .visa-search-card .select2-container .select2-selection__rendered {
+    font-weight: 500;
+    font-size: 15px;
+}
+.search-hero-section .visa-search-card .hero-btn {
+    background-color: var(--theme1);
+    color: #fff;
+    padding-inline: 28px;
+    height: 47px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+.search-hero-section .visa-search-card .hero-btn:hover {
+    background-color:#94251b;
+}
+.search-hero-section .visa-search-card .hero-label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    padding-left: 2px;
+}
+.search-hero-section .visa-search-inner {
+    margin-top: 50px;
+}
+.search-hero-section .search-hero-title span {
+    color: green;
+}
+/***** eligible country search section end *****/
+
+
+/***** eligible country section start *****/
+.eligible-country-card {
+    border-radius: 8px;
+    background: white;
+    padding: 12.5px;
+    color: #000;
+    font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: all 0.3s ease-in-out;
+}
+.eligible-country-card .eligible-country-card-text {
+    color: #000;
+    transition: all 0.3s ease-in-out;
+}
+.eligible-country-card:hover {
+    transform: translateY(-8px);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: var(--theme1);
+    border-color: var(--theme1);
+}
+.eligible-country-card:hover .eligible-country-card-text {
+    color: #fff;
+}
+.select2-results__option {
+    font-size: 14.5px;
+}
+/***** eligible country section end *****/
+
+
+/***** content section start *****/
+.content-card {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 15px;
+    border-radius: 12px;
+}
+.content-card p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    line-height: 27px;
+    color: #424242;
+}
+.content-card .show-few-lines {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+.content-card .read-more-btn {
+    color: var(--theme1);
+    font-size: 15px;
+}
+/***** content section end *****/
+
+
+/***** breadcrumb section start *****/
+.page-change-section {
+    background-color: #eee;
+    padding-block: 18px;
+    border-bottom: 1px solid #5757572c;
+}
+.page-change-section .page-change-list {
+    gap: 10px;
+}
+.page-change-section .page-change-link {
+    font-size: 14px;
+    color: var(--theme1);
+    gap: 8px;
+    font-weight: 500;
+}
+.page-change-section .page-change-link i {
+    color: #000;
+}
+.page-change-section .page-change-link a {
+    color: #000;
+}
+@media(max-width: 767px) {
+    .page-change-section .page-change-list {
+        gap:4px;
+    }
+    .page-change-section .page-change-link {
+        line-height: 23px;
+    }
+}
+/***** breadcrumb section end *****/
+
+
+/***** price section start *****/
+.price-tab {
+    border-bottom: 1px solid #eee;
+    margin-top: 30px;
+    gap: 5px;
+}
+.price-tab .nav-link {
+    border: none;
+    border-radius: 3px 25px 3px 25px;
+    color: #000;
+    padding: 8px 30px;
+    font-size: 15px;
+    background-color: #eee;
+}
+.price-tab .nav-link i {
+    margin-right: 2px;
+}
+.price-tab .nav-link span {
+    transition: all 0.3s ease-in-out;
+}
+.price-tab .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 0%;
+    background-color: var(--theme1);
+    bottom: 0;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+.price-tab .nav-link.active span {
+    color: #fff;
+}
+.price-tab .nav-link.active::before {
+    height: 100%;
+}
+
+
+.pricing-card {
+    transition: all .3s ease-in-out;
+    box-shadow: rgba(99, 99, 99, .2) 0 2px 8px 0;
+    border-radius: 12px;
+}
+.pricing-card .pricing-header {
+    padding: 12px 0;
+}
+.pricing-card .pricing-body {
+    border-radius: 0 0 12px 12px;
+    padding: 12px;
+}
+.pricing-card .pricing-card-heading {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--theme1);
+    padding: 8px 16px;
+    margin-left: -8px;
+    border-radius: 6px 6px 6px 0;
+}
+.pricing-card .pricing-card-heading::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    border: 4px solid;
+    border-color: #94291f #94291f transparent transparent;
+}
+/* .pricing-card .pricing-body::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px ;
+    background-color: var(--theme1);
+    width: 100%;
+} */
+.pricing-card .dubai-visa-price {
+    font-size: 38px;
+    font-weight: 700;
+    gap: 6px;
+    /* color: var(--theme1); */
+    margin-top: 15px;
+}
+.pricing-card .dubai-visa-price sup {
+    font-size: 18px;
+    font-weight: 600;
+}
+.pricing-card .price-card-data-inner {
+    gap: 7px;
+}
+.pricing-card .visa-checkbox {
+    margin-bottom: 0px;
+    display: flex;
+}
+.pricing-card .visa-checkbox .visa-checkbox-inner {
+    width: 85px;
+    height: 31px;
+    background: rgba(69, 90, 100, .396);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.pricing-card .visa-checkbox .visa-checkbox-inner::after {
+    content: "Regular";
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    left: 0;
+    text-align: right;
+    padding: 0 8px;
+    line-height: 31px;
+    font-size: 12px;
+    font-weight: 400;
+}
+.pricing-card .visa-checkbox .visa-checkbox-inner::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: .3s;
+    box-shadow: -3px 0 3px rgba(0, 0, 0, .1);
+}
+.pricing-card .visa-checkbox input:checked~.visa-checkbox-inner {
+    background: #31b63a;
+}
+.pricing-card .visa-checkbox input:checked~.visa-checkbox-inner::before {
+    transform: translate(54px);
+    transition: .3s;
+}
+.pricing-card .visa-checkbox input:checked~.visa-checkbox-inner::after {
+    content: "Express";
+    text-align: left;
+    font-size: 12px;
+}
+.pricing-card .price-card-data {
+    gap: 6px;
+    padding-block: 9px;
+    line-height: normal;
+    align-items: start !important;
+}
+.pricing-card .price-card-data .price-check {
+    height: 17px;
+    min-width: 17px;
+    max-width: 17px;
+    font-size: 12px;
+    background-color: #d1d1d1;
+    color: #333;
+    transition: all .3s ease-in-out;
+    margin-top: 1px;
+}
+.pricing-card .price-card-inner {
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 27px;
+    text-overflow: ellipsis;
+}
+.pricing-card .price-card-inner .service-type {
+    font-weight: 500;
+    white-space: nowrap;
+    color: #000;
+}
+.pricing-card .price-apply-btn {
+    font-weight: 500;
+    background-color: var(--theme1);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 25px;
+    transition: all .3s ease-in-out;
+    outline: none;
+    gap: 7px;
+    box-shadow: rgba(60, 64, 67, .3) 0px 1px 2px 0px, rgba(60, 64, 67, .15) 0px 1px 3px 1px;
+}
+.pricing-card .price-apply-btn span {
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.pricing-card .price-apply-btn i {
+    transition: all .3s ease-in-out;
+}
+.pricing-card .price-apply-btn:hover {
+    background-color:#94291f;
+}
+.pricing-card .price-apply-btn:hover i {
+    transform: translateX(10px);
+}
+.pricing-card.pricecard1 .price-card-data .price-check-two {
+    background-color: #31b63a;
+    color: #fff;
+}
+/***** price section end *****/
+
+
+/***** track section start *****/
+.track-section {
+    background: url(../img/track-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-block: 30px;
+    height: 400px;
+}
+/* .track-section::before { */
+    /* content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #00000038;
+    height: 100%;
+    width: 100%;
+} */
+.track-section .track-img {
+    padding: 20px;
+    height: 340px;
+    width: 340px;
+}
+/***** track section end *****/

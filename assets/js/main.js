@@ -49,39 +49,16 @@ function scrollFunction() {
   }
 }
 
-
-// file upload js
-const fileInput = document.getElementById('file-input');
-const cameraInput = document.getElementById('camera-input');
-const placeholder = document.getElementById('placeholder');
-const preview = document.getElementById('preview');
-const uploadOptions = document.getElementById('upload-options');
-function triggerFileUpload() {
-  fileInput.click();
-}
-function triggerCamera() {
-  cameraInput.click();
-}
-function handleFileUpload(event) {
-  const file = event.target.files[0];
-  if (file) {
-    placeholder.style.display = 'none';
-    preview.style.display = 'block';
-    if (file.type.startsWith('image/')) {
-      const reader = new FileReader();
-      reader.onload = function (e) {
-        preview.innerHTML = `<img class="h-100 w-100 img-fluid" src="${e.target.result}" alt="Uploaded Image">`;
-      };
-      reader.readAsDataURL(file);
-    } else {
-      preview.innerHTML = `<p>${file.name}</p>`;
-    }
+// read more js start 
+function readMore(ele,eve){
+  eve.preventDefault();
+  var txt = document.querySelector(".read_more_text");
+  txt.classList.toggle("show-few-lines");
+  
+  if(txt.classList.contains("show-few-lines")){
+      ele.innerText = "Read More";
+  }else{
+      ele.innerText = "Read Less";
   }
 }
-function removeFile() {
-  fileInput.value = ''; // Clear  file input
-  cameraInput.value = ''; // Clear camera input
-  placeholder.style.display = 'block'; // Show placeholder
-  preview.style.display = 'none'; // Hide preview
-  preview.innerHTML = ''; // Clear preview content
-}
+// read more js end

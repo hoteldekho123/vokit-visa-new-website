@@ -3,155 +3,270 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Upload with Preview</title>
+  <title>4-Step Form with Animated Progress Bar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
     }
 
-    .upload-box {
-      width: 100%;
-      max-width: 400px;
-      padding: 20px;
-      border: 2px dashed #D4483B;
+    .form-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
       border-radius: 10px;
-      text-align: center;
-      margin: 0 auto;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .preview-container {
-      position: relative;
-      text-align: center;
-    }
-
-    .preview-container img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    .placeholder {
-      display: block;
-    }
-
-    .preview {
+    .tab {
       display: none;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
     }
 
-    .upload-options {
-      margin-top: 20px;
+    .tab.active {
+      display: block;
+      opacity: 1;
     }
 
-    .upload-button {
-      display: inline-block;
-      margin: 10px 5px;
-      padding: 10px 20px;
-      background-color: #D4483B;
-      color: white;
-      border: none;
+    .tab-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .tab-header div {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      background: #f1f1f1;
       border-radius: 5px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .upload-button:hover {
-      background-color: #B7382A;
-    }
-
-    .preview-actions {
-      margin-top: 10px;
-    }
-
-    .preview-actions button {
-      padding: 5px 10px;
       margin: 0 5px;
-      border: none;
-      border-radius: 5px;
+      font-weight: bold;
       cursor: pointer;
+    }
+
+    .tab-header div.active {
+      background: #007bff;
       color: #fff;
     }
 
-    .btn-edit {
-      background-color: #4285F4;
+    .tab-header div.completed {
+      background: #28a745;
+      color: #fff;
     }
 
-    .btn-remove {
-      background-color: #D4483B;
+    .progress-bar-container {
+      width: 100%;
+      background: #f1f1f1;
+      height: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      overflow: hidden;
     }
 
-    .btn-edit:hover {
-      background-color: #3367D6;
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background: #007bff;
+      transition: width 0.4s ease;
     }
 
-    .btn-remove:hover {
-      background-color: #B7382A;
+    .tab-content {
+      margin-bottom: 20px;
     }
+
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .button-container button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn-prev {
+      background: #6c757d;
+      color: #fff;
+    }
+
+    .btn-next {
+      background: #007bff;
+      color: #fff;
+    }
+
+    .btn-prev:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+
+    .btn-next:hover {
+      background: #0056b3;
+    }
+
+    .btn-prev:hover {
+      background: #5a6268;
+    }
+
+    .btn-submit {
+      background: #28a745;
+    }
+
+    .btn-submit:hover {
+      background: #218838;
+    }
+    .flip-card {
+    background-color: transparent;
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: #f7f7f7;
+}
+
   </style>
 </head>
 <body>
 
-  <div class="upload-box">
-    <h2>Upload Your File</h2>
-    <div class="preview-container " id="preview-container">
-      <img src="https://via.placeholder.com/400x200.png?text=Default+Image" alt="Default Placeholder" class="placeholder" id="placeholder">
-      <div class="preview" id="preview"></div>
+  <div class="form-container">
+    <div class="tab-header">
+      <div class="step active" data-step="0">Step 1</div>
+      <div class="step" data-step="1">Step 2</div>
+      <div class="step" data-step="2">Step 3</div>
+      <div class="step" data-step="3">Step 4</div>
     </div>
-    <div class="upload-options" id="upload-options">
-      <button class="upload-button" onclick="triggerFileUpload()">Upload File</button>
-      <button class="upload-button" onclick="triggerCamera()">Take Photo</button>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progressBar"></div>
     </div>
-    <input type="file" id="file-input" accept=".png, .jpg, .jpeg, .pdf" style="display: none;" onchange="handleFileUpload(event)">
-    <input type="file" id="camera-input" accept="image/*" capture="environment" style="display: none;" onchange="handleFileUpload(event)">
+
+    <form id="multi-step-form">
+      <div class="tab active">
+        
+      
+      </div>
+      <div class="tab">
+        <div class="tab-content">
+          <h3>Step 2</h3>
+          <p><label for="email">Email:</label><br><input type="email" id="email" name="email" required></p>
+        </div>
+      </div>
+      <div class="tab">
+        <div class="tab-content">
+          <h3>Step 3</h3>
+          <p><label for="phone">Phone:</label><br><input type="text" id="phone" name="phone" required></p>
+        </div>
+      </div>
+      <div class="tab">
+        <div class="tab-content">
+          <h3>Step 4</h3>
+          <p><label for="address">Address:</label><br><textarea id="address" name="address" required></textarea></p>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button type="button" class="btn-prev" id="prevBtn" onclick="navigateTab(-1)">Previous</button>
+        <button type="button" class="btn-next" id="nextBtn" onclick="navigateTab(1)">Next</button>
+        <button type="submit" class="btn-submit" style="display: none;">Submit</button>
+      </div>
+    </form>
   </div>
 
   <script>
-    const fileInput = document.getElementById('file-input');
-    const cameraInput = document.getElementById('camera-input');
-    const placeholder = document.getElementById('placeholder');
-    const preview = document.getElementById('preview');
-    const uploadOptions = document.getElementById('upload-options');
+    let currentTab = 0;
+    const tabs = document.querySelectorAll('.tab');
+    const steps = document.querySelectorAll('.step');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.querySelector('.btn-submit');
+    const progressBar = document.getElementById('progressBar');
 
-    // Trigger file input for file upload
-    function triggerFileUpload() {
-      fileInput.click();
-    }
-
-    // Trigger file input for camera
-    function triggerCamera() {
-      cameraInput.click();
-    }
-
-    // Handle file upload
-    function handleFileUpload(event) {
-      const file = event.target.files[0];
-      if (file) {
-        // Hide placeholder
-        placeholder.style.display = 'none';
-        preview.style.display = 'block';
-
-        // Check if the uploaded file is an image
-        if (file.type.startsWith('image/')) {
-          const reader = new FileReader();
-          reader.onload = function (e) {
-            preview.innerHTML = `<img src="${e.target.result}" alt="Uploaded Image">`;
-          };
-          reader.readAsDataURL(file);
-        } else {
-          // For non-image files, show file name
-          preview.innerHTML = `<p>${file.name}</p>`;
+    function showTab(n) {
+      tabs.forEach((tab, index) => {
+        tab.classList.remove('active');
+        if (index === n) {
+          setTimeout(() => tab.classList.add('active'), 100); // Delay for fade effect
         }
-      }
+      });
+
+      steps.forEach((step, index) => {
+        step.classList.remove('active', 'completed');
+        if (index === n) {
+          step.classList.add('active');
+        } else if (index < n) {
+          step.classList.add('completed');
+        }
+      });
+
+      prevBtn.style.display = n === 0 ? 'none' : 'inline-block';
+      nextBtn.style.display = n === tabs.length - 1 ? 'none' : 'inline-block';
+      submitBtn.style.display = n === tabs.length - 1 ? 'inline-block' : 'none';
+
+      updateProgressBar(n);
     }
 
-    // Remove uploaded file
-    function removeFile() {
-      fileInput.value = ''; // Clear file input
-      cameraInput.value = ''; // Clear camera input
-      placeholder.style.display = 'block'; // Show placeholder
-      preview.style.display = 'none'; // Hide preview
-      preview.innerHTML = ''; // Clear preview content
+    function navigateTab(n) {
+      if (n === 1 && !validateForm()) return;
+      currentTab += n;
+      if (currentTab >= tabs.length) {
+        document.getElementById('multi-step-form').submit();
+        return false;
+      }
+      showTab(currentTab);
     }
+
+    function validateForm() {
+      const currentInputs = tabs[currentTab].querySelectorAll('input, textarea');
+      let valid = true;
+      currentInputs.forEach(input => {
+        if (!input.checkValidity()) {
+          valid = false;
+          input.reportValidity();
+        }
+      });
+      return valid;
+    }
+
+    function updateProgressBar(step) {
+      const progressPercentage = ((step + 1) / tabs.length) * 100;
+      progressBar.style.width = `${progressPercentage}%`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => showTab(currentTab));
   </script>
 
 </body>
