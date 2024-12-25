@@ -1271,6 +1271,12 @@ body , html{
     color: #6e6e6e;
     margin-top: 1px;
 }
+.visa-review-card .visa-review-list {
+    gap: 5px;
+}
+.visa-review-card .visa-review-list i {
+    color: #ffa534;
+}
 .visa-review-card .visa-review-card-heading {
     font-size: 18px;
     margin-top: 15px;
@@ -1627,32 +1633,32 @@ body , html{
 
 
 /***** eligible country search start *****/
-.eligible-single-search-section .visa-search-card {
+.visa-search-card {
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
     background: #f7f7f7;
     padding: 30px;
     border-radius: 13px;
 }
-.search-hero-section .visa-search-card .serach-heading-main {
+.visa-search-card .serach-heading-main {
     gap: 9px;
 }
-.search-hero-section .visa-search-card .serach-heading {
+.visa-search-card .serach-heading {
     font-size: 28px;
     line-height: normal;
 }
-.search-hero-section .visa-search-card .select2-container {
+.visa-search-card .select2-container {
     height: 48px;
 }
-.search-hero-section .visa-search-card .select2-container .selection {
+.visa-search-card .select2-container .selection {
     height: 100%;
     display: block;
 }
-.search-hero-section .visa-search-card .select2-container .select2-selection {
+.visa-search-card .select2-container .select2-selection {
     height: 100%;
     display: flex;
     align-items: center;
 }
-.search-hero-section .visa-search-card .select2-container .select2-selection__arrow {
+.visa-search-card .select2-container .select2-selection__arrow {
     height: auto;
     width: auto;
     position: absolute;
@@ -1660,11 +1666,11 @@ body , html{
     right: 15px;
     transform: translateY(-50%);
 }
-.search-hero-section .visa-search-card .select2-container .select2-selection__rendered {
+.visa-search-card .select2-container .select2-selection__rendered {
     font-weight: 500;
     font-size: 15px;
 }
-.search-hero-section .visa-search-card .hero-btn {
+.visa-search-card .hero-btn {
     background-color: var(--theme1);
     color: #fff;
     padding-inline: 28px;
@@ -1672,19 +1678,19 @@ body , html{
     border-radius: 5px;
     transition: all .3s ease-in-out;
 }
-.search-hero-section .visa-search-card .hero-btn:hover {
+.visa-search-card .hero-btn:hover {
     background-color:#94251b;
 }
-.search-hero-section .visa-search-card .hero-label {
+.visa-search-card .hero-label {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 6px;
     padding-left: 2px;
 }
-.search-hero-section .visa-search-inner {
+.visa-search-inner {
     margin-top: 50px;
 }
-.search-hero-section .search-hero-title span {
+.search-hero-title span {
     color: green;
 }
 /***** eligible country search section end *****/
@@ -2052,6 +2058,32 @@ body , html{
     background: url(../img/dubai-image-4.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    height: 450px;
+    height: 400px;
+    padding-bottom: 40px;
+}
+.country-search-section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000044;
+}
+.country-search-section .visa-search-inner{
+    margin-top: 30px;
+}
+.country-search-section .visa-search-rating-card {
+    padding: 6.5px 14px;
+    top: -15px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    right: -15px;
+    gap: 6px;
+    border-radius: 6px;
+    border: 2px solid var(--theme1);
+    transition: all 0.3s ease-in-out;
+}
+.country-search-section .visa-search-rating-card .visa-search-rating-title {
+    font-size: 20px;
 }
 /***** visa country hero section end *****/

@@ -8,12 +8,13 @@
     <script src="assets/js/jquery.min.js"></script>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css">
-    <!-- main css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    
     <!-- swiper css -->
     <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
     <!-- select2 css -->
     <link rel="stylesheet" href="assets/libs/select2/select2.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font family -->
@@ -43,16 +44,25 @@
     <!-- ***** navbar end ***** -->
 
     <!-- ***** visa country section start ***** -->
-    <div class="country-search-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-8">
-                    <div>
-                        
-                    </div>
-                    <div class="">
-                        <div class="country-search-card bg-white">
-                            <form action="" method="post">
+    <div class="country-search-section position-relative">
+        <div class="container position-relative h-100">
+            <div class="row h-100 align-items-end">
+                <div class="col-8 mx-auto">
+                    <div class="visa-search-card position-relative">
+                        <div class="visa-search-rating-card position-absolute d-flex align-items-center bg-white">
+                            <div class="visa-search-rating-title text-black fw-semibold">4.8</div>
+                            <div class="visa-search-rating-img">
+                                <img src="assets/img/trustpilot-logo.svg" alt="trustpilot" height="22">
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center serach-heading-main">
+                            <span><img src="assets/img/airplane-icon-color.svg" height="22" alt="Visa"></span>
+                            <h2 class="serach-heading text-center fw-bold mb-0">
+                                Emirates Visa
+                            </h2>
+                        </div>
+                        <div class="visa-search-inner">
+                            <form action="{{url(strtolower($page->country).'/searchsubmit')}}" method="post">
                                 <div class="row g-md-2 g-3 h-100 align-items-end flex-md-nowrap">
                                     <div class="col-md">
                                         <div class="hero-input h-100">
@@ -1900,12 +1910,11 @@
                     </div>
                     <ul class="list-unstyled mb-0 p-0 d-flex flex-column footer-list">
                         <li><a href="eligible-country.html" class="footer-link text-decoration-none">Eligible Country</a></li>
-                        <li><a href="" class="footer-link text-decoration-none">Security</a></li>
-                        <li><a href="" class="footer-link text-decoration-none">Transparency</a></li>
-                        <li><a href="" class="footer-link text-decoration-none">Blog</a></li>
-                        <li><a href="" class="footer-link text-decoration-none">Newsroom</a></li>
-                        <li><a href="" class="footer-link text-decoration-none">Contact</a></li>
-                        <li><a href="" class="footer-link text-decoration-none">Partners</a></li>
+                        <li><a href="track.html" class="footer-link text-decoration-none">Track</a></li>
+                        <li><a href="visa-country.html" class="footer-link text-decoration-none">Visa Country</a></li>
+                        <li><a href="about.html" class="footer-link text-decoration-none">About</a></li>
+                        <li><a href="privacy-policy.html" class="footer-link text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="terms-condition.html" class="footer-link text-decoration-none">Terms & Condition</a></li>
                     </ul>
                 </div>
                 <div class="col-2">
