@@ -1942,7 +1942,7 @@ body , html{
 
 /***** track section start *****/
 .track-section {
-    background: url(../img/track-bg.jpg) no-repeat;
+    background: url(../img/track-bg-2.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     padding-block: 30px;
@@ -1956,8 +1956,13 @@ body , html{
 }
 .track-section .track-title {
     line-height: 28px;
-    color: #000000;
+    color: #ffff;
     margin-bottom: 18px;
+    font-size: 15px;
+}
+.track-section .track-title i {
+    margin-right: 5px;
+    margin-top: 2px;
 }
 .track-section .track-inner-card {
     padding: 15px;
