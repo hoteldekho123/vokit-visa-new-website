@@ -863,5 +863,23 @@
         });
 
     </script>
+
+    <!-- on scorll navbar -->
+    <script>
+        window.onscroll = function () {
+        scrollFunction();
+        };
+        var first = true;
+        function scrollFunction() {
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+            document.getElementById("navbar").classList.add('fixed-navbar');
+            document.getElementById("scrolltop").classList.add('fixed-scroll');
+        }
+        else {
+            document.getElementById("navbar").classList.remove('fixed-navbar');
+            document.getElementById("scrolltop").classList.remove('fixed-scroll');
+        }
+        }
+    </script>
 </body>
 </html>

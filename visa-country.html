@@ -42,129 +42,59 @@
     </nav>
     <!-- ***** navbar end ***** -->
 
-    <!-- ***** page heading section start ***** -->
-    <section class="container-fluid page-heading position-relative d-flex align-items-center">
-        <div class="container h-100">
-            <div class="h-100 d-flex align-items-center position-relative z-1">
-                <div class="row w-100">
-                    <div class="col-12 heading-section-heading">
-                        <h1>Eligible Countries For  Azerbaijan Tourist Visa</h1>
-                    </div>
-                    <div class="col-12 mt-3">
-                        <nav aria-label="breadcrumb" class="breadcrumb-section">
-                            <ol class="breadcrumb mb-0">
-                                <li class="breadcrumb-item d-flex align-items-center">
-                                    <a href="https://www.vokit.com" class="d-flex align-items-center">
-                                        Home
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                </li>
-                                <li class="breadcrumb-item d-flex align-items-center">
-                                  <a href="https://www.vokit.com/azerbaijan-visa" class="td-flex align-items-center">
-                                   Azerbaijan
-                                    <i class="fa-solid fa-chevron-right"></i>
-                                  </a>
-                                </li>
-                                <li class="breadcrumb-item active" aria-current="page">Eligible Country</li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** page heading section end ***** -->
-
-    <!-- ***** content section start ***** -->
-    <section class="content-section common-gap">
+    <!-- ***** visa country section start ***** -->
+    <div class="country-search-section">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">
-                    <div class="heading-main d-inline-flex align-items-center">
-                        <img src="assets/img/airplane-icon-color.svg" alt=" Azerbaijan Visa For Portugal citizens" height="23">
-                        <h2 class="heading mb-0">
-                            Azerbaijan Visa For Portugal citizens
-                        </h2>
+                <div class="col-8">
+                    <div>
+                        
                     </div>
-                </div>
-            </div>
-            <div class="row mt-3">
-                <div class="col-12">
-                    <div class="content-card border">
-                        <div class="read_more_text show-few-lines">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam velit quas modi repudiandae repellendus dolorum blanditiis nostrum commodi vel facere, earum molestias doloribus ea! Saepe asperiores accusantium rerum inventore?</p>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam velit quas modi repudiandae repellendus dolorum blanditiis nostrum commodi vel facere, earum molestias doloribus ea! Saepe asperiores accusantium rerum inventore?</p>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam velit quas modi repudiandae repellendus dolorum blanditiis nostrum commodi vel facere, earum molestias doloribus ea! Saepe asperiores accusantium rerum inventore?</p>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam velit quas modi repudiandae repellendus dolorum blanditiis nostrum commodi vel facere, earum molestias doloribus ea! Saepe asperiores accusantium rerum inventore?</p>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam velit quas modi repudiandae repellendus dolorum blanditiis nostrum commodi vel facere, earum molestias doloribus ea! Saepe asperiores accusantium rerum inventore?</p>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-end">
-                            <button onclick="readMore(this,event)" id="myBtn" class="read-more-btn border-0 bg-transparent fw-medium p-0 overflow-hidden position-relative">Read More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ***** content section end ***** -->
-
-    <!-- ***** search section start ***** -->
-    <section class="search-hero-section position-relative common-gap eligible-single-search-section">
-        <div class="h-100 w-100 d-flex align-items-center position-relative z-1">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 mx-auto">
-                        <div class="visa-search-card">
-                            <div class="d-flex align-items-center justify-content-center serach-heading-main">
-                                <span><img src="assets/img/airplane-icon-color.svg" height="22" alt="Visa"></span>
-                                <h2 class="serach-heading text-center fw-bold mb-0">
-                                    Apply for {{ucfirst($page->country)}} Visa Online
-                                </h2>
-                            </div>
-                            <div class="visa-search-inner">
-                                <form action="" method="post">
-                                    <div class="row g-md-2 g-3 h-100 align-items-end flex-md-nowrap">
-                                        <div class="col-md">
-                                            <div class="hero-input h-100">
-                                                <label for="" class="hero-label">I Am A Citizen Of</label>
-                                                <div class="position-relative">
-                                                    <select class="select2 w-100 border-0" name="country_of" required>
-                                                        <option value="">Select Country</option>
-                                                        @foreach($countries as $country)
-                                                            <option value="{{$country->country_name}}">{{$country->country_name}}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md">
-                                            <div class="hero-input h-100">
-                                                <label for="" class="hero-label">I Am Traviling From</label>  
-                                                <div class="position-relative">
-                                                    <select class="select2 w-100 border-0" name="country_from" required>
-                                                        <option value="">Select Country</option>
-                                                        @foreach($countries as $country)
-                                                            <option value="{{$country->country_name}}">{{$country->country_name}}</option>
-                                                        @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-auto">
-                                            <div class="h-100 ">
-                                                <button class="hero-btn border-0 w-100">Apply Now</button>
+                    <div class="">
+                        <div class="country-search-card bg-white">
+                            <form action="" method="post">
+                                <div class="row g-md-2 g-3 h-100 align-items-end flex-md-nowrap">
+                                    <div class="col-md">
+                                        <div class="hero-input h-100">
+                                            <label for="" class="hero-label">I Am A Citizen Of</label>
+                                            <div class="position-relative">
+                                                <select class="select2 w-100 border-0" name="country_of" required>
+                                                    <option value="">Select Country</option>
+                                                    @foreach($countries as $country)
+                                                        <option value="{{$country->country_name}}">{{$country->country_name}}</option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
+                                    <div class="col-md">
+                                        <div class="hero-input h-100">
+                                            <label for="" class="hero-label">I Am Traviling From</label>  
+                                            <div class="position-relative">
+                                                <select class="select2 w-100 border-0" name="country_from" required>
+                                                    <option value="">Select Country</option>
+                                                    @foreach($countries as $country)
+                                                        <option value="{{$country->country_name}}">{{$country->country_name}}</option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <div class="h-100 ">
+                                            <button class="hero-btn border-0 w-100">Apply Now</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ***** search section end ***** -->
+
+    </div>
+    <!-- ***** visa country section end ***** -->
 
     <!-- ***** price section start ***** -->
     <section class="price-section common-gap">
@@ -1648,6 +1578,39 @@
         </div>
     </section>
     <!-- ***** price section end ***** -->
+
+    <!-- ***** content section start ***** -->
+    <section class="content-section common-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="heading-main d-inline-flex align-items-center">
+                        <img src="assets/img/airplane-icon-color.svg" alt=" Azerbaijan Visa For Portugal citizens" height="23">
+                        <h2 class="heading mb-0">
+                            Azerbaijan Visa For Portugal citizens
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12">
+                    <div class="content-card border">
+                        <div class="read_more_text show-few-lines">
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam velit quas modi repudiandae repellendus dolorum blanditiis nostrum commodi vel facere, earum molestias doloribus ea! Saepe asperiores accusantium rerum inventore?</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam velit quas modi repudiandae repellendus dolorum blanditiis nostrum commodi vel facere, earum molestias doloribus ea! Saepe asperiores accusantium rerum inventore?</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam velit quas modi repudiandae repellendus dolorum blanditiis nostrum commodi vel facere, earum molestias doloribus ea! Saepe asperiores accusantium rerum inventore?</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam velit quas modi repudiandae repellendus dolorum blanditiis nostrum commodi vel facere, earum molestias doloribus ea! Saepe asperiores accusantium rerum inventore?</p>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum quisquam velit quas modi repudiandae repellendus dolorum blanditiis nostrum commodi vel facere, earum molestias doloribus ea! Saepe asperiores accusantium rerum inventore?</p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-end">
+                            <button onclick="readMore(this,event)" id="myBtn" class="read-more-btn border-0 bg-transparent fw-medium p-0 overflow-hidden position-relative">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** content section end ***** -->
 
     <!-- ***** Customer reviews section start ***** -->
     <section class="common-gap">
