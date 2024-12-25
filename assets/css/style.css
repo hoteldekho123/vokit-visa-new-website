@@ -1514,7 +1514,7 @@ body , html{
     border-bottom-right-radius: 0 !important;
 }
 .form-card .form-btn-main {
-    margin-top: 35px;
+    margin-top: 30px;
     gap: 15px;
 }
 .form-card .form-btn {
@@ -1541,6 +1541,24 @@ body , html{
 .dropzone {
     border: 1px dashed var(--theme1);
     border-radius: 7px;
+    max-height: 150px;
+}
+.dropzone .dz-preview {
+    margin: 0 auto;
+}
+.dropzone .dropzone-title {
+    font-size: 15px;
+    margin-top: 8px;
+}
+.dropzone .dropzone-icon {
+    font-size: 28px;
+    color: var(--theme1);
+}
+.form-card .form-note-card {
+    padding: 6px;
+    font-size: 14px;
+    line-height: 27px;
+    margin-top: 20px;
 }
 /***** form section end *****/
 
