@@ -1948,6 +1948,12 @@ body , html{
     padding-block: 30px;
     height: 400px;
 }
+.track-section .track-heading {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
 /* .track-section::before { */
     /* content: '';
     position: absolute;
@@ -1961,5 +1967,26 @@ body , html{
     padding: 20px;
     height: 340px;
     width: 340px;
+}
+.track-section .track-inner-card {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, .3) 0px 1px 2px 0px, rgba(60, 64, 67, .15) 0px 1px 3px 1px;
+}
+.track-section .track-group {
+    border-radius: 8px;
+    height: 48px;
+    margin-top: 8px;
+}
+.track-section .track-group .track-input {
+    font-size: 15px;
+    font-weight: 500;
+}
+.track-section .track-group .track-btn {
+    font-size: 15px;
+    font-weight: 500;
+    background-color: var(--theme1);
+    padding-inline: 20px;
+    color: #fff;
 }
 /***** track section end *****/
