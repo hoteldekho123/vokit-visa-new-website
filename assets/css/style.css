@@ -1948,11 +1948,17 @@ body , html{
     padding-block: 30px;
     height: 400px;
 }
+.track-section .track-heading-main {
+    gap: 8px;
+    margin-bottom: 15px;
+}
+.track-section .track-heading-main img {
+    filter: brightness(10);
+}
 .track-section .track-heading {
     color: #fff;
     font-size: 28px;
     font-weight: 600;
-    margin-bottom: 10px;
 }
 .track-section .track-title {
     line-height: 28px;
