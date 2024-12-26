@@ -246,11 +246,164 @@
     }
     .visa-detail-section .authorized-title::before {
         border-width: 16px;
-        right: -31px;
+        right: -30px;
         z-index: -1;
+        height: 32px;
     }
     .visa-hero-section .guarantee-title {
+        font-size: 13px;
+    }
+    .visa-hero-section .guarantee-title img {
+        height: 18px;
+        
+    }
+
+    .visa-price-tab {
+        margin-top: 15px;
+        padding-bottom: 15px;
+    }
+    .visa-price-tab .nav-link {
+        padding: 8px 15px;
+    }
+    .visa-price-card .visa-price-detail-main {
+        gap: 13px;
+    }
+    .visa-price-card .visa-price-title {
+        font-size: 17px;
+    }
+    .visa-price-card .visa-price-card-rate {
+        font-size: 30px;
+    }
+    .visa-partner-card {
+        padding: 10px;
+    }
+    .timeline-main {
+        margin-top: 20px;
+    }
+    .timeline-main li {
+        padding-left: 18px;
+        gap: 15px;
+        padding-bottom: 23px;
+    }
+    .timeline-main .timeline-detail-card {
+        padding: 13px;
+    }
+    .timeline-detail-card .timeline-detail-heading {
+        font-size: 16px;
+    }
+    .timeline-detail-card .timeline-detail-para p {
         font-size: 14px;
+        line-height: 26px;
+    }
+    .statistics-data-card .statistics-data-card-header {
+        padding: 12px;
+    }
+    .statistics-data-card .form-select {
+        font-size: 14px ;
+    }
+    .statistics-data-card .statistics-data-card-heading {
+        font-size: 17px;
+    }
+    .visa-reviews-section .visa-reviews-wrapper {
+        margin-top: 20px;
+        gap: 15px;
+    }
+    .visa-review-data-card {
+        padding: 15px;
+        gap: 14px;
+    }
+    .visa-review-data-card .visa-review-data-img {
+        height: 48px;
+        width: 48px;
+    }
+    .visa-review-data-card .visa-review-data-rating {
+        font-size: 32px;
+    }
+    .visa-review-card .visa-review-card-heading {
+        font-size: 17px;
+        margin-top: 12px;
+    }
+    .visa-review-card .visa-review-details p {
+        font-size: 14px;
+        line-height: 25px;
+    }
+    .visa-review-card {
+        padding-bottom: 15px;
+    }
+    .visa-reviews-section .visa-review-btn {
+        font-size: 15px;
+    }
+    .rejection-card .rejection-title {
+        font-size: 17px;
+    }
+    .rejection-card .rejection-text {
+        line-height: 24px;
+    }
+    .visa-faq-section .accordion-button {
+        padding: 13px;
+        font-size: 16px;
+    }
+    .visa-faq-section .accordion-button::before {
+        height: 24px;
+        width: 24px;
+        font-size: 12px;
+    }
+    .visa-faq-section .accordion-body {
+        padding: 13px;
+    }
+    .visa-sidebar .visa-sidebar-icon img {
+        height: 32px;
+    }
+    .visa-sidebar {
+        padding: 12px;
+        padding-top: 75px;
+    }
+    .visa-sidebar .visa-sidebar-icon {
+        margin-right: 10px;
+    }
+    .visa-sidebar .visa-sidebar-header-main {
+        width: 107%;
+    }
+    .visa-sidebar .visa-sidebar-header .visa-sidebar-header-title {
+        font-size: 16px;
+    }
+    .visa-sidebar .visa-sidebar-heading {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+    .visa-sidebar .nav-link {
+        font-size: 13px;
+    }
+    .visa-sidebar .visa-sidebar-price-main {
+        margin-top: 18px;
+        padding-top: 15px;
+    }
+    .visa-sidebar .visa-sidebar-price-title {
+        font-size: 17px;
+    }
+    .visa-sidebar .visa-sidebar-total-price {
+        font-size: 18px;
+    }
+    .visa-sidebar .visa-sidebar-btn-main {
+        margin-top: 15px;
+    }
+    .country-time-card {
+        padding: 10px;
+        gap: 6px;
+    }
+    .country-time-card .country-time-icon {
+        height: 45px;
+        width: 45px;
+    }
+    .country-time-card .country-time-icon img {
+        height: 23px;
+    }
+    .country-time-card .country-time-icon-main {
+        height: 60px;
+        width: 60px;
+    }
+    .country-time-card .country-time {
+        font-size: 15px;
     }
     /* visa main section end */
 }
