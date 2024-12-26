@@ -1069,93 +1069,157 @@ body , html{
 }
 /* visa info seciton end */
 
-/* visa guarantee section start */
-.visa-guarantee-section .visa-guarantee-card {
+/* visa price section start */
+.visa-price-tab {
+    border-bottom: 1px solid #eee;
+    margin-top: 20px;
+    gap: 5px;
+    padding-bottom: 20px;
+}
+.visa-price-tab .nav-link {
+    border: none;
+    color: #000;
+    padding: 8.5px 20px;
+    font-size: 14px;
+    background-color: #eee;
+    border-radius: 6px;
+}
+.visa-price-tab .nav-link i {
+    margin-right: 2px;
+}
+.visa-price-tab .nav-link span {
+    transition: all 0.3s ease-in-out;
+}
+.visa-price-tab .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    background-color: var(--theme1);
+    bottom: 0;
+    width: 0%;
+    transition: all 0.3s ease-in-out;
+}
+.visa-price-tab .nav-link.active span {
+    color: #fff;
+}
+.visa-price-tab .nav-link.active::before {
+    width: 100%;
+}
+.visa-price-card {
     border: 1.6px solid #dadada69;
-    padding: 13px;
+    padding: 12px;
     border-radius: 12px;
-    padding-top: 60px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     background-color: #f8fafc;
 }
-.visa-guarantee-card .visa-guarantee-card-title-main {
-    position: absolute;
-    left: -8px;
-    top: 12px;
-}
-.visa-guarantee-card .visa-guarantee-card-title {
-    background-color: var(--theme1);
-    color: #fff;
-    font-size: 13px;
-    padding: 7px 3px 7px 12px;
-    border-radius: 8px 0 0 0 ;
+.visa-price-card .visa-price-title {
+    color: #000;
+    font-size: 18px;
     line-height: normal;
 }
-.visa-guarantee-card .visa-guarantee-card-title::before {
+/* .visa-price-card .visa-price-title::before {
     content: '';
     position: absolute;
     left: 0;
     bottom: -8px;
     border: 4px solid ;
     border-color: #94251b #94251b transparent transparent;
-}
-.visa-guarantee-card .visa-guarantee-card-title::after {
-    content: '';
-    position: absolute;
-    right: -30px;
-    top: 0;
-    border: 15px solid ;
-    border-color: transparent transparent var(--theme1) var(--theme1);
-}
-.visa-guarantee-card .visa-guarantee-card-title img {
-    filter: invert(1);
-}
-.visa-guarantee-card .visa-guarantee-card-checkbox {
+} */
+.visa-price-card .visa-price-card-checkbox {
     height: 18px;
     width: 18px;
-    border: 1px solid #c5c5c5;
+    border: 1px solid #a1a1a1;
     font-size: 10px;
     color:#fff;
     top: 15px;
     right: 10px;
     transition: all 0.3s ease-in-out;
 }
-.visa-guarantee-card .visa-guarantee-visa-type {
-    font-size: 16px;
-    font-weight: 500;
-    color: #000;
-    margin-top: 17px;
-}
-.visa-guarantee-card .visa-guarentee-time {
-    font-size: 18px;
-    color: var(--theme1);
-    margin-top: 8px;
+.visa-price-card .visa-price-card-rate {
+    font-size: 34px;
     line-height: normal;
-    gap: 6px;
-}
-.visa-guarantee-card .visa-guarentee-time i {
-    font-size: 15px;
-}
-.visa-guarantee-card .visa-guarantee-card-icon {
-    height: 42px;
-    width: 42px;
-    background-color: #d4483b23;
-    border-radius: 8px;
-    font-size: 19px;
     color: var(--theme1);
 }
-.visa-guarantee-input:checked ~ .visa-guarantee-card {
+.visa-price-card .visa-price-card-rate sup {
+    font-size: 16px;
+}
+.visa-price-card .visa-checkbox .visa-checkbox-inner {
+    width: 85px;
+    height: 31px;
+    background: rgba(69, 90, 100, .396);
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.visa-price-card .visa-checkbox .visa-checkbox-inner::after {
+    content: "Regular";
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    left: 0;
+    text-align: right;
+    padding: 0 8px;
+    line-height: 31px;
+    font-size: 12px;
+    font-weight: 400;
+}
+.visa-price-card .visa-checkbox .visa-checkbox-inner::before {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: .3s;
+    box-shadow: -3px 0 3px rgba(0, 0, 0, .1);
+}
+.visa-price-card .visa-checkbox input:checked~.visa-checkbox-inner {
+    background: #31b63a;
+}
+.visa-price-card .visa-checkbox input:checked~.visa-checkbox-inner::before {
+    transform: translate(54px);
+    transition: .3s;
+}
+.visa-price-card .visa-checkbox input:checked~.visa-checkbox-inner::after {
+    content: "Express";
+    text-align: left;
+    font-size: 12px;
+}
+.visa-price-card .visa-price-detail-main {
+    gap: 15px;
+    margin-top: 18px;
+}
+.visa-price-card .visa-price-details {
+    font-size: 14px;
+    color: #000;
+    gap: 5px;
+}
+.visa-price-card .visa-price-details-icon {
+    height: 15px;
+    width: 15px;
+    background: #dddddd;
+    font-size: 10px;
+}
+.visa-price-input:checked ~ .visa-price-card {
     border-color: var(--theme1) ;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     transform: translateY(-8px);
     background-color: #fff;
 }
-.visa-guarantee-input:checked ~ .visa-guarantee-card .visa-guarantee-card-checkbox {
+.visa-price-input:checked ~ .visa-price-card .visa-price-card-checkbox {
     background-color: var(--theme1) ;
     border-color: var(--theme1);
 }
-/* visa guarantee section end */
+.visa-price-card.selected .visa-price-details-icon {
+    background-color: #31b63a;
+    color: #fff;
+}
+/* visa price section end */
 
 /* visa document section start */
 .visa-docs-card {
