@@ -1359,6 +1359,7 @@ body , html{
     background-color: green;
     color: #fff;
     font-size: 18px;
+    font-weight: 600;
 }
 .visa-reviews-wrapper .col-12:nth-child(2) .visa-review-card-icon-main{
     border: 1.5px dashed #12c4ca;

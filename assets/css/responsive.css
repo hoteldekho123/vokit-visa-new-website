@@ -83,6 +83,9 @@
     .country-card .country-card-date {
         margin-block: 7px;
     }
+    .country-card .country-img {
+        height: 210px;
+    }
     /* country section end */
 
     /* step section start */
@@ -230,7 +233,7 @@
         width: 22px ;
     }
     .visa-hero-section .visa-hero-heading {
-        font-size: 22px;
+        font-size: 20px;
     }
     .visa-detail-section .authorized-title .authorized-icon {
         height: 40px;
@@ -264,6 +267,7 @@
     }
     .visa-price-tab .nav-link {
         padding: 8px 15px;
+        font-size: 13px;
     }
     .visa-price-card .visa-price-detail-main {
         gap: 13px;
@@ -330,9 +334,19 @@
     .visa-review-card {
         padding-bottom: 15px;
     }
+    .visa-review-card .visa-reviewer-name {
+        font-size: 15px;
+    }
     .visa-reviews-section .visa-review-btn {
         font-size: 15px;
     }
+    .visa-review-card .visa-review-date {
+        font-size: 13px;
+    }
+    .visa-review-card .visa-review-list {
+        gap: 3px;
+    }
+
     .rejection-card .rejection-title {
         font-size: 17px;
     }
