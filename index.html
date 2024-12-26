@@ -6,10 +6,11 @@
     <title>Vokit</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css">
-    <!-- main css -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <!-- swiper css -->
     <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font family -->
@@ -21,6 +22,11 @@
         .container {
             max-width: 95% !important;
         }
+        @media (max-width:767px){
+            .container {
+                max-width: 100% !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -31,10 +37,7 @@
             <a class="navbar-brand py-0" href="index.html">
                 <img src="assets/img/logo.svg" alt="navbar logo" class="h-100 w-100 img-fluid">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="searchbar-main position-relative z-3">
+            <div class="searchbar-main position-relative z-3 d-md-block d-none">
                 <div class="searchbar bg-white d-flex w-100 overflow-hidden align-items-center">
                     <input type="text" id="searchinput1" class="searchbar-input h-100 form-control shadow-none rounded-0 border-0" placeholder="Search Country...">
                     <button class="searchbar-btn d-flex align-items-center justify-content-center rounded-circle border-0 bg-transparent"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -109,7 +112,7 @@
     <section class="hero-section position-relative">
         <div class="container">
             <div class="row justify-content-between align-items-center position-relative ">
-                <div class="col-7 mx-auto">
+                <div class="col-lg-7 col-md-10 mx-auto">
                     <div class="row text-center  ">
                         <div class="col-12">
                             <div class="hero-title fw-medium">
@@ -215,8 +218,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-4">
-                <div class="col-md-3">
+            <div class="row mt-md-1 mt-0 g-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="country-card border bg-white h-100 position-relative">
                         <div class="position-relative">
                             <a  href="visa-main.html" class="country-img d-block overflow-hidden"> 
@@ -244,7 +247,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="country-card border bg-white h-100 position-relative">
                         <div class="position-relative">
                             <a href="visa-main.html" class="country-img d-block overflow-hidden">
@@ -271,7 +274,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="country-card border bg-white h-100 position-relative">
                         <div class="position-relative">
                             <a href="visa-main.html" class="country-img d-block overflow-hidden">
@@ -298,7 +301,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-6">
                     <div class="country-card border bg-white h-100 position-relative">
                         <div class="position-relative">
                             <a href="visa-main.html" class="country-img d-block overflow-hidden">
@@ -343,8 +346,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-5 pt-3 gx-5">
-                <div class="col-md-4">
+            <div class="row mt-5 pt-md-3 gx-xl-5 step-apply-main">
+                <div class="col-lg-4 col-md-6">
                    <div class="step-apply-card-main pb-1 position-relative">
                         <div class="step-apply-card d-inline-block position-relative">
                             <div class="step-card-count-main d-flex rounded-circle align-items-center justify-content-center position-absolute">
@@ -364,7 +367,7 @@
                         </div>
                    </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="step-apply-card-main pb-1 position-relative">
                          <div class="step-apply-card d-inline-block position-relative">
                              <div class="step-card-count-main d-flex rounded-circle align-items-center justify-content-center position-absolute">
@@ -383,8 +386,8 @@
                              </div>
                          </div>
                     </div>
-                 </div>
-                 <div class="col-md-4">
+                </div>
+                <div class="col-lg-4 col-md-6">
                     <div class="step-apply-card-main pb-1 step-apply-card-last position-relative">
                          <div class="step-apply-card d-inline-block position-relative">
                              <div class="step-card-count-main d-flex rounded-circle align-items-center justify-content-center position-absolute">
@@ -403,7 +406,7 @@
                              </div>
                          </div>
                     </div>
-                 </div>
+                </div>
             </div>
         </div>
     </section>
@@ -520,7 +523,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-4 gx-5">
+            <div class="row mt-md-4 mt-3 gx-xl-5 gap-lg-0 gap-4">
                 <div class="col-lg-6">
                     <div class="review-detail-card position-relative overflow-hidden   ">
                         <div class="review-detail-card-heading fw-semibold ">
@@ -672,8 +675,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-4 pt-3">
-                <div class="col-md-4">
+            <div class="row mt-0 pt-md-2 g-md-4 g-3">
+                <div class="col-lg-4 col-md-6">
                     <div class="why-choose-card d-flex">
                         <div class="why-choose-card-icon">
                             <img src="assets/img/secure-process.svg" alt="secure process" height="40">
@@ -686,9 +689,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="why-choose-card d-flex">
-                        <div>
+                        <div class="why-choose-card-icon">
                             <img src="assets/img/fast-approval.svg" alt="fast-approval" height="40">
                         </div>
                         <div>
@@ -697,9 +700,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="why-choose-card d-flex">
-                        <div>
+                        <div class="why-choose-card-icon">
                             <img src="assets/img/people-icon.svg" alt="Trusted by 1 Million+" height="40">
                         </div>
                         <div>
@@ -717,7 +720,7 @@
     <footer class="footer border-top common-gap">
         <div class="container footer-inner">
             <div class="row g-4">
-                <div class="col-4">
+                <div class="col-lg-4 col-md-4">
                     <div class="footer-logo">
                         <img src="assets/img/logo.svg" alt="logo" class="h-100 img-fluid">
                     </div>
@@ -730,7 +733,7 @@
                         <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-youtube"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-2">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-heading fw-semibold">
                         Company
                     </div>
@@ -743,7 +746,7 @@
                         <li><a href="terms-condition.html" class="footer-link text-decoration-none">Terms & Condition</a></li>
                     </ul>
                 </div>
-                <div class="col-2">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-heading fw-semibold">
                         Tools
                     </div>
@@ -757,7 +760,7 @@
                         <li><a href="" class="footer-link text-decoration-none">Partners</a></li>
                     </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 ">
                     <div class="footer-heading fw-semibold">
                         Offices
                     </div>

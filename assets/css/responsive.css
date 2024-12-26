@@ -1,0 +1,256 @@
+@media (max-width:1200px){
+    .visa-sidebar .visa-sidebar-header-main {
+        width: 103%;
+    }
+}
+@media (max-width:991px){
+    .hero-section .searchbar-main {
+        width: 55%;
+    }
+    .step-apply-card-main::before {
+        display: none;
+    }
+    .step-apply-card-main {
+        text-align: center;
+    }
+}
+@media (max-width:767px){
+    /* common start */
+    .container {
+        max-width: 98% !important;
+    }
+    .heading-main .heading {
+        font-size: 20px;
+    }
+    .heading-main img {
+        height: 19px;
+    }
+    .common-gap {
+        margin-top: 40px;
+    }
+    .visa-heading-main .visa-heading {
+        font-size: 19px;
+    }
+    .visa-heading-main img {
+        height: 16px;
+        margin-top: 1px;
+    }
+    .visa-gap {
+        margin-top: 35px;
+    }
+    /* common end */
+
+    /* navbar start */
+    .navbar {
+        height: auto;
+    }
+    .navbar .navbar-brand {
+        height: 40px;
+    }
+    .navbar .nav-whatsapp img {
+        height: 24px;
+    }
+    /* navbar end */
+
+    /* hero section start */
+    .hero-section {
+        padding: 90px 0 105px;
+    }
+    .hero-section .hero-title {
+        font-size: 16px;
+    }
+    .hero-section .hero-heading {
+        font-size: 24px;
+        line-height: normal;
+        margin-top: 10px;
+    }
+    .hero-section .searchbar-main {
+        width: 80%;
+    }
+    .searchbar-main .searchbar {
+        height: 50px;
+    }
+    /* hero section end */
+
+    /* country section start */
+    .country-section {
+        padding-top: 70px;
+        padding-inline: 3px;
+    }
+    .country-card .country-name {
+        font-size: 16px;
+    }
+    .country-card .country-card-date {
+        margin-block: 7px;
+    }
+    /* country section end */
+
+    /* step section start */
+    .step-apply-main {
+        gap: 40px;
+    }
+    .step-apply-card .step-apply-content {
+        height: 250px;
+        width: 250px;
+    }
+    .step-apply-card .step-card-count-main {
+        height: 95px;
+        width: 95px;
+    }
+    .step-apply-card .step-card-count {
+        height: 75px;
+        width: 75px;
+        font-size: 17px;
+        line-height: 23px;
+    }
+    .step-apply-card .step-apply-card-title {
+        font-size: 16px;
+    }
+    .step-apply-card .step-apply-card-detail {
+        font-size: 14px;
+    }
+    /* step section end */
+
+    /* review section start */
+    .review-detail-card {
+        padding: 15px;
+    }
+    .review-detail-card .review-detail-card-heading {
+        font-size: 24px;
+    }
+    .review-detail-card .review-detail-card-title {
+        font-size: 14px;
+        margin-top: 2px;
+    }
+    .review-detail-card .review-detail-card-clients {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        gap: 12px;
+    }
+    .review-detail-card .review-detail-userimg {
+        height: 45px;
+        width: 45px;
+        border-width: 2px;
+    }
+    .review-detail-card .review-detail-total-client {
+        font-size: 20px;
+    }
+    .review-detail-card .review-detail-client-title {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+    .review-detail-card .review-detail-card-img {
+        height: 40px;
+    }
+    .review-detail-card .review-detail-card-google-logo {
+        height: 30px;
+    }
+    .review-detail-card .review-detail-card-rating-title {
+        font-size: 23px;
+    }
+    .review-main-card {
+        padding: 12px;
+    }
+    .review-card .reviewer-img {
+        height: 65px;
+        width: 65px;
+    }
+    .review-card .review-card-title {
+        font-size: 16px;
+        margin-top: 6px;
+    }
+    .review-card .review-card-para p {
+        font-size: 14px;
+    }
+    .review-main-card::after {
+        height: 50px;
+        width: 60px;
+        top: 3%;
+    }
+    .review-main-card .review-slider-btn {
+        height: 33px;
+        width: 33px;
+        font-size: 14px;
+    }
+    /* review section end */
+
+    /* why choose us section start */
+    .why-choose-card .why-choose-card-title {
+        font-size: 16px;
+    }
+    .why-choose-card .why-choose-card-detail {
+        font-size: 14px;
+        line-height: 23px;
+        margin-top: 5px;
+    }
+    .why-choose-card .why-choose-card-icon {
+        height: 35px;
+        width: 70px;
+    }
+    .why-choose-card .why-choose-card-icon img {
+        height: 100%;
+        width: 100%;
+    }
+    /* why choose us section end */
+
+    /* footer start */
+    .footer .footer-inner {
+        padding-block: 30px;
+    }
+    .footer .footer-list {
+        gap: 5px;
+        margin-top: 15px;
+    }
+    .footer .footer-social-list {
+        margin-top: 10px;
+        gap: 14px;
+    }
+    .footer .footer-social-link {
+        font-size: 16px;
+    }
+    .footer .footer-para {
+        font-size: 14px;
+    }
+    .copyright-section {
+        padding-block: 14px;
+    }
+    /* footer end */
+
+    /* visa main section start */
+    .visa-hero-section .visa-hero-img {
+        height: auto;
+    }
+    .visa-hero-section .visa-hero-heading-main {
+        padding: 7px 12px;
+        gap: 8px;
+    }
+    .visa-hero-section .visa-hero-heading-main svg {
+        height: 20px;
+        width: 22px ;
+    }
+    .visa-hero-section .visa-hero-heading {
+        font-size: 22px;
+    }
+    .visa-detail-section .authorized-title .authorized-icon {
+        height: 40px;
+        width: 40px;
+    }
+    .visa-detail-section .authorized-title .authorized-icon img {
+        height: 20px;
+    }
+    .visa-detail-section .authorized-title {
+        height: 32px;
+        font-size: 12px;
+        gap: 0;
+    }
+    .visa-detail-section .authorized-title::before {
+        border-width: 16px;
+        right: -31px;
+        z-index: -1;
+    }
+    .visa-hero-section .guarantee-title {
+        font-size: 14px;
+    }
+    /* visa main section end */
+}

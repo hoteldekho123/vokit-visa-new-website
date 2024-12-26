@@ -6,11 +6,12 @@
     <title>Vokit</title>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css">
-    <!-- main css -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <!-- swiper css -->
     <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assets/libs/chart/apexcharts.js"></script>
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font family -->
@@ -21,14 +22,11 @@
 <body>
 
     <!-- ***** navbar start ***** -->
-    <nav class="navbar navbar-two navbar-expand-lg" aria-label="Offcanvas navbar large" id="navbar">
+    <nav class="navbar navbar-two navbar-expand-md" aria-label="Offcanvas navbar large" id="navbar">
         <div class="container">
             <a class="navbar-brand py-0" href="index.html">
                 <img src="assets/img/logo.svg" alt="navbar logo" class="h-100 w-100 img-fluid">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div>
                 <a href="" class="d-flex align-items-center justify-content-center nav-whatsapp text-decoration-none">
                     <img src="assets/img/whatsapp-icon.svg" height="28" alt="whatsapp">
@@ -42,8 +40,8 @@
     <!-- ***** visa main section start ***** -->
     <main class="mt-4">
         <div class="container">
-            <div class="row gx-5">
-                <div class="col-md-8 pe-5">
+            <div class="row gx-xl-5">
+                <div class="col-xl-8 pe-xl-5">
                     <div class="visa-hero-section position-relative">
                         <div class="visa-hero-img overflow-hidden">
                             <img src="assets/img/dubai-image-1.jpg" alt="dubai" class="h-100 w-100 img-fluid">
@@ -69,8 +67,8 @@
 
                     <div class="visa-detail-section">
 
-                        <div class="d-flex align-items-center mt-4 pt-1">
-                            <div class="authorized-title fw-medium d-flex align-items-center position-relative">
+                        <div class="d-flex align-items-center mt-4 pt-md-1">
+                            <div class="authorized-title fwmedium d-flex align-items-center position-relative">
                                 <div class="authorized-icon rounded-circle d-flex align-items-center justify-content-center">
                                     <img src="assets/img/authorized-icon.svg" alt="authorized" height="25">
                                 </div>
@@ -1128,14 +1126,14 @@
                                     Dubai Visa Requirements
                                 </h2>
                             </div>
-                            <div class="row row-cols-6 mt-0 g-3">
-                                <div class="col">
+                            <div class="row mt-0 g-3">
+                                <div class="col-auto">
                                     <div class="d-flex align-items-center visa-docs-card border">
                                         <div class="visa-docs-card-icon"><i class="fa-regular fa-image"></i></div>
                                         <div class="visa-docs-card-title fw-medium">Photo</div>
                                     </div>
                                 </div>
-                                <div class="col">
+                                <div class="col-auto">
                                     <div class="d-flex align-items-center visa-docs-card border">
                                         <div class="visa-docs-card-icon"><i class="fa-solid fa-passport"></i></div>
                                         <div class="visa-docs-card-title fw-medium">Passport</div>
@@ -1288,7 +1286,34 @@
                                     Our Customer Reviews
                                 </h2>
                             </div>
-                            <div class="row mt-4 visa-reviews-wrapper">
+                            <div class="row mt-3">
+                                <div class="col-auto">
+                                    <div class="visa-review-data-card d-flex align-items-center ">
+                                        <div class="visa-review-img-list d-flex align-items-center">
+                                            <div class="visa-review-data-img rounded-circle overflow-hidden m-0"><img src="assets/img/reviewer-img.jpg" alt="review" class="h-100 w-100 img-fluid"></div>
+                                            <div class="visa-review-data-img rounded-circle overflow-hidden"><img src="assets/img/reviewer-img-2.jpg" alt="review" class="h-100 w-100 img-fluid"></div>
+                                            <div class="visa-review-data-img rounded-circle overflow-hidden"><img src="assets/img/reviewer-img-3.jpg" alt="review" class="h-100 w-100 img-fluid"></div>
+                                            <div class="visa-review-data-img rounded-circle overflow-hidden"><img src="assets/img/reviewer-img-4.jpg" alt="review" class="h-100 w-100 img-fluid"></div>
+                                            <div class="visa-review-data-img rounded-circle overflow-hidden"><img src="assets/img/reviewer-img-5.jpg" alt="review" class="h-100 w-100 img-fluid"></div>
+                                        </div>
+                                        <div>
+                                            <div class="visa-review-data-title fw-semibold">Clients Feedback</div>
+                                            <div class="d-flex align-items-center mt-1">
+                                                <div class="visa-review-data-rating fw-semibold">
+                                                    4.9
+                                                </div>
+                                                <div>
+                                                    <div class="visa-review-data-subtitle fw-medium">Overall Reviews</div>
+                                                    <div class="visa-review-data-total"> 3434 Reviews</div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="row visa-reviews-wrapper">
                                 <div class="col-12">
                                     <div class="visa-review-card h-100">
                                         <div class="d-flex align-items-center justify-content-between">
@@ -1484,7 +1509,7 @@
 
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-xl-4 mt-xl-0 mt-4 pt-xl-0 pt-2">
                     <div class="sticky-top visa-sidebar-main">
                         <div class="visa-sidebar position-relative">
                             <div class="visa-sidebar-header-main position-absolute">
@@ -1499,6 +1524,9 @@
                                 </div>
                             </div>
                             <div class="tile" id="tile-1">
+                                <div class="visa-sidebar-heading fw-semibold text-black">
+                                    14 Days Single Entry Visa
+                                </div>
                                 <!-- Nav tabs -->
                                 <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
                                     <li class="nav-item" role="presentation">
@@ -1518,7 +1546,7 @@
                                         </button>
                                     </li>
                                 </ul>
-                                <div class="visa-sidebar-traveller-details d-flex align-items-center justify-content-between">
+                                <div class="visa-sidebar-traveller-details d-none align-items-center justify-content-between">
                                     <div class="visa-sidebar-traveller-title fw-medium text-black">
                                         <span class="visa-sidebar-traveller-icon"><i class="fa-solid fa-user-group"></i></span>
                                         Travellers
@@ -1703,7 +1731,7 @@
     <footer class="footer border-top common-gap">
         <div class="container footer-inner">
             <div class="row g-4">
-                <div class="col-4">
+                <div class="col-lg-4 col-md-4">
                     <div class="footer-logo">
                         <img src="assets/img/logo.svg" alt="logo" class="h-100 img-fluid">
                     </div>
@@ -1716,7 +1744,7 @@
                         <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-youtube"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-2">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-heading fw-semibold">
                         Company
                     </div>
@@ -1729,7 +1757,7 @@
                         <li><a href="terms-condition.html" class="footer-link text-decoration-none">Terms & Condition</a></li>
                     </ul>
                 </div>
-                <div class="col-2">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-heading fw-semibold">
                         Tools
                     </div>
@@ -1743,7 +1771,7 @@
                         <li><a href="" class="footer-link text-decoration-none">Partners</a></li>
                     </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 ">
                     <div class="footer-heading fw-semibold">
                         Offices
                     </div>
@@ -1777,6 +1805,27 @@
         </div>
     </footer>
     <!-- ***** footer end ***** -->
+
+    <!-- ***** bottom start ***** -->
+    <div class="bottom-bar fixed-bottom bg-white border-top d-md-none d-block">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="bottom-bar-title fw-semibold">
+                14 Days Single Entry Visa
+            </div>
+            <div class="bottom-bar-price">
+                9500 INR
+            </div>
+        </div>
+        <div class="row mt-2 ">
+            <div class="col-md-6 mx-auto">
+                <a href="application-form.html" class="bottom-bar-btn d-flex align-items-center justify-content-center text-decoration-none">
+                    <span class="visa-sidebar-btn-icon "><img src="assets/img/guarantee-icon.svg" height="20" alt="guarantee"></span>
+                    Start Application
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- ***** bottom end ***** -->
 
     <!-- review modal -->
     <div class="modal fade visa-reviews-section review-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
