@@ -39,7 +39,7 @@ window.onscroll = function () {
 };
 var first = true;
 function scrollFunction() {
-  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+  if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
       document.getElementById("navbar").classList.add('fixed-navbar');
       document.getElementById("scrolltop").classList.add('fixed-scroll');
   }

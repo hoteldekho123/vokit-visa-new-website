@@ -13,27 +13,42 @@
     .step-apply-card-main {
         text-align: center;
     }
+    .review-modal .modal-dialog {
+        max-width: 80%;
+    }
+    /* page heading section start */
+    .page-heading .heading-section-heading>* {
+        font-size: 25px;
+        line-height: 32px;
+    }
+    /* page heading section end */
 }
 @media (max-width:767px){
     /* common start */
     .container {
-        max-width: 98% !important;
+        max-width: 100% !important;
     }
     .heading-main .heading {
-        font-size: 20px;
+        font-size: 19px;
+        padding-left: 25px;
+        line-height: 28px;
     }
-    .heading-main img {
+    .heading-main .heading::before {
+        top: 4px;
         height: 19px;
+        width: 19px;
     }
     .common-gap {
         margin-top: 40px;
     }
     .visa-heading-main .visa-heading {
-        font-size: 19px;
+        font-size: 18px;
+        padding-left: 24px;
     }
-    .visa-heading-main img {
-        height: 16px;
-        margin-top: 1px;
+    .visa-heading-main .visa-heading::before {
+        top: 4px;
+        height: 17px;
+        width: 17px;
     }
     .visa-gap {
         margin-top: 35px;
@@ -324,7 +339,7 @@
         font-size: 32px;
     }
     .visa-review-card .visa-review-card-heading {
-        font-size: 17px;
+        font-size: 16px;
         margin-top: 12px;
     }
     .visa-review-card .visa-review-details p {
@@ -345,6 +360,9 @@
     }
     .visa-review-card .visa-review-list {
         gap: 3px;
+    }
+    .visa-review-card .visa-review-list i {
+        font-size: 13px;
     }
 
     .rejection-card .rejection-title {
@@ -371,6 +389,8 @@
     .visa-sidebar {
         padding: 12px;
         padding-top: 75px;
+        width: 93%;
+        margin-inline: auto;
     }
     .visa-sidebar .visa-sidebar-icon {
         margin-right: 10px;
@@ -383,7 +403,6 @@
     }
     .visa-sidebar .visa-sidebar-heading {
         font-size: 18px;
-        margin-bottom: 14px;
     }
     .visa-sidebar .nav-link {
         font-size: 13px;
@@ -401,6 +420,14 @@
     .visa-sidebar .visa-sidebar-btn-main {
         margin-top: 15px;
     }
+    .visa-sidebar .visa-sidebar-detail-title {
+        font-size: 14px;
+    }
+    .visa-sidebar .visa-sidebar-btn {
+        font-size: 15px;
+    }
+
+
     .country-time-card {
         padding: 10px;
         gap: 6px;
@@ -419,5 +446,249 @@
     .country-time-card .country-time {
         font-size: 15px;
     }
+    .review-modal .modal-dialog {
+        max-width: 100%;
+    }
+    .review-modal .modal-title {
+        font-size: 18px !important;
+    }
+    .review-modal .btn-close {
+        background-size: 13px;
+    }
+    .review-modal .modal-header,
+    .review-modal .modal-body {
+        padding: 12px;
+    }
     /* visa main section end */
+
+    /* page heading section start */
+    .page-heading {
+        height: 250px;
+        padding-top: 60px;
+    }
+    .page-heading .heading-section-heading>* {
+        font-size: 21px;
+        line-height: 32px;
+    }
+    .page-heading .breadcrumb {
+        gap: 8px;
+    }
+    .page-heading .breadcrumb .breadcrumb-item {
+        font-size: 14px;
+    }
+    .page-heading .breadcrumb .breadcrumb-item a {
+        gap: 5px;
+    }
+    /* page heading section end */
+
+    /***** eligible country search start *****/
+    .visa-search-card {
+        box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+        background: #f7f7f7;
+        padding: 15px;
+        border-radius: 13px;
+    }
+    .visa-search-card .serach-heading-main {
+        gap: 5px;
+    }
+    .visa-search-card .serach-heading-main img {
+        height: 18px;
+    }
+    .visa-search-card .serach-heading {
+        font-size: 19px;
+    }
+    .visa-search-card .hero-btn {
+        height: 45px;
+        font-size: 15px;
+    }
+    .visa-search-card .hero-label {
+        margin-bottom: 5px;
+    }
+    .visa-search-inner {
+        margin-top: 30px;
+    }
+    /***** eligible country search section end *****/
+
+    /***** eligible country section start *****/
+    .eligible-country-card {
+        padding: 11.5px;
+        font-size: 14px;
+    }
+    .eligible-country-card::before {
+        font-size: 12px;
+    }
+    /***** eligible country section end *****/
+
+    /***** content section start *****/
+    .content-card {
+        padding: 12px;
+    }
+    .content-card p {
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 8px;
+    }
+    /***** content section end *****/
+
+    /***** price section start *****/
+    .price-tab {
+        margin-top: 18px;
+        padding-bottom: 20px;
+    }
+    .price-tab .nav-link {
+        font-size: 14px;
+    }
+
+    .pricing-card .pricing-card-heading {
+        font-size: 15px;
+    }
+    .pricing-card .dubai-visa-price {
+        font-size: 32px;
+    }
+    .pricing-card .dubai-visa-price sup {
+        font-size: 17px;
+    }
+    .pricing-card .price-card-data {
+        gap: 0px;
+        padding-block: 7px;
+    }
+    .pricing-card .price-card-data .price-check {
+        height: 16px;
+        min-width: 16px;
+        max-width: 16px;
+        font-size: 11px;
+    }
+    .pricing-card .price-apply-btn {
+        font-size: 15px;
+    }
+    /***** price section end *****/
+
+
+    /***** visa country hero section start *****/
+    .country-search-section {
+        height: auto;
+        padding:90px 0 40px;
+    }
+    .country-search-section .visa-search-card {
+        padding-top: 45px ;
+    }
+    .country-search-section .visa-search-rating-card .visa-search-rating-img {
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .country-search-section .visa-search-rating-card .visa-search-rating-img img {
+        height: 100%;
+    }
+    .country-search-section .visa-search-rating-card {
+        padding: 6px 12px;
+        gap: 5px;
+        border-radius:0 0 6px 6px;
+    }
+    .country-search-section .visa-search-rating-card .visa-search-rating-title {
+        font-size: 16px;
+    }
+    .country-search-section .visa-search-inner{
+        margin-top: 25px;
+    }
+    /***** visa country hero section end *****/
+
+    /***** form section start *****/
+    .form-card{
+        padding: 15px;
+    }
+    .form-card .form-card-heading-main {
+        gap: 7px;
+    }
+    .form-card .form-card-heading-main img {
+        height: 18px;
+    }
+    .form-card .form-card-heading {
+        font-size: 20px;
+    }
+    .form-card .form-card-title {
+        font-size: 16px;
+        margin-top: 22px;
+    }
+    .form-card .visa-form-price {
+        font-size: 17px;
+    }
+    .form-input-group .input-label {
+        font-size: 14.5px;
+    }
+    .form-input-group .form-input {
+        height: 42px;
+        font-size: 14px;
+    }
+    .form-input-group .select2-selection {
+        height: 42px !important;
+        display: flex !important;
+        align-items: center;
+        border-radius: 8px !important;
+    }
+    .form-input-group .select2-selection__rendered {
+        font-size: 14px !important;
+    }
+    .form-input-group .select2-selection__arrow {
+        height: 42px !important;
+        top: 0 !important;
+    }
+    .form-input-group .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
+    .form-input-group .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+        border-bottom-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+    .form-card .form-btn-main {
+        margin-top: 30px;
+        gap: 15px;
+    }
+    .form-card .form-btn {
+        background-color: var(--theme1);
+        color: #fff;
+        border: 1px solid var(--theme1);
+        padding: 9px 30px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+        border-radius: 6px;
+        gap: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+    .form-card .form-btn:hover {
+        background-color: transparent;
+        color: var(--theme1);
+    }
+    .form-card .form-btn-one {
+        background-color: var(--theme2);
+        border-color: var(--theme2);
+    }
+    .form-card .form-btn-one:hover {
+        color: var(--theme2);
+    }
+    .dropzone {
+        border: 1px dashed var(--theme1);
+        border-radius: 7px;
+        max-height: 150px;
+    }
+    .dropzone .dz-preview {
+        margin: 0 auto;
+    }
+    .dropzone .dz-message {
+        margin: 0;
+    }
+    .dropzone .dropzone-title {
+        font-size: 15px;
+        margin-top: 12px;
+        color: #000;
+    }
+    .dropzone .dropzone-icon {
+        height: 40px;
+    }
+    .form-card .form-note-card {
+        padding: 6px;
+        font-size: 14px;
+        line-height: 27px;
+        margin-top: 20px;
+    }
+    /***** form section end *****/
+
 }

@@ -8,12 +8,13 @@
     <script src="assets/js/jquery.min.js"></script>
     <!-- bootstrap css -->
     <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css">
-    <!-- main css -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <!-- swiper css -->
     <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
     <!-- select2 css -->
     <link rel="stylesheet" href="assets/libs/select2/select2.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- font awesome cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- font family -->
@@ -24,14 +25,11 @@
 <body>
 
     <!-- ***** navbar start ***** -->
-    <nav class="navbar navbar-two navbar-expand-lg" aria-label="Offcanvas navbar large" id="navbar">
+    <nav class="navbar navbar-one navbar-expand-lg" aria-label="Offcanvas navbar large" id="navbar">
         <div class="container">
             <a class="navbar-brand py-0" href="index.html">
                 <img src="assets/img/logo.svg" alt="navbar logo" class="h-100 w-100 img-fluid">
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div>
                 <a href="" class="d-flex align-items-center justify-content-center nav-whatsapp text-decoration-none">
                     <img src="assets/img/whatsapp-icon.svg" height="28" alt="whatsapp">
@@ -43,7 +41,7 @@
     <!-- ***** navbar end ***** -->
 
     <!-- ***** page heading section start ***** -->
-    <section class="container-fluid page-heading position-relative d-flex align-items-center">
+    <section class="page-heading position-relative d-flex align-items-center">
         <div class="container h-100">
             <div class="h-100 d-flex align-items-center position-relative z-1">
                 <div class="row w-100">
@@ -80,8 +78,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <div class="heading-main d-inline-flex align-items-center">
-                        <img src="assets/img/airplane-icon-color.svg" alt=" Azerbaijan Visa For Portugal citizens" height="23">
+                    <div class="heading-main d-inline-flex">
                         <h2 class="heading mb-0">
                             Azerbaijan Visa For Portugal citizens
                         </h2>
@@ -113,12 +110,12 @@
         <div class="h-100 w-100 d-flex align-items-center position-relative z-1">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 mx-auto">
+                    <div class="col-lg-10 mx-auto">
                         <div class="visa-search-card">
                             <div class="d-flex align-items-center justify-content-center serach-heading-main">
                                 <span><img src="assets/img/airplane-icon-color.svg" height="22" alt="Visa"></span>
                                 <h2 class="serach-heading text-center fw-bold mb-0">
-                                    Apply for {{ucfirst($page->country)}} Visa Online
+                                    Apply for Visa Online
                                 </h2>
                             </div>
                             <div class="visa-search-inner">
@@ -171,8 +168,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <div class="heading-main d-inline-flex align-items-center">
-                        <img src="assets/img/airplane-icon-color.svg" alt=" Customer reviews" height="23">
+                    <div class="heading-main d-inline-flex">
                         <h2 class="heading mb-0">
                             Choose From a Range of Dubai Visa Options
                         </h2>
@@ -181,7 +177,7 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    <ul class="nav nav-tabs price-tab justify-content-center" id="myTab" role="tablist">
+                    <ul class="nav nav-tabs price-tab overflow-x-auto flex-nowrap text-nowrap justify-content-lg-center" id="myTab" role="tablist">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link price-tab-link position-relative fw-medium overflow-hidden active" id="single-tab" data-bs-toggle="tab" data-bs-target="#single-tab-pane" type="button" role="tab" aria-controls="single-tab-pane" aria-selected="true">
                                <span class="position-relative"><i class="fas fa-door-open"></i>Single Entry</span>
@@ -210,10 +206,10 @@
                           
                     </ul> 
                 </div>
-                <div class="col-12 mt-4">
+                <div class="col-12 mt-md-4 mt-3">
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade show active" id="single-tab-pane" role="tabpanel" aria-labelledby="single-tab" tabindex="0">
-                            <div class="row">
+                            <div class="row g-3">
                                 <div class="col-lg-4">
                                     <div class="pricing-card border pricing-card-two position-relative fortoogle0" id="pricingnew">
                                         <div class="d-flex pricing-header align-items-center justify-content-between">
@@ -499,7 +495,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="multiple-tab-pane" role="tabpanel" aria-labelledby="multiple-tab" tabindex="0">
-                            <div class="row">
+                            <div class="row g-3">
                                 <div class="col-lg-4">
                                     <div class="pricing-card border pricing-card-two position-relative fortoogle0" id="pricingnew">
                                         <div class="d-flex pricing-header align-items-center justify-content-between">
@@ -785,7 +781,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="transit-tab-pane" role="tabpanel" aria-labelledby="transit-tab" tabindex="0">
-                            <div class="row">
+                            <div class="row g-3">
                                 <div class="col-lg-4">
                                     <div class="pricing-card border pricing-card-two position-relative fortoogle0" id="pricingnew">
                                         <div class="d-flex pricing-header align-items-center justify-content-between">
@@ -1071,7 +1067,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="job-seeker-tab-pane" role="tabpanel" aria-labelledby="job-seeker-tab" tabindex="0">
-                            <div class="row">
+                            <div class="row g-3">
                                 <div class="col-lg-4">
                                     <div class="pricing-card border pricing-card-two position-relative fortoogle0" id="pricingnew">
                                         <div class="d-flex pricing-header align-items-center justify-content-between">
@@ -1357,7 +1353,7 @@
                             </div>
                         </div>
                         <div class="tab-pane fade" id="freelance-tab-pane" role="tabpanel" aria-labelledby="freelance-tab" tabindex="0">
-                            <div class="row">
+                            <div class="row g-3">
                                 <div class="col-lg-4">
                                     <div class="pricing-card border pricing-card-two position-relative fortoogle0" id="pricingnew">
                                         <div class="d-flex pricing-header align-items-center justify-content-between">
@@ -1654,15 +1650,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <div class="heading-main d-inline-flex align-items-center">
-                        <img src="assets/img/airplane-icon-color.svg" alt=" Customer reviews" height="23">
+                    <div class="heading-main d-inline-flex">
                         <h2 class="heading mb-0">
                             Customer reviews
                         </h2>
                     </div>
                 </div>
             </div>
-            <div class="row mt-4 gx-5">
+            <div class="row mt-md-4 mt-3 gx-xl-5 gap-lg-0 gap-4">
                 <div class="col-lg-6">
                     <div class="review-detail-card position-relative overflow-hidden   ">
                         <div class="review-detail-card-heading fw-semibold ">
@@ -1806,8 +1801,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <div class="heading-main d-inline-flex align-items-center">
-                        <img src="assets/img/airplane-icon-color.svg" alt=" Customer reviews" height="23">
+                    <div class="heading-main d-inline-flex">
                         <h2 class="heading mb-0">
                             Frequently Asked Questions
                         </h2>
@@ -1860,65 +1854,11 @@
     </section>
     <!-- ***** visa faq section end ***** -->
 
-    <!-- why choose us section start -->
-    <section class="why-choose-section position-relative common-gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="heading-main d-inline-flex align-items-center">
-                        <img src="assets/img/airplane-icon-color.svg" alt="top Destination" height="23">
-                        <h2 class="heading mb-0">
-                            Why Choose Us
-                        </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt-4 pt-3">
-                <div class="col-md-4">
-                    <div class="why-choose-card d-flex">
-                        <div class="why-choose-card-icon">
-                            <img src="assets/img/secure-process.svg" alt="secure process" height="40">
-                        </div>
-                        <div>
-                            <div class="fw-semibold why-choose-card-title">100% Secure Process</div>
-                            <div class="why-choose-card-detail">
-                                Your data is protected with advanced encryption. We ensure a fully secure application process from start to finish.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="why-choose-card d-flex">
-                        <div>
-                            <img src="assets/img/fast-approval.svg" alt="fast-approval" height="40">
-                        </div>
-                        <div>
-                            <div class="fw-semibold why-choose-card-title">Fastest Visa Approvals</div>
-                            <div class="why-choose-card-detail">Get your visa on time with our efficient services. Experience swift processing without unnecessary delays.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="why-choose-card d-flex">
-                        <div>
-                            <img src="assets/img/people-icon.svg" alt="Trusted by 1 Million+" height="40">
-                        </div>
-                        <div>
-                            <div class="fw-semibold why-choose-card-title">Trusted by 1 Million+ Travelers</div>
-                            <div class="why-choose-card-detail">Join a global community of travelers who rely on us for their visa requirements. Your journey begins here.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- why choose us section end -->
-
     <!-- ***** footer start ***** -->
     <footer class="footer border-top common-gap">
         <div class="container footer-inner">
             <div class="row g-4">
-                <div class="col-4">
+                <div class="col-lg-4 col-md-4">
                     <div class="footer-logo">
                         <img src="assets/img/logo.svg" alt="logo" class="h-100 img-fluid">
                     </div>
@@ -1931,7 +1871,7 @@
                         <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-youtube"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-2">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-heading fw-semibold">
                         Company
                     </div>
@@ -1944,7 +1884,7 @@
                         <li><a href="terms-condition.html" class="footer-link text-decoration-none">Terms & Condition</a></li>
                     </ul>
                 </div>
-                <div class="col-2">
+                <div class="col-lg-2 col-md-4 col-6">
                     <div class="footer-heading fw-semibold">
                         Tools
                     </div>
@@ -1958,7 +1898,7 @@
                         <li><a href="" class="footer-link text-decoration-none">Partners</a></li>
                     </ul>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 ">
                     <div class="footer-heading fw-semibold">
                         Offices
                     </div>
@@ -2008,25 +1948,6 @@
                 prevEl: ".swiper-prev",
             },
         });
-    </script>
-
-    <!-- navbar js -->
-    <script>
-        // // on scorll navbar
-        window.onscroll = function () {
-        scrollFunction();
-        };
-        var first = true;
-        function scrollFunction() {
-        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-            document.getElementById("navbar").classList.add('fixed-navbar');
-            document.getElementById("scrolltop").classList.add('fixed-scroll');
-        }
-        else {
-            document.getElementById("navbar").classList.remove('fixed-navbar');
-            document.getElementById("scrolltop").classList.remove('fixed-scroll');
-        }
-        }
     </script>
 
     <!-- select2 -->

@@ -16,9 +16,22 @@ body , html{
     text-align: center;
     line-height: normal;
     font-weight: 600;
+    position: relative;
+    padding-left: 30px;
+}
+.heading-main .heading::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 6px;
+    height: 22px;
+    width: 22px;
+    background: url(../img/airplane-icon-color.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 .heading-main img {
-    margin-top: 4px;
+    margin-top: 6px;
 }
 .visa-heading-main {
     gap: 7px;
@@ -28,9 +41,19 @@ body , html{
     text-align: center;
     line-height: normal;
     font-weight: 600;
+    position: relative;
+    padding-left: 27px;
 }
-.visa-heading-main img{
-    margin-top: 4px;
+.visa-heading-main .visa-heading::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    top: 6px;
+    height: 19px;
+    width: 19px;
+    background: url(../img/airplane-icon-color.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 .common-gap {
     margin-top: 65px;
@@ -896,7 +919,8 @@ body , html{
 }
 .custom-tooltip .tooltip-detail-main {
     width: 250px;
-    left: -20px;
+    left: 50%;
+    transform: translateX(-50%);
     top: 165%;
     visibility: hidden;
     opacity: 0;
@@ -913,14 +937,14 @@ body , html{
 .custom-tooltip .tooltip-details::before {
     content: '';
     position: absolute;
-    left: 20px;
+    left: 50%;
     top: -7px;
     background: #fff;
     height: 14px;
     width: 14px;
     border: 1px solid;
     border-color: #eee transparent transparent #eee;
-    transform: rotate(45deg);
+    transform:translateX(-50%) rotate(45deg);
 }
 .custom-tooltip .tooltip-title {
     font-size: 17px;
@@ -1591,11 +1615,6 @@ body , html{
     font-size: 18px;
     color: var(--theme1);
 }
-.form-group .form-input {
-    font-size: 14px;
-    height: 42px;
-    margin-top: 2px;
-}
 .form-input-group .input-label {
     font-weight: 500;
     display: block;
@@ -1610,7 +1629,7 @@ body , html{
     border-radius: 8px;
 }
 .form-input-group .select2-selection {
-    height: 42px !important;
+    height: 44px !important;
     display: flex !important;
     align-items: center;
     border-radius: 8px !important;
@@ -1619,7 +1638,7 @@ body , html{
     font-size: 14px !important;
 }
 .form-input-group .select2-selection__arrow {
-    height: 42px !important;
+    height: 44px !important;
     top: 0 !important;
 }
 .form-input-group .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
@@ -1660,13 +1679,16 @@ body , html{
 .dropzone .dz-preview {
     margin: 0 auto;
 }
+.dropzone .dz-message {
+    margin: 0;
+}
 .dropzone .dropzone-title {
     font-size: 15px;
-    margin-top: 8px;
+    margin-top: 12px;
+    color: #000;
 }
 .dropzone .dropzone-icon {
-    font-size: 28px;
-    color: var(--theme1);
+    height: 40px;
 }
 .form-card .form-note-card {
     padding: 6px;
