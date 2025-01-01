@@ -1659,6 +1659,7 @@ body , html{
     border-radius: 6px;
     gap: 8px;
     transition: all 0.3s ease-in-out;
+    font-size: 15px;
 }
 .form-card .form-btn:hover {
     background-color: transparent;
@@ -1714,6 +1715,11 @@ body , html{
 }
 .tems-heading-section {
     background: url(../img/terms-condition-bg.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.contact-heading-section {
+    background: url(../img/contact-us-bg.jpg) no-repeat;
     background-position: center;
     background-size: cover;
 }
@@ -2266,3 +2272,196 @@ body , html{
     filter: invert(1);
 }
 /***** bottom bar end *****/
+
+
+/***** contact section start *****/
+.contact-sidebar {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    padding: 20px;
+    border-radius: 8px;
+    top: 90px;
+}
+.contact-sidebar .contact-sidebar-link {
+    gap: 14px;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.contact-sidebar .contact-sidebar-heading {
+    font-size: 18px;
+    line-height: 28px;
+}
+.contact-sidebar .contact-sidebar-link-icon {
+    font-size: 20px;
+    color: var(--theme1);
+}
+.contact-sidebar .contact-sidebar-link-subtitle {
+    font-size: 14px;
+    margin-top: 4px;
+    line-height: 23px;
+    color: #727272;
+}
+.contact-section .contact-form-heading {
+    font-size: 22px;
+}
+.contact-input-group .contact-input {
+    height: 45px;
+    font-size: 14px;
+    border-color: #c7c7c7;
+    border-radius: 7px;
+    background-color: #f7f7f7;
+}
+.contact-input-group .contact-form-label {
+    font-size: 14px;
+    margin-bottom: 2.5px;
+    margin-left: 0.5px;
+}
+.contact-input-group .contact-textarea {
+    height: 110px;
+}
+.contact-section .contact-form-btn {
+    background-color: var(--theme1);
+    border: 1px solid var(--theme1);
+    color: #fff;
+    font-size: 15px;
+    padding: 9px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.contact-section .contact-form-btn i {
+    margin-left: 4px;
+}
+.contact-section .contact-form-btn:hover{
+    background-color: transparent;
+    color: var(--theme1);
+}
+/***** contact section end *****/
+
+
+/***** payment section start *****/
+.payment-section .payment-heading-main {
+    gap: 10px;
+}
+.payment-section .payment-heading {
+    font-size: 27px;
+}
+.payment-detail-card {
+    box-shadow: rgba(60, 64, 67, .3) 0px 1px 2px 0px, rgba(60, 64, 67, .15) 0px 1px 3px 1px;
+    border-radius: 12px;
+    margin-top: 18px;
+}
+.payment-detail-card .payment-detail-header {
+    padding: 12px;
+}
+.payment-detail-card .payment-card-heading {
+    font-size: 17px;    
+}
+.payment-detail-card .edit-btn {
+    background-color: var(--theme1);
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 7px 7px;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+    gap: 4px;
+}
+.payment-detail-card .edit-btn:hover {
+    background-color: #da4b50;
+}
+.payment-detail-card .table th {
+    font-weight: 600;
+    padding: 10px 13px;
+    font-size: 15px;
+}
+.payment-detail-card .table td {
+    font-size: 14px;
+    padding: 10px 13px;
+}
+.payment-detail-card .payment-detail-body {
+    padding: 15px;
+}
+.payment-detail-card .payment-detail-input:checked~.payment-check-card {
+    border: 2px solid #009739;
+}
+.payment-detail-card .payment-detail-input:checked~.payment-check-card .express-check {
+    background-color: #009739;
+}
+.payment-detail-card .payment-check-card {
+    border-radius: 7px;
+    border: 1.5px solid #c9c9c9;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+    gap: 10px;
+    padding: 10px;
+}
+.payment-detail-card .payment-check-card .express-check {
+    height: 16px;
+    max-width: 16px;
+    min-width: 16px;
+    font-size: 10px;
+    color: #fff;
+    background-color: #b3b3b3;
+    margin-top: 5px;
+}
+.payment-detail-card .payment-check-card .payment-check-title {
+    font-weight: 500;
+}
+.payment-detail-card .payment-check-card .payment-check-price {
+    color: #009739;
+    font-weight: 600;
+    font-size: 15px;
+}
+.payment-detail-card .payment-check-card .payment-check-para {
+    font-size: 14px;
+    margin-top: 1px;
+}
+.payment-detail-card .payment-detail-subheading {
+    font-size: 14px;
+    margin-top: 2px;
+    color: #505050;
+}
+.payment-sidebar-card {
+    padding: 13px 10px;
+    border: 1px solid #c9c9c9;
+    cursor: pointer;
+    gap: 10px;
+    transition: all .1s ease-in-out;
+}
+.payment-sidebar-card img {
+    height: 33px;
+}
+.payment-sidebar-card .payment-sidebar-check {
+    height: 20px;
+    min-width: 20px;
+    max-width: 20px;
+    border: 1px solid #ccc;
+}
+.payment-sidebar-card .payment-sidebar-check::before {
+    content: "";
+    position: absolute;
+    right: -3px;
+    top: -1px;
+    height: 0px;
+    width: 9px;
+    background-color: #f8f9fa;
+    transition: all .3s ease-in-out;
+}
+.payment-sidebar-card .payment-sidebar-check img {
+    height: 125%;
+    width: 0%;
+    left: 2px;
+    position: absolute;
+    top: -6px;
+    transition: all .3s ease-in-out;
+}
+.sidebar-input:checked~.payment-sidebar-card {
+    border: 1.8px solid var(--theme1);
+}
+.sidebar-input:checked~.payment-sidebar-card .payment-sidebar-check::before {
+    height: 9px;
+}
+.sidebar-input:checked~.payment-sidebar-card .payment-sidebar-check img {
+    width: 125%}
+/***** payment section end *****/
+

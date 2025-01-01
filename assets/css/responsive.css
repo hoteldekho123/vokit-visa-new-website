@@ -691,4 +691,90 @@
     }
     /***** form section end *****/
 
+    /***** contact section start *****/
+    .contact-sidebar {
+        padding: 15px;
+    }
+    .contact-sidebar .contact-sidebar-link {
+        gap: 10px;
+        margin-bottom: 12px;
+        padding-bottom: 12px;
+    }
+    .contact-sidebar .contact-sidebar-heading {
+        font-size: 16px;
+        line-height: normal;
+    }
+    .contact-sidebar .contact-sidebar-link-icon {
+        font-size: 18px;
+    }
+    .contact-sidebar .contact-sidebar-link-subtitle {
+        font-size: 14px;
+    }
+    .contact-sidebar .contact-sidebar-link-title {
+        font-size: 15px;
+    }
+    .contact-section .contact-form-heading {
+        font-size: 20px;
+    }
+    .contact-input-group .contact-input {
+        height: 45px;
+        font-size: 14px;
+        border-color: #c7c7c7;
+        border-radius: 7px;
+        background-color: #f7f7f7;
+    }
+    .contact-input-group .contact-form-label {
+        font-size: 14px;
+        margin-bottom: 2.5px;
+        margin-left: 0.5px;
+    }
+    .contact-input-group .contact-textarea {
+        height: 110px;
+    }
+    .contact-section .contact-form-btn {
+        background-color: var(--theme1);
+        border: 1px solid var(--theme1);
+        color: #fff;
+        font-size: 15px;
+        padding: 9px 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+    .contact-section .contact-form-btn i {
+        margin-left: 4px;
+    }
+    .contact-section .contact-form-btn:hover{
+        background-color: transparent;
+        color: var(--theme1);
+    }
+    /***** contact section end *****/
+
+
+    /* payment detail section start */
+    .payment-detail-card .payment-detail-header {
+        padding: 10px;
+    }
+    .payment-detail-card .payment-detail-subheading {
+        font-size: 12px;
+    }
+    .payment-detail-card .edit-btn {
+        font-size: 13px;
+    }
+    .payment-detail-card .payment-detail-body {
+        padding: 12px;
+    }
+    .payment-detail-card .payment-check-card {
+        gap: 8px;
+        padding: 8px;
+    }
+    .payment-detail-card .payment-check-card .payment-check-price {
+        font-size: 14px;
+    }
+    .payment-detail-card .payment-check-card .payment-check-title {
+        font-size: 15px;
+    }
+    .payment-detail-card .payment-check-card .payment-check-para {
+        font-size: 13px;
+    }
+    /* payment detail section end */
 }

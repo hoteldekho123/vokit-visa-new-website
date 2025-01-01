@@ -752,7 +752,7 @@
                         <li><a href="" class="footer-link text-decoration-none">Transparency</a></li>
                         <li><a href="" class="footer-link text-decoration-none">Blog</a></li>
                         <li><a href="" class="footer-link text-decoration-none">Newsroom</a></li>
-                        <li><a href="" class="footer-link text-decoration-none">Contact</a></li>
+                        <li><a href="contact.html" class="footer-link text-decoration-none">Contact</a></li>
                         <li><a href="" class="footer-link text-decoration-none">Partners</a></li>
                     </ul>
                 </div>
@@ -814,11 +814,9 @@
                 { inputId: 'searchinput1', cardId: 'searchcard1' },
                 { inputId: 'searchinput2', cardId: 'searchcard2' }
             ];
-
             pairs.forEach(function (pair) {
                 const input = document.getElementById(pair.inputId);
                 const div = document.getElementById(pair.cardId);
-
                 function toggleSearchCard() {
                     if (div.classList.contains('d-none')) {
                         div.classList.remove('d-none');
@@ -826,12 +824,10 @@
                         div.classList.add('d-none');
                     }
                 }
-
                 input.addEventListener('click', function (event) {
-                    event.stopPropagation(); // Prevent bubbling
+                    event.stopPropagation(); 
                     toggleSearchCard();
                 });
-
                 document.addEventListener('click', function (event) {
                     if (!input.contains(event.target) && !div.contains(event.target)) {
                         div.classList.add('d-none');

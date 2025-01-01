@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vokit</title>
+    <!-- jquery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
+    <!-- select2 css -->
+    <link rel="stylesheet" href="assets/libs/select2/select2.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ***** navbar start ***** -->
+    <nav class="navbar navbar-two navbar-expand-lg" aria-label="Offcanvas navbar large" id="navbar">
+        <div class="container">
+            <a class="navbar-brand py-0" href="index.html">
+                <img src="assets/img/logo.svg" alt="navbar logo" class="h-100 w-100 img-fluid">
+            </a>
+            <div>
+                <a href="" class="d-flex align-items-center justify-content-center nav-whatsapp text-decoration-none">
+                    <img src="assets/img/whatsapp-icon.svg" height="28" alt="whatsapp">
+                    Chat With Us !
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- ***** navbar end ***** -->
+
+    <!-- ***** payment detail section start ***** -->
+    <main class="mt-5">
+        <div class="container">
+            <div class="row gx-xl-5">
+                <div class="col-xl-8 pe-xl-5 payment-section">
+                    <div class="payment-heading-main fw-bold position-relative text-center d-flex align-items-center justify-content-center">
+                        <img src="assets/img/airplane-icon-color.svg" alt="airplane" height="20">
+                        <h1 class="payment-heading mb-0 fw-semibold">Payment Detail</h1>
+                    </div>
+                    <div class="payment-detail-card visa-form-card p-0">
+                        <div class="payment-detail-header d-flex flex-md-row flex-column border-bottom align-items-md-center justify-content-between">
+                           <div class="payment-card-heading p-0 fw-semibold">
+                              Confirm or edit your order 
+                           </div>
+                        </div>
+                        <div class="table-responsive">
+                           <table class="table align-middle text-nowrap" id="data-table">
+                                <thead>
+                                    <tr class="bg-light">
+                                        <th scope="col" class="bg-transparent">#</th>
+                                        <th scope="col" class="bg-transparent"> Name</th>
+                                        <th scope="col" class="bg-transparent">Mobile No.</th>
+                                        <th scope="col" class="bg-transparent">Email   </th>
+                                        <th scope="col" class="bg-transparent">Action   </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td scope="row">1</td>
+                                        <td class="name">dfdfd dfdfd</td>
+                                        <td class="mobile">+911231323313</td>
+                                        <td class="email">demo@gmai.com</td>
+                                        <td>
+                                            <button type="button" class="edit-btn wauto border-0 text-decoration-none d-flex align-items-center" id="previousapp">
+                                                <i class="fa-solid fa-user-pen"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                           </table>
+                        </div>
+                    </div>
+                    <div class="payment-detail-card mt-4 visa-form-card p-0">
+                        <div class="payment-detail-header d-flex border-bottom align-items-center justify-content-between">
+                           <div class="payment-card-heading fw-semibold p-0">
+                            Add to your order ?
+                           </div>
+                        </div> 
+                        <div class="payment-detail-body">
+                           <div class="row mt-0 gx-3 gap-md-0 gap-2">
+                              <div class="col-md-6 ">
+                                 <input type="checkbox" hidden="" id="express-service" class="payment-detail-input">
+                                 <label class="payment-check-card bg-light d-flex" for="express-service">
+                                    <div class="express-check rounded-circle d-flex align-items-center justify-content-center">  
+                                       <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <div class="w-100">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="payment-check-title">
+                                             Express Service
+                                          </div>
+                                                                                  <div class="payment-check-price">7000 INR</div>
+                                                                             </div>
+                                       <p class="mb-0 payment-check-para">
+                                          Get Your Order in 12 Hours
+                                       </p>
+                                    </div>
+                                 </label>
+                              </div>
+                              <div class="col-md-6 ">
+                                 <input type="checkbox" hidden="" id="insurance" class="payment-detail-input">
+                                 <label class="payment-check-card bg-light d-flex" for="insurance">
+                                    <div class="express-check rounded-circle d-flex align-items-center justify-content-center">  
+                                       <i class="fa-solid fa-check"></i>
+                                    </div>
+                                    <div class="w-100">
+                                       <div class="d-flex align-items-center justify-content-between">
+                                          <div class="payment-check-title">
+                                             Insurance
+                                          </div>
+                                          <div class="payment-check-price">5000 INR</div>
+                                       </div>
+                                       <p class="mb-0 payment-check-para">
+                                          Get you Instant Medical Travel Insurance
+                                       </p>
+                                    </div>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="payment-detail-card mt-4 visa-form-card p-0">
+                        <div class="payment-detail-header border-bottom">
+                            <div class="payment-card-heading fw-semibold p-0">
+                                Select Payment Method
+                            </div>
+                            <div class="payment-detail-subheading">All transactions are secure and encrypted.</div>
+                        </div> 
+                        <div class="payment-detail-body">
+                            <div class="row payment-sidebar-inner g-3">
+                                <div class="col-lg-4">
+                                    <input type="radio" name="paymentmethod" value="mamopay" class="sidebar-input" hidden="" id="mamopay" checked="">
+                                    <label for="mamopay" class="payment-sidebar-card bg-light align-items-center rounded-2 w-100 d-flex">
+                                        <span class="payment-sidebar-check rounded-circle d-flex align-items-center justify-content-center position-relative">
+                                            <img src="https://www.vokit.com/assets/img/checkbox.svg" alt="check">
+                                        </span>
+                                        <img src="https://www.vokit.com/assets/img/mamo-pay-icon.webp" alt="mamo pay" class="" loading="lazy">
+                                    </label>
+                                </div>
+                                <div class="col-lg-4">
+                                    <input type="radio" name="paymentmethod" value="network" class="sidebar-input" hidden="" id="network">
+                                    <label for="network" class="payment-sidebar-card bg-light align-items-center rounded-2 w-100 d-flex">
+                                        <span class="payment-sidebar-check rounded-circle d-flex align-items-center justify-content-center position-relative">
+                                            <img src="https://www.vokit.com/assets/img/checkbox.svg" alt="check">
+                                        </span>
+                                        <img src="https://www.vokit.com/assets/img/network_gateway_icon.webp" alt="network" class="" loading="lazy">
+                                    </label>
+                                </div>
+                                <div class="col-lg-4">
+                                   <input type="radio" name="paymentmethod" value="ccavenue" class="sidebar-input" hidden="" id="ccavenue">
+                                    <label for="ccavenue" class="payment-sidebar-card bg-light align-items-center rounded-2 w-100 d-flex">
+                                        <span class="payment-sidebar-check rounded-circle d-flex align-items-center justify-content-center position-relative">
+                                            <img src="https://www.vokit.com/assets/img/checkbox.svg" alt="check">
+                                        </span>
+                                        <img src="https://www.vokit.com/assets/img/ccavenue_icon.webp" alt="ccavenue" class="" loading="lazy">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 mt-xl-0 mt-4 pt-xl-0 pt-md-2">
+                    <div class="sticky-top visa-sidebar-main">
+                        <div class="visa-sidebar position-relative">
+                            <div class="visa-sidebar-header-main position-absolute">
+                                <div class="d-flex align-items-center visa-sidebar-header position-relative">
+                                    <div class="visa-sidebar-icon">
+                                        <img src="assets/img/guarantee-icon.svg" alt="guarantee" height="40">
+                                    </div>
+                                    <div>
+                                        <div class="visa-sidebar-header-title fw-medium">Visa guaranteed on</div>
+                                        <div class="visa-sidebar-header-time">24 Dec 2024 at 06:00 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile" id="tile-1">
+                                <div class="visa-sidebar-heading fw-semibold text-black">
+                                    14 Days Single Entry Visa
+                                </div>
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link position-relative fw-medium overflow-hidden active" id="regular-tab" data-bs-toggle="tab" data-bs-target="#regular-tab-pane" type="button" role="tab" aria-controls="regular-tab-pane" aria-selected="true">
+                                            <span class="position-relative">
+                                                <i class="fa-solid fa-clock"></i>
+                                                26 December
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link position-relative fw-medium overflow-hidden" id="express-tab" data-bs-toggle="tab" data-bs-target="#express-tab-pane" type="button" role="tab" aria-controls="express-tab-pane" aria-selected="false">
+                                            <span class="position-relative">
+                                                <i class="fa-solid fa-bolt"></i>
+                                                25 December
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="visa-sidebar-traveller-details d-none align-items-center justify-content-between">
+                                    <div class="visa-sidebar-traveller-title fw-medium text-black">
+                                        <span class="visa-sidebar-traveller-icon"><i class="fa-solid fa-user-group"></i></span>
+                                        Travellers
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center visa-sidebar-traveller-data">
+                                        <button class="visa-sidebar-data-btn border-end h-100 minus-btn"><i class="fa-solid fa-minus"></i></button>
+                                        <input type="number" value="0" min="0" max="100" class="visa-sidebar-data-input fw-medium form-control text-center bg-transparent border-0 shadow-none">
+                                        <button class="visa-sidebar-data-btn plus-btn h-100 border-start"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div class="tab-content mt-3" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="regular-tab-pane" role="tabpanel" aria-labelledby="regular-tab" tabindex="0">
+                                        <div class="visa-sidebar-title fw-semibold">
+                                            Price
+                                        </div>
+                                        <div class="d-flex flex-column visa-sidebar-detail">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="visa-sidebar-detail-title d-flex align-items-center">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="visa-sidebar-detail-icon d-flex align-items-center justify-content-center">
+                                                            <img src="assets/img/govt-icon.svg" alt="govt Fees" height="18">
+                                                        </div>
+                                                        Government Fees
+                                                    </div> 
+                                                    <div class="custom-tooltip position-relative">
+                                                        <div class="tooltip-icon">
+                                                            <i class="fa-solid fa-circle-info"></i>
+                                                        </div>
+                                                        <div class="tooltip-detail-main position-absolute">
+                                                            <div class="tooltip-details position-relative">
+                                                                <div class="tooltip-title fw-medium">
+                                                                    Government Fee 
+                                                                </div>
+                                                                <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="visa-sidebar-detail-subtitle d-flex align-items-center">
+                                                    <div class="fw-medium visa-sidebar-detail-price">
+                                                        ₹2342
+                                                    </div>
+                                                    x
+                                                    <div class="fw-medium">
+                                                        2
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="visa-sidebar-detail-title d-flex align-items-center">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="visa-sidebar-detail-icon d-flex align-items-center justify-content-center">
+                                                            <img src="assets/img/guarantee-icon.svg" alt="vokit Fees" height="18">
+                                                        </div>
+                                                        Vokit Fees
+                                                    </div>
+                                                    <div class="custom-tooltip position-relative">
+                                                        <div class="tooltip-icon">
+                                                            <i class="fa-solid fa-circle-info"></i>
+                                                        </div>
+                                                        <div class="tooltip-detail-main position-absolute">
+                                                            <div class="tooltip-details position-relative">
+                                                                <div class="tooltip-title fw-medium">
+                                                                    Vokit Fees 
+                                                                </div>
+                                                                <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="visa-sidebar-detail-subtitle d-flex align-items-center">
+                                                    <div class="fw-medium visa-sidebar-detail-price">
+                                                        ₹2342
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="express-tab-pane" role="tabpanel" aria-labelledby="express-tab" tabindex="0">
+                                        <div class="visa-sidebar-title fw-semibold">
+                                            Price
+                                        </div>
+                                        <div class="d-flex flex-column visa-sidebar-detail">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="visa-sidebar-detail-title d-flex align-items-center">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="visa-sidebar-detail-icon d-flex align-items-center justify-content-center">
+                                                            <img src="assets/img/govt-icon.svg" alt="govt Fees" height="18">
+                                                        </div>
+                                                        Government Fees
+                                                    </div> 
+                                                    <div class="custom-tooltip position-relative">
+                                                        <div class="tooltip-icon">
+                                                            <i class="fa-solid fa-circle-info"></i>
+                                                        </div>
+                                                        <div class="tooltip-detail-main position-absolute">
+                                                            <div class="tooltip-details position-relative">
+                                                                <div class="tooltip-title fw-medium">
+                                                                    Government Fee 
+                                                                </div>
+                                                                <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="visa-sidebar-detail-subtitle d-flex align-items-center">
+                                                    <div class="fw-medium visa-sidebar-detail-price">
+                                                        ₹2342
+                                                    </div>
+                                                    x
+                                                    <div class="fw-medium">
+                                                        2
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="visa-sidebar-detail-title d-flex align-items-center">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="visa-sidebar-detail-icon d-flex align-items-center justify-content-center">
+                                                            <img src="assets/img/guarantee-icon.svg" alt="vokit Fees" height="18">
+                                                        </div>
+                                                        Vokit Fees
+                                                    </div>
+                                                    <div class="custom-tooltip position-relative">
+                                                        <div class="tooltip-icon">
+                                                            <i class="fa-solid fa-circle-info"></i>
+                                                        </div>
+                                                        <div class="tooltip-detail-main position-absolute">
+                                                            <div class="tooltip-details position-relative">
+                                                                <div class="tooltip-title fw-medium">
+                                                                    Vokit Fees 
+                                                                </div>
+                                                                <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="visa-sidebar-detail-subtitle d-flex align-items-center">
+                                                    <div class="fw-medium visa-sidebar-detail-price">
+                                                        ₹2342
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="visa-sidebar-price-main d-flex align-items-center justify-content-between">
+                                    <div class="visa-sidebar-price-title fw-medium text-black">
+                                        Total Price
+                                    </div>
+                                    <div class="visa-sidebar-total-price text-black fw-semibold">
+                                        ₹ 32423
+                                    </div>
+                                </div>
+                                <div class="visa-sidebar-btn-main">
+                                    <a href="application-form.html" class="visa-sidebar-btn d-flex align-items-center justify-content-center text-decoration-none">
+                                        <span class="visa-sidebar-btn-icon "><img src="assets/img/guarantee-icon.svg" height="20" alt="guarantee"></span>
+                                        Pay With Debit Card/Credit Card
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="country-time-card d-flex align-items-center" id="visa-page">
+                            <div class="country-time-icon-main rounded-circle d-flex align-items-center justify-content-center">
+                                <div class="country-time-icon d-flex bg-white rounded-circle align-items-center justify-content-center">
+                                    <img src="assets/img/clock.svg" alt="time" height="32">
+                                </div>
+                            </div>
+                            <div>
+                                <div id="country-name" class="time-country-name fw-semibold text-white">Loading...</div>
+                                <div id="current-time" class="country-time fw-medium text-white">Loading...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main> 
+    <!-- ***** payment detail section end ***** -->
+
+    <!-- ***** footer start ***** -->
+    <footer class="footer border-top common-gap">
+        <div class="container footer-inner">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer-logo">
+                        <img src="assets/img/logo.svg" alt="logo" class="h-100 img-fluid">
+                    </div>
+                    <p class="footer-para">Your one-stop travel solution, from planning to discovering, booking, and sharing memories.</p>
+                    <ul class="list-unstyled mb-0 p-0 footer-social-list d-flex align-items-center ">
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="footer-heading fw-semibold">
+                        Company
+                    </div>
+                    <ul class="list-unstyled mb-0 p-0 d-flex flex-column footer-list">
+                        <li><a href="eligible-country.html" class="footer-link text-decoration-none">Eligible Country</a></li>
+                        <li><a href="track.html" class="footer-link text-decoration-none">Track</a></li>
+                        <li><a href="visa-country.html" class="footer-link text-decoration-none">Visa Country</a></li>
+                        <li><a href="about.html" class="footer-link text-decoration-none">About</a></li>
+                        <li><a href="privacy-policy.html" class="footer-link text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="terms-condition.html" class="footer-link text-decoration-none">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="footer-heading fw-semibold">
+                        Tools
+                    </div>
+                    <ul class="list-unstyled mb-0 p-0 d-flex flex-column footer-list">
+                        <li><a href="" class="footer-link text-decoration-none">For Travel Agents</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Security</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Transparency</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Blog</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Newsroom</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Contact</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="footer-heading fw-semibold">
+                        Offices
+                    </div>
+                    <ul class="list-unstyled mb-0 p-0 d-flex flex-column footer-list">
+                        <li>
+                            <a href="" class="footer-link text-decoration-none">
+                                <i class="fa-solid fa-location-dot"></i>
+                                106, Building-4, Al Suq Al Kabeer, Opp. Concorde Palace Hotel, Bur Dubai, Dubai, UAE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-link text-decoration-none">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Office 169, 321 - 323 High Rd Chadwell Heath Dagenham RM6 6AX United Kingdom
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-section border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright-title text-center">
+                            © Vokit, All rights reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** footer end ***** -->
+
+    <!-- js files -->
+    <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/libs/select2/select2.min.js"></script>
+
+    <!-- review slider js -->
+    <script>
+        var swiper = new Swiper(".reviewslider", {
+            loop:true,  
+            navigation: {
+                nextEl: ".swiper-next",
+                prevEl: ".swiper-prev",
+            },
+        });
+    </script>
+
+    <!-- navbar js -->
+    <script>
+        // // on scorll navbar
+        window.onscroll = function () {
+        scrollFunction();
+        };
+        var first = true;
+        function scrollFunction() {
+        if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+            document.getElementById("navbar").classList.add('fixed-navbar');
+            document.getElementById("scrolltop").classList.add('fixed-scroll');
+        }
+        else {
+            document.getElementById("navbar").classList.remove('fixed-navbar');
+            document.getElementById("scrolltop").classList.remove('fixed-scroll');
+        }
+        }
+    </script>
+
+    <!-- select2 -->
+    <script>
+        // Initialize Select2 on the select element
+        $(document).ready(function() {
+          $('.select2').select2();
+        });
+    </script>
+</body>
+</html>

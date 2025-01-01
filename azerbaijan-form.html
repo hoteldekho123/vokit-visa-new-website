@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vokit</title>
+    <!-- jquery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="assets/libs/bootstrap/bootstrap.min.css">
+    <!-- swiper css -->
+    <link rel="stylesheet" href="assets/libs/swiper/swiper-bundle.min.css">
+    <!-- select2 css -->
+    <link rel="stylesheet" href="assets/libs/select2/select2.min.css">
+    <!-- dropzone css -->
+    <link rel="stylesheet" href="assets/libs/dropzone/dropzone.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ***** navbar start ***** -->
+    <nav class="navbar navbar-two navbar-expand-lg" aria-label="Offcanvas navbar large" id="navbar">
+        <div class="container">
+            <a class="navbar-brand py-0" href="index.html">
+                <img src="assets/img/logo.svg" alt="navbar logo" class="h-100 w-100 img-fluid">
+            </a>
+            <div>
+                <a href="" class="d-flex align-items-center justify-content-center nav-whatsapp text-decoration-none">
+                    <img src="assets/img/whatsapp-icon.svg" height="28" alt="whatsapp">
+                    Chat With Us !
+                </a>
+            </div>
+        </div>
+    </nav>
+    <!-- ***** navbar end ***** -->
+
+    <!-- ***** visa main section start ***** -->
+    <main class="mt-5">
+        <div class="container">
+            <div class="row gx-xl-5">
+                <div class="col-xl-8 pe-xl-5">
+                    <div class="form-card">
+                        <div class="form-card-heading-main fw-bold position-relative text-center d-flex align-items-center justify-content-center">
+                            <img src="assets/img/airplane-icon-color.svg" alt="airplane" height="20">
+                            <h1 class="form-card-heading mb-0 fw-semibold">Azerbaijan Application Form</h1>
+                        </div>
+                        <div class="row form-row mt-3 g-lg-4 g-3 align-items-center">
+                            <div class="col-md-4 col-sm-6">
+                                <div class="form-input-group">
+                                    <label for="select_type" class="input-label">Select Entry Type  <span class="text-red">*</span> </label>
+                                    <select class="form-select form-control shadow-none form-input w-100" name="entry_type" id="select_type">
+                                        <option value=" ">Select Entry Type</option>
+                                      @foreach($packages as $package)
+                                        <option value="{{$package->package_name}}">{{$package->package_name}}</option>
+                                      @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="form-input-group">
+                                    <label for="service_type" class="input-label">Select Service Type <span class="text-red">*</span> </label>
+                                    <select class="form-select form-control shadow-none form-input w-100" name="service_type" id="service_type">
+                                      <option value="">--Select Service Type--</option>
+                                      <option value="regular">Regular(Time 02 - 03 Days)</option>
+                                      <option value="express">Express(Time 04 - 12 Hours)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-center gap-2 visa-form-price mt-md-3 fw-medium">
+                                    Visa Fee :
+                                    <div class="sidebar-data-price" id="custom-price"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                               <div class="form-input-group">
+                                  <label for="" class="input-label">I am a Citizen of  <span class="text-red">*</span> </label>
+                                  <select class="select2 w-100 border-0" name="country_of" id="countryof">
+                                     <option value=" ">Select Country</option>
+                                     @foreach($countries as $country)
+                                     <option value="{{$country->country_name}}">{{$country->country_name}}</option>
+                                     @endforeach
+                                  </select>
+                               </div>
+                            </div>
+                            <div class="col-sm-6">
+                               <div class="form-input-group">
+                                  <label for="" class="input-label">I am Travelling From <span class="text-red">*</span> </label>
+                                  <select class="select2 w-100 border-0" name="country_from" id="countryfrom">
+                                     <option value=" ">Select Country</option>
+                                     @foreach($countries as $country)
+                                     <option value="{{$country->country_name}}">{{$country->country_name}}</option>
+                                     @endforeach
+                                  </select>
+                               </div>
+                            </div>
+                            <div class="col-sm-6">
+                               <div class="form-input-group">
+                                  <label for="" class="input-label" >Applicant Full Name <span class="text-red">*</span></label>
+                                  <div class="input-container position-relative">
+                                     <input type="text" name="name" class="form-control shadow-none form-input" placeholder="Applicant Full Name">
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="col-sm-6">
+                               <div class="form-input-group">
+                                  <label for="" class="input-label">Your Email Address <span class="text-red">*</span></label>
+                                  <div class="input-container position-relative">
+                                     <input type="email" name="email" class="form-control shadow-none form-input" placeholder="Your Email Address">
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="col-sm-6">
+                               <div class="form-input-group">
+                                  <label for="marital-status" class="input-label">Marital Status <span class="text-red">*</span></label>
+                                  <div class="input-container input-container-two position-relative">
+                                     <select name="marital" id="marital-status" class="form-select shadow-none form-input">
+                                        <option value="" selected disabled>Select Marital Status </option>
+                                        <option value="single">Single </option>
+                                        <option value="married">Married</option>
+                                        <option value="other">Other</option>
+                                     </select>
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="col-sm-6">
+                               <div class="form-input-group form-input-call-group">
+                                  <label for="" class="input-label">Mobile / WhatsApp Number <span class="text-red">*</span></label>
+                                  <div class="input-container position-relative">
+                                     <input type="tel" class="form-control shadow-none form-input w-100" placeholder=" Mobile / WhatsApp Number " id="txtphone" name="phone">
+                                     <input type="hidden" id="countrycode" name="countrycode">
+                                     <input type="hidden" id="fullphone" name="fullphone">
+                                  </div>
+                               </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-input-group">
+                                 <label for="" class="input-label">Passport <span class="text-red">*</span></label>
+                                 <div class="input-container position-relative">
+                                    <input type="text" name="passport" class="form-control shadow-none form-input" placeholder="Passport Number">
+                                 </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="form-input-group">
+                                 <label for="" class="input-label">Profession <span class="text-red">*</span></label>
+                                 <div class="input-container position-relative">
+                                    <input type="text" name="profession" class="form-control shadow-none form-input" placeholder="Profession">
+                                 </div>
+                              </div>
+                           </div>
+                            <div class="col-sm-6">
+                              <div class="form-input-group">
+                                 <label for="" class="input-label">Travel Date To UAE<span class="text-red">*</span></label>
+                                 <div class="date-input position-relative bg-white">
+                                    <div class="input-container input-container-two position-relative">
+                                       <input type="text" name="travel_date" id="datepicker" class="form-control datepicker bg-transparent position-relative z-2 shadow-none form-input" placeholder="Select Date">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                            <div class="col-sm-6">
+                              <div class="form-input-group">
+                                 <label for="" class="input-label">Purpose of Travel <span class="text-red">*</span></label>
+                                 <div class="input-container position-relative">
+                                    <input type="text" name="purpose" class="form-control shadow-none form-input" placeholder="Purpose of Travel">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="form-card-title border-bottom fw-semibold text-center">
+                            Please Upload The Following Documents
+                        </div>
+                        <div class="row mt-0 g-3">
+                            <div class="col-md-4 col-sm-6">
+                                <form action="/upload" class="dropzone text-center d-flex align-items-center justify-content-center" id="dropzone-box-1">
+                                    <div class="dz-message">
+                                        <div class="dropzone-icon">
+                                            <img src="assets/img/passport-icon.svg" alt="passport" class="h-100">
+                                        </div>
+                                        <div class="fw-medium dropzone-title text-nowrap">Upload Passport</div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <form action="/upload" class="dropzone text-center d-flex align-items-center justify-content-center" id="dropzone-box-2">
+                                    <div class="dz-message">
+                                        <div class="dropzone-icon">
+                                            <img src="assets/img/photo-icon.svg" alt="passport" class="h-100">
+                                        </div>
+                                        <div class="fw-medium dropzone-title text-nowrap">Upload Photo</div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4 col-sm-6">
+                                <form action="/upload" class="dropzone text-center d-flex align-items-center justify-content-center" id="dropzone-box-3">
+                                    <div class="dz-message">
+                                        <div class="dropzone-icon">
+                                            <img src="assets/img/document-icon.svg" alt="passport" class="h-100">
+                                        </div>
+                                        <div class="fw-medium dropzone-title text-nowrap">Other Document/ National ID</div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="form-note-card bg-light border rounded-2">
+                            <p class="file-note mb-0"><b><i class="fa-solid fa-circle-exclamation me-1"></i>NOTE:</b> Upload of passport and photograph are not mandatory to complete the visa application form. You can provide us these documents later also on email:
+                            <a href="mailto:info@vokit.com" target="_blank">info@vokit.com </a> or on WhatsApp
+                            <a href="https://api.whatsapp.com/send?phone=971565016625" target="_blank"> +971-565016625 </a>
+                            </p>
+                        </div>
+                        <div class="d-flex flex-sm-row flex-column form-btn-main align-items-center justify-content-center">
+                            <button class="form-btn form-btn-one fw-medium d-flex align-items-center"><i class="fa-solid fa-user-plus"></i>Add Another Applicant</button>
+                            <button class="form-btn form-btn-two fw-medium d-flex align-items-center"><i class="fa-solid fa-check"></i>Coutinue To Payment</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 mt-xl-0 mt-4 pt-xl-0 pt-md-2">
+                    <div class="sticky-top visa-sidebar-main">
+                        <div class="visa-sidebar position-relative">
+                            <div class="visa-sidebar-header-main position-absolute">
+                                <div class="d-flex align-items-center visa-sidebar-header position-relative">
+                                    <div class="visa-sidebar-icon">
+                                        <img src="assets/img/guarantee-icon.svg" alt="guarantee" height="40">
+                                    </div>
+                                    <div>
+                                        <div class="visa-sidebar-header-title fw-medium">Visa guaranteed on</div>
+                                        <div class="visa-sidebar-header-time">24 Dec 2024 at 06:00 PM</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile" id="tile-1">
+                                <div class="visa-sidebar-heading fw-semibold text-black">
+                                    14 Days Single Entry Visa
+                                </div>
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link position-relative fw-medium overflow-hidden active" id="regular-tab" data-bs-toggle="tab" data-bs-target="#regular-tab-pane" type="button" role="tab" aria-controls="regular-tab-pane" aria-selected="true">
+                                            <span class="position-relative">
+                                                <i class="fa-solid fa-clock"></i>
+                                                26 December
+                                            </span>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link position-relative fw-medium overflow-hidden" id="express-tab" data-bs-toggle="tab" data-bs-target="#express-tab-pane" type="button" role="tab" aria-controls="express-tab-pane" aria-selected="false">
+                                            <span class="position-relative">
+                                                <i class="fa-solid fa-bolt"></i>
+                                                25 December
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                                <div class="visa-sidebar-traveller-details d-none align-items-center justify-content-between">
+                                    <div class="visa-sidebar-traveller-title fw-medium text-black">
+                                        <span class="visa-sidebar-traveller-icon"><i class="fa-solid fa-user-group"></i></span>
+                                        Travellers
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-center visa-sidebar-traveller-data">
+                                        <button class="visa-sidebar-data-btn border-end h-100 minus-btn"><i class="fa-solid fa-minus"></i></button>
+                                        <input type="number" value="0" min="0" max="100" class="visa-sidebar-data-input fw-medium form-control text-center bg-transparent border-0 shadow-none">
+                                        <button class="visa-sidebar-data-btn plus-btn h-100 border-start"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+                                </div>
+                                <div class="tab-content mt-3" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="regular-tab-pane" role="tabpanel" aria-labelledby="regular-tab" tabindex="0">
+                                        <div class="visa-sidebar-title fw-semibold">
+                                            Price
+                                        </div>
+                                        <div class="d-flex flex-column visa-sidebar-detail">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="visa-sidebar-detail-title d-flex align-items-center">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="visa-sidebar-detail-icon d-flex align-items-center justify-content-center">
+                                                            <img src="assets/img/govt-icon.svg" alt="govt Fees" height="18">
+                                                        </div>
+                                                        Government Fees
+                                                    </div> 
+                                                    <div class="custom-tooltip position-relative">
+                                                        <div class="tooltip-icon">
+                                                            <i class="fa-solid fa-circle-info"></i>
+                                                        </div>
+                                                        <div class="tooltip-detail-main position-absolute">
+                                                            <div class="tooltip-details position-relative">
+                                                                <div class="tooltip-title fw-medium">
+                                                                    Government Fee 
+                                                                </div>
+                                                                <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="visa-sidebar-detail-subtitle d-flex align-items-center">
+                                                    <div class="fw-medium visa-sidebar-detail-price">
+                                                        ₹2342
+                                                    </div>
+                                                    x
+                                                    <div class="fw-medium">
+                                                        2
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="visa-sidebar-detail-title d-flex align-items-center">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="visa-sidebar-detail-icon d-flex align-items-center justify-content-center">
+                                                            <img src="assets/img/guarantee-icon.svg" alt="vokit Fees" height="18">
+                                                        </div>
+                                                        Vokit Fees
+                                                    </div>
+                                                    <div class="custom-tooltip position-relative">
+                                                        <div class="tooltip-icon">
+                                                            <i class="fa-solid fa-circle-info"></i>
+                                                        </div>
+                                                        <div class="tooltip-detail-main position-absolute">
+                                                            <div class="tooltip-details position-relative">
+                                                                <div class="tooltip-title fw-medium">
+                                                                    Vokit Fees 
+                                                                </div>
+                                                                <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="visa-sidebar-detail-subtitle d-flex align-items-center">
+                                                    <div class="fw-medium visa-sidebar-detail-price">
+                                                        ₹2342
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="express-tab-pane" role="tabpanel" aria-labelledby="express-tab" tabindex="0">
+                                        <div class="visa-sidebar-title fw-semibold">
+                                            Price
+                                        </div>
+                                        <div class="d-flex flex-column visa-sidebar-detail">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="visa-sidebar-detail-title d-flex align-items-center">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="visa-sidebar-detail-icon d-flex align-items-center justify-content-center">
+                                                            <img src="assets/img/govt-icon.svg" alt="govt Fees" height="18">
+                                                        </div>
+                                                        Government Fees
+                                                    </div> 
+                                                    <div class="custom-tooltip position-relative">
+                                                        <div class="tooltip-icon">
+                                                            <i class="fa-solid fa-circle-info"></i>
+                                                        </div>
+                                                        <div class="tooltip-detail-main position-absolute">
+                                                            <div class="tooltip-details position-relative">
+                                                                <div class="tooltip-title fw-medium">
+                                                                    Government Fee 
+                                                                </div>
+                                                                <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="visa-sidebar-detail-subtitle d-flex align-items-center">
+                                                    <div class="fw-medium visa-sidebar-detail-price">
+                                                        ₹2342
+                                                    </div>
+                                                    x
+                                                    <div class="fw-medium">
+                                                        2
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <div class="visa-sidebar-detail-title d-flex align-items-center">
+                                                    <div class="d-flex align-items-center gap-1">
+                                                        <div class="visa-sidebar-detail-icon d-flex align-items-center justify-content-center">
+                                                            <img src="assets/img/guarantee-icon.svg" alt="vokit Fees" height="18">
+                                                        </div>
+                                                        Vokit Fees
+                                                    </div>
+                                                    <div class="custom-tooltip position-relative">
+                                                        <div class="tooltip-icon">
+                                                            <i class="fa-solid fa-circle-info"></i>
+                                                        </div>
+                                                        <div class="tooltip-detail-main position-absolute">
+                                                            <div class="tooltip-details position-relative">
+                                                                <div class="tooltip-title fw-medium">
+                                                                    Vokit Fees 
+                                                                </div>
+                                                                <p class="tooltip-para">Fee charged by the embassy to process your visa. This includes all taxes and is directly paid to the government.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="visa-sidebar-detail-subtitle d-flex align-items-center">
+                                                    <div class="fw-medium visa-sidebar-detail-price">
+                                                        ₹2342
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="visa-sidebar-price-main d-flex align-items-center justify-content-between">
+                                    <div class="visa-sidebar-price-title fw-medium text-black">
+                                        Total Price
+                                    </div>
+                                    <div class="visa-sidebar-total-price text-black fw-semibold">
+                                        ₹ 32423
+                                    </div>
+                                </div>
+                                <div class="visa-sidebar-btn-main">
+                                    <a href="application-form.html" class="visa-sidebar-btn d-flex align-items-center justify-content-center text-decoration-none">
+                                        <span class="visa-sidebar-btn-icon "><img src="assets/img/guarantee-icon.svg" height="20" alt="guarantee"></span>
+                                        Start Application
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="country-time-card d-flex align-items-center" id="visa-page">
+                            <div class="country-time-icon-main rounded-circle d-flex align-items-center justify-content-center">
+                                <div class="country-time-icon d-flex bg-white rounded-circle align-items-center justify-content-center">
+                                    <img src="assets/img/clock.svg" alt="time" height="32">
+                                </div>
+                            </div>
+                            <div>
+                                <div id="country-name" class="time-country-name fw-semibold text-white">Loading...</div>
+                                <div id="current-time" class="country-time fw-medium text-white">Loading...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- ***** visa main section end ***** -->
+
+    <!-- ***** footer start ***** -->
+    <footer class="footer border-top common-gap">
+        <div class="container footer-inner">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer-logo">
+                        <img src="assets/img/logo.svg" alt="logo" class="h-100 img-fluid">
+                    </div>
+                    <p class="footer-para">Your one-stop travel solution, from planning to discovering, booking, and sharing memories.</p>
+                    <ul class="list-unstyled mb-0 p-0 footer-social-list d-flex align-items-center ">
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-pinterest-p"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="" class="footer-social-link d-flex text-decoration-none"><i class="fa-brands fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="footer-heading fw-semibold">
+                        Company
+                    </div>
+                    <ul class="list-unstyled mb-0 p-0 d-flex flex-column footer-list">
+                        <li><a href="eligible-country.html" class="footer-link text-decoration-none">Eligible Country</a></li>
+                        <li><a href="track.html" class="footer-link text-decoration-none">Track</a></li>
+                        <li><a href="visa-country.html" class="footer-link text-decoration-none">Visa Country</a></li>
+                        <li><a href="about.html" class="footer-link text-decoration-none">About</a></li>
+                        <li><a href="privacy-policy.html" class="footer-link text-decoration-none">Privacy Policy</a></li>
+                        <li><a href="terms-condition.html" class="footer-link text-decoration-none">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="footer-heading fw-semibold">
+                        Tools
+                    </div>
+                    <ul class="list-unstyled mb-0 p-0 d-flex flex-column footer-list">
+                        <li><a href="" class="footer-link text-decoration-none">For Travel Agents</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Security</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Transparency</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Blog</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Newsroom</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Contact</a></li>
+                        <li><a href="" class="footer-link text-decoration-none">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="footer-heading fw-semibold">
+                        Offices
+                    </div>
+                    <ul class="list-unstyled mb-0 p-0 d-flex flex-column footer-list">
+                        <li>
+                            <a href="" class="footer-link text-decoration-none">
+                                <i class="fa-solid fa-location-dot"></i>
+                                106, Building-4, Al Suq Al Kabeer, Opp. Concorde Palace Hotel, Bur Dubai, Dubai, UAE
+                            </a>
+                        </li>
+                        <li>
+                            <a href="" class="footer-link text-decoration-none">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Office 169, 321 - 323 High Rd Chadwell Heath Dagenham RM6 6AX United Kingdom
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-section border-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright-title text-center">
+                            © Vokit, All rights reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ***** footer end ***** -->
+
+    <!-- ***** bottom start ***** -->
+    <div class="bottom-bar fixed-bottom bg-white border-top d-md-none d-block">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="bottom-bar-title fw-semibold">
+                14 Days Single Entry Visa
+            </div>
+            <div class="bottom-bar-price">
+                9500 INR
+            </div>
+        </div>
+        <div class="row mt-2 ">
+            <div class="col-md-6 mx-auto">
+                <a href="application-form.html" class="bottom-bar-btn d-flex align-items-center justify-content-center text-decoration-none">
+                    <span class="visa-sidebar-btn-icon "><img src="assets/img/guarantee-icon.svg" height="20" alt="guarantee"></span>
+                    Start Application
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- ***** bottom end ***** -->
+
+    <!-- review modal -->
+    <div class="modal fade visa-reviews-section review-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title fs-5 fw-semibold" id="exampleModalLabel">Customer Reviews</div>
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row visa-reviews-wrapper">
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="visa-review-card h-100">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
+                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
+                                            L
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
+                                        <div class="visa-review-date">14 Dec, 2024 </div>
+                                    </div>
+                                </div>
+                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
+                                    The visa service was exceptional
+                                </div>
+                                <div class="visa-review-details">
+                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/libs/select2/select2.min.js"></script>
+    <script src="assets/libs/dropzone/dropzone.min.js"></script>
+
+    <!-- hero input  -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const pairs = [
+                { inputId: 'searchinput1', cardId: 'searchcard1' },
+                { inputId: 'searchinput2', cardId: 'searchcard2' }
+            ];
+
+            pairs.forEach(function (pair) {
+                const input = document.getElementById(pair.inputId);
+                const div = document.getElementById(pair.cardId);
+
+                function toggleSearchCard() {
+                    if (div.classList.contains('d-none')) {
+                        div.classList.remove('d-none');
+                    } else {
+                        div.classList.add('d-none');
+                    }
+                }
+
+                input.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Prevent bubbling
+                    toggleSearchCard();
+                });
+
+                document.addEventListener('click', function (event) {
+                    if (!input.contains(event.target) && !div.contains(event.target)) {
+                        div.classList.add('d-none');
+                    }
+                });
+            });
+        });
+
+    </script> 
+
+    <!-- hero text change -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const textElement = document.getElementById('animated-text');
+            const messages = [
+                'Your Trusted Visa Partner',
+                'Visas Simplified, Globally',
+                'Hassle-Free Visa Services',
+                'On Time, Every Time'
+            ];
+            let currentIndex = 0;
+            function changeText() {
+                textElement.textContent = messages[currentIndex];
+                currentIndex = (currentIndex + 1) % messages.length;
+            }
+            setInterval(changeText, 2000);
+        });
+
+    </script>
+
+    <!-- minus plus input -->
+    <script>
+        document.querySelectorAll('.visa-sidebar-traveller-data').forEach((inputContainer) => {
+        const minusBtn = inputContainer.querySelector('.minus-btn');
+        const plusBtn = inputContainer.querySelector('.plus-btn');
+        const inputField = inputContainer.querySelector('.visa-sidebar-data-input');
+        minusBtn.addEventListener('click', () => {
+            let currentValue = parseInt(inputField.value);
+            if (currentValue > parseInt(inputField.min)) {
+            inputField.value = currentValue - 1;
+            }
+        });
+        plusBtn.addEventListener('click', () => {
+            let currentValue = parseInt(inputField.value);
+            if (currentValue < parseInt(inputField.max)) {
+            inputField.value = currentValue + 1;
+            }
+        });
+        });
+    </script>
+
+    <!-- partner slider -->
+    <script>
+        var swiper = new Swiper(".partner-slider", {
+          slidesPerView: 1,
+          spaceBetween: 15,
+          loop:true,
+          breakpoints: {
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 5,
+            },
+          },
+        });
+    </script>
+
+    <!-- country time -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const country = "Dubai"; // Example static country, replace with dynamic data from backend
+            const timezone = "Asia/Dubai"; // Example timezone, replace with backend response
+            document.getElementById('country-name').textContent = country;
+            function updateTime() {
+                const options = {
+                    timeZone: timezone,
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                };
+                const formatter = new Intl.DateTimeFormat('en-US', options);
+                document.getElementById('current-time').textContent = formatter.format(new Date());
+            }
+            updateTime();
+            setInterval(updateTime, 1000);
+        });
+    </script>
+
+    <!-- chart js -->
+    <script>
+        const getDailyCategories = () => {
+          const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+          const today = new Date();
+          let categories = ["Today"];
+          
+          for (let i = 1; i <= 6; i++) {
+            const dayIndex = (today.getDay() - i + 7) % 7; 
+            categories.push(daysOfWeek[dayIndex]); 
+          }
+          return categories.reverse();
+        };
+        const dataSets = {
+          daily: [15, 18, 12, 20, 25, 10, 30],
+          weekly: [70, 120, 90, 100, 130, 150, 180, 200],
+          monthly: [300, 400, 500, 600, 700, 800, 900, 1000, 1100],
+          yearly: [5000, 6000, 7000, 8000, 9000, 10000],
+        };
+        const categories = {
+          daily: getDailyCategories(),
+          weekly: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8'],
+          monthly: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep'],
+          yearly: ['2018', '2019', '2020', '2021', '2022', '2023'],
+        };
+        var options = {
+          chart: {
+            type: 'line',
+            height: 350,
+            toolbar: { show: false },
+          },
+          series: [
+            {
+              name: 'Visa Approve',
+              data: dataSets.daily,
+            },
+          ],
+          xaxis: {
+            categories: categories.daily,
+          },
+          title: {
+            align: 'center',
+            style: {
+              fontSize: '18px',
+              color: '#333',
+            },
+          },
+          colors: ['#1E90FF'],
+          stroke: {
+            curve: 'smooth',
+            width: 2,
+          },
+        };
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+        document.querySelector("#timeRange").addEventListener("change", function (e) {
+          const range = e.target.value;
+    
+          // Update chart data
+          chart.updateOptions({
+            series: [
+              {
+                name: 'Sales',
+                data: dataSets[range],
+              },
+            ],
+            xaxis: {
+              categories: categories[range],
+            },
+          });
+        });
+    </script>
+
+    <!-- select2 -->
+    <script>
+        // Initialize Select2 on the select element
+        $(document).ready(function() {
+          $('.select2').select2();
+        });
+    </script>
+
+    <!-- dropzone js -->
+    <script>
+        // Initialize Dropzone for each box
+        Dropzone.autoDiscover = false;
+    
+        const dropzone1 = new Dropzone("#dropzone-box-1", {
+          maxFiles: 1, // Limit to one file
+          acceptedFiles: "image/*", // Accept only images
+          dictDefaultMessage: "Drag & drop or click to upload File 1"
+        });
+    
+        const dropzone2 = new Dropzone("#dropzone-box-2", {
+          maxFiles: 1, // Limit to one file
+          acceptedFiles: "image/*", // Accept only images
+          dictDefaultMessage: "Drag & drop or click to upload File 2"
+        });
+    
+        const dropzone3 = new Dropzone("#dropzone-box-3", {
+          maxFiles: 1, // Limit to one file
+          acceptedFiles: "image/*", // Accept only images
+          dictDefaultMessage: "Drag & drop or click to upload File 3"
+        });
+    
+        // You can handle events for each dropzone if needed
+        dropzone1.on("success", function(file, response) {
+          console.log("File 1 uploaded:", response);
+        });
+    
+        dropzone2.on("success", function(file, response) {
+          console.log("File 2 uploaded:", response);
+        });
+    
+        dropzone3.on("success", function(file, response) {
+          console.log("File 3 uploaded:", response);
+        });
+    </script>
+</body>
+</html>
