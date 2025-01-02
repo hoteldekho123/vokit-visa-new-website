@@ -1590,6 +1590,10 @@ body , html{
 .form-section .form-section-heading {
     font-size: 26px;
 }
+.form-section .form-container {
+    position: sticky;
+    top: 75px;
+}
 .form-card{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     padding: 20px;
@@ -1605,21 +1609,23 @@ body , html{
 }
 .form-card .form-card-title {
     font-size: 18px;
-    margin-top: 25px;
+    margin-top: 35px;
     padding-bottom: 6px;
 }
-/* .form-card .form-card-heading::before {
-    content: '';
-    position: absolute;
-    left: -9px;
-    top: 4px;
-    width: 2px;
-    height: 15px;
-    background-color: var(--theme1);
-} */
+.form-card .form-card-subheading {
+    font-size: 18px;
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+}
 .form-card .visa-form-price {
     font-size: 18px;
     color: var(--theme1);
+}
+.form-card .form-inner-title {
+    font-size: 13px;
+    color: #666;
+    padding-bottom: 8px;
+    line-height: 22px;
 }
 .form-input-group .input-label {
     font-weight: 500;
@@ -1655,11 +1661,39 @@ body , html{
 .form-input-group .select2-container {
     width: 100% !important;
 }
-.form-card .form-btn-main {
+.form-input-group .date-input::before {
+    content: "\f073";  
+    font-family: FontAwesome;
+    top: 10px;
+    right: 12px;
+    position: absolute;
+    font-size: 18px;
+    z-index: 1;
+}
+.form-input-group .iti {
+    width: 100%;
+}
+.form-input-group .iti__country-list {
+    width: 100%;
+    top: 100%;
+}
+.form-input-group .iti__flag-container {
+    position: unset;
+}
+.form-input-group .iti__selected-flag {
+    position: absolute;
+}
+.form-input-group .iti__country {
+    font-size: 14px;
+}
+.select2-container {
+    z-index: 1111;
+}
+.form-btn-main {
     margin-top: 30px;
     gap: 15px;
 }
-.form-card .form-btn {
+.form-btn {
     background-color: var(--theme1);
     color: #fff;
     border: 1px solid var(--theme1);
@@ -1670,15 +1704,17 @@ body , html{
     transition: all 0.3s ease-in-out;
     font-size: 15px;
 }
-.form-card .form-btn:hover {
+.form-btn:hover {
     background-color: transparent;
+
+
     color: var(--theme1);
 }
-.form-card .form-btn-one {
+.form-btn-one {
     background-color: var(--theme2);
     border-color: var(--theme2);
 }
-.form-card .form-btn-one:hover {
+.form-btn-one:hover {
     color: var(--theme2);
 }
 .dropzone {
@@ -1702,8 +1738,8 @@ body , html{
 }
 .form-card .form-note-card {
     padding: 6px;
-    font-size: 14px;
-    line-height: 27px;
+    font-size: 13px;
+    line-height: 25px;
     margin-top: 20px;
 }
 .form-tab .tab {
@@ -1716,7 +1752,7 @@ body , html{
     opacity: 1;
 }
 .tab-header .step {
-    width: 25%;
+    flex: 1;
 }
 .tab-header .step .step-inner {
     background: #f1f1f1;
@@ -1747,6 +1783,19 @@ body , html{
 .tab-header .step.completed::before {
     width: 100%;
 }
+.tab-header .step .step-icon {
+    height: 15px;
+    display: none;
+}
+.tab-header .step .step-icon img {
+    filter: brightness(100);
+}
+.tab-header .step.completed .step-icon {
+    display: flex;
+}
+.tab-header .step.completed .step-text {
+    display: none;
+}
 .progress-bar-container {
     width: 100%;
     background: #f1f1f1;
@@ -1763,7 +1812,30 @@ body , html{
     background: var(--theme1);
     transition: width 0.4s ease;
 }
-
+.form-action-btn {
+    border: 1px solid var(--theme1);
+    background-color: var(--theme1);
+    color: #fff;
+    font-size: 14px;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.form-action-btn:hover {
+    color: var(--theme1);
+}
+.form-action-btn:hover {
+    background-color: transparent;
+}
+.form-action-btn.btn-prev {
+    background-color: var(--theme2);
+    border-color: var(--theme2);
+}
+.form-action-btn.btn-prev:hover{
+    background-color: transparent;
+    color: var(--theme2);
+}
 /***** form section end *****/
 
 
@@ -2421,7 +2493,7 @@ body , html{
     padding: 12px;
 }
 .payment-detail-card .payment-card-heading {
-    font-size: 17px;    
+    font-size: 18px;    
 }
 .payment-detail-card .edit-btn {
     background-color: var(--theme1);
@@ -2488,6 +2560,24 @@ body , html{
     margin-top: 2px;
     color: #505050;
 }
+.payment-detail-card .payment-detail-footer {
+    padding: 12px;
+    gap: 10px;
+}
+.payment-detail-card .payment-detail-safey-icon {
+    height: 25px;
+    margin-top: 4px;
+}
+.payment-detail-card .payment-detail-footer-title {
+    font-size: 14px;
+}
+.payment-detail-card .payment-detail-footer-title-two {
+    font-size: 12px;
+    gap: 6px;
+}
+.payment-detail-card .payment-detail-footer-title-two i {
+    color: var(--theme1);
+}
 .payment-sidebar-card {
     padding: 13px 10px;
     border: 1px solid #c9c9c9;
@@ -2531,4 +2621,19 @@ body , html{
 .sidebar-input:checked~.payment-sidebar-card .payment-sidebar-check img {
     width: 125%}
 /***** payment section end *****/
+ 
 
+/***** add another modal start *****/
+.azerbaijan-addanother-modal .modal-dialog {
+    max-width: 80%;
+}
+.azerbaijan-addanother-modal .modal-title {
+    font-size: 18px;
+}
+.azerbaijan-addanother-modal .btn-close {
+    font-size: 12px;
+}
+.oman-addanother-modal .modal-dialog {
+    max-width: 60%;
+}
+/***** add another modal end *****/

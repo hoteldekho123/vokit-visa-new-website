@@ -400,6 +400,7 @@
     }
     .visa-sidebar .visa-sidebar-header .visa-sidebar-header-title {
         font-size: 16px;
+        margin-bottom: 1px;
     }
     .visa-sidebar .visa-sidebar-heading {
         font-size: 18px;
@@ -411,11 +412,17 @@
         margin-top: 18px;
         padding-top: 15px;
     }
+    .visa-sidebar .visa-sidebar-title {
+        font-size: 16px;
+    }
     .visa-sidebar .visa-sidebar-price-title {
-        font-size: 17px;
+        font-size: 16px;
+    }
+    .visa-sidebar .visa-sidebar-detail-price {
+        font-size: 15px;
     }
     .visa-sidebar .visa-sidebar-total-price {
-        font-size: 18px;
+        font-size: 17px;
     }
     .visa-sidebar .visa-sidebar-btn-main {
         margin-top: 15px;
@@ -594,7 +601,17 @@
     }
     /***** visa country hero section end *****/
 
+
     /***** form section start *****/
+    .form-section .form-section-heading-main {
+        gap: 5px;
+    }
+    .form-section .form-section-heading-main img {
+        height: 18px;
+    }
+    .form-section .form-section-heading {
+        font-size: 20px;
+    }
     .form-card{
         padding: 15px;
     }
@@ -609,13 +626,13 @@
     }
     .form-card .form-card-title {
         font-size: 16px;
-        margin-top: 22px;
+        margin-top: 25px;
     }
     .form-card .visa-form-price {
         font-size: 17px;
     }
     .form-input-group .input-label {
-        font-size: 14.5px;
+        font-size: 14px;
     }
     .form-input-group .form-input {
         height: 42px;
@@ -623,9 +640,6 @@
     }
     .form-input-group .select2-selection {
         height: 42px !important;
-        display: flex !important;
-        align-items: center;
-        border-radius: 8px !important;
     }
     .form-input-group .select2-selection__rendered {
         font-size: 14px !important;
@@ -634,60 +648,19 @@
         height: 42px !important;
         top: 0 !important;
     }
-    .form-input-group .select2-container--default.select2-container--open.select2-container--below .select2-selection--single,
-    .form-input-group .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
-        border-bottom-left-radius: 0 !important;
-        border-bottom-right-radius: 0 !important;
-    }
-    .form-card .form-btn-main {
+    .form-btn-main {
         margin-top: 30px;
         gap: 15px;
     }
-    .form-card .form-btn {
-        background-color: var(--theme1);
-        color: #fff;
-        border: 1px solid var(--theme1);
-        padding: 9px 30px;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-        border-radius: 6px;
-        gap: 8px;
-        transition: all 0.3s ease-in-out;
-    }
-    .form-card .form-btn:hover {
-        background-color: transparent;
-        color: var(--theme1);
-    }
-    .form-card .form-btn-one {
-        background-color: var(--theme2);
-        border-color: var(--theme2);
-    }
-    .form-card .form-btn-one:hover {
-        color: var(--theme2);
-    }
-    .dropzone {
-        border: 1px dashed var(--theme1);
-        border-radius: 7px;
-        max-height: 150px;
-    }
-    .dropzone .dz-preview {
-        margin: 0 auto;
-    }
-    .dropzone .dz-message {
-        margin: 0;
+    .form-btn {
+        font-size: 14px;
     }
     .dropzone .dropzone-title {
-        font-size: 15px;
-        margin-top: 12px;
-        color: #000;
-    }
-    .dropzone .dropzone-icon {
-        height: 40px;
+        font-size: 14px;
     }
     .form-card .form-note-card {
-        padding: 6px;
-        font-size: 14px;
-        line-height: 27px;
-        margin-top: 20px;
+        font-size: 12.5px;
+        line-height: 24px;
     }
     /***** form section end *****/
 
@@ -708,7 +681,7 @@
         font-size: 18px;
     }
     .contact-sidebar .contact-sidebar-link-subtitle {
-        font-size: 14px;
+        font-size: 13px;
     }
     .contact-sidebar .contact-sidebar-link-title {
         font-size: 15px;
@@ -716,43 +689,15 @@
     .contact-section .contact-form-heading {
         font-size: 20px;
     }
-    .contact-input-group .contact-input {
-        height: 45px;
-        font-size: 14px;
-        border-color: #c7c7c7;
-        border-radius: 7px;
-        background-color: #f7f7f7;
-    }
-    .contact-input-group .contact-form-label {
-        font-size: 14px;
-        margin-bottom: 2.5px;
-        margin-left: 0.5px;
-    }
-    .contact-input-group .contact-textarea {
-        height: 110px;
-    }
-    .contact-section .contact-form-btn {
-        background-color: var(--theme1);
-        border: 1px solid var(--theme1);
-        color: #fff;
-        font-size: 15px;
-        padding: 9px 20px;
-        border-radius: 5px;
-        transition: all 0.3s ease-in-out;
-    }
-    .contact-section .contact-form-btn i {
-        margin-left: 4px;
-    }
-    .contact-section .contact-form-btn:hover{
-        background-color: transparent;
-        color: var(--theme1);
-    }
     /***** contact section end *****/
 
 
     /* payment detail section start */
     .payment-detail-card .payment-detail-header {
         padding: 10px;
+    }
+    .payment-detail-card .payment-card-heading {
+        font-size: 17px;    
     }
     .payment-detail-card .payment-detail-subheading {
         font-size: 12px;
@@ -777,4 +722,29 @@
         font-size: 13px;
     }
     /* payment detail section end */
+
+     
+    /***** add another modal start *****/
+    .azerbaijan-addanother-modal .modal-dialog {
+        max-width: 90%;
+    }
+    .azerbaijan-addanother-modal .modal-title {
+        font-size: 16px;
+    }
+    /***** add another modal end *****/
+}
+
+@media (max-width:567px){
+    .form-btn {
+        width: 100%;
+       justify-content: center;
+    }
+     /***** add another modal start *****/
+     .azerbaijan-addanother-modal .modal-dialog {
+        max-width: 100%;
+    }
+    .azerbaijan-addanother-modal .modal-title {
+        font-size: 16px;
+    }
+    /***** add another modal end *****/
 }

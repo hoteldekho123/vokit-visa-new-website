@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="assets/libs/select2/select2.min.css">
     <!-- dropzone css -->
     <link rel="stylesheet" href="assets/libs/dropzone/dropzone.min.css">
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="assets/libs/flatpickr/flatpickr.min.css">
+    <!-- iti css -->
+    <link rel="stylesheet" href="assets/libs/iti-input/intlTelInput.css">
     <!-- main css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
@@ -53,7 +57,7 @@
                             <h1 class="form-card-heading mb-0 fw-semibold">Dubai Application Form</h1>
                         </div>
                         <div class="row form-row mt-3 g-lg-4 g-3 align-items-center">
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-sm-6">
                                 <div class="form-input-group">
                                     <label for="select_type" class="input-label">Select Entry Type  <span class="text-red">*</span> </label>
                                     <select class="form-select form-control shadow-none form-input w-100" name="entry_type" id="select_type">
@@ -64,7 +68,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6">
+                            <div class="col-sm-6">
                                 <div class="form-input-group">
                                     <label for="service_type" class="input-label">Select Service Type <span class="text-red">*</span> </label>
                                     <select class="form-select form-control shadow-none form-input w-100" name="service_type" id="service_type">
@@ -74,7 +78,7 @@
                                     </select>
                                 </div>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-md-4 d-none">
                                 <div class="d-flex align-items-center gap-2 visa-form-price mt-md-3 fw-medium">
                                     Visa Fee :
                                     <div class="sidebar-data-price" id="custom-price"></div>
@@ -132,22 +136,20 @@
                                </div>
                             </div>
                             <div class="col-sm-6">
-                               <div class="form-input-group form-input-call-group">
-                                  <label for="" class="input-label">Mobile / WhatsApp Number <span class="text-red">*</span></label>
-                                  <div class="input-container position-relative">
-                                     <input type="tel" class="form-control shadow-none form-input w-100" placeholder=" Mobile / WhatsApp Number " id="txtphone" name="phone">
-                                     <input type="hidden" id="countrycode" name="countrycode">
-                                     <input type="hidden" id="fullphone" name="fullphone">
-                                  </div>
-                               </div>
+                                <div class="form-input-group form-input-call-group">
+                                    <label for="phone" class="input-label">Mobile / WhatsApp Number <span class="text-red">*</span></label>
+                                    <div class="input-container position-relative">
+                                        <input type="tel" class="form-control shadow-none form-input w-100" placeholder=" Mobile / WhatsApp Number " id="phone" name="phone">
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-sm-6">
-                              <div class="form-input-group">
-                                 <label for="" class="input-label">Passport <span class="text-red">*</span></label>
-                                 <div class="input-container position-relative">
-                                    <input type="text" name="passport" class="form-control shadow-none form-input" placeholder="Passport Number">
-                                 </div>
-                              </div>
+                                <div class="form-input-group">
+                                    <label for="" class="input-label">Passport <span class="text-red">*</span></label>
+                                    <div class="input-container position-relative">
+                                        <input type="text" name="passport" class="form-control shadow-none form-input" placeholder="Passport Number">
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-sm-6">
                               <div class="form-input-group">
@@ -158,15 +160,13 @@
                               </div>
                            </div>
                             <div class="col-sm-6">
-                              <div class="form-input-group">
-                                 <label for="" class="input-label">Travel Date To UAE<span class="text-red">*</span></label>
-                                 <div class="date-input position-relative bg-white">
-                                    <div class="input-container input-container-two position-relative">
-                                       <input type="text" name="travel_date" id="datepicker" class="form-control datepicker bg-transparent position-relative z-2 shadow-none form-input" placeholder="Select Date">
+                                <div class="form-input-group">
+                                    <label for="" class="input-label">Travel Date To UAE<span class="text-red">*</span></label>
+                                    <div class="date-input position-relative bg-white">
+                                        <input type="text" name="travel_date" id="datepicker" class="form-control datepicker bg-transparent position-relative z-2 shadow-none form-input" placeholder="Select Date">
                                     </div>
-                                 </div>
-                              </div>
-                           </div>
+                                </div>
+                            </div>
                             <div class="col-sm-6">
                               <div class="form-input-group">
                                  <label for="" class="input-label">Purpose of Travel <span class="text-red">*</span></label>
@@ -176,8 +176,13 @@
                               </div>
                            </div>
                         </div>
-                        <div class="form-card-title border-bottom fw-semibold text-center">
-                            Please Upload The Following Documents
+                        <div>
+                            <div class="form-card-title border-0 fw-semibold">
+                                Please Upload The Following Documents
+                            </div>
+                            <div class="form-inner-title border-bottom">
+                                <span class="fw-medium text-black"> Accepted Formats :</span> WORD, PDF, JPG or PNG
+                            </div>
                         </div>
                         <div class="row mt-0 g-3">
                             <div class="col-md-4 col-sm-6">
@@ -416,7 +421,7 @@
                                     </div>
                                 </div>
                                 <div class="visa-sidebar-btn-main">
-                                    <a href="application-form.html" class="visa-sidebar-btn d-flex align-items-center justify-content-center text-decoration-none">
+                                    <a href="payment-detail.html" class="visa-sidebar-btn d-flex align-items-center justify-content-center text-decoration-none">
                                         <span class="visa-sidebar-btn-icon "><img src="assets/img/guarantee-icon.svg" height="20" alt="guarantee"></span>
                                         Start Application
                                     </a>
@@ -541,154 +546,14 @@
     </div>
     <!-- ***** bottom end ***** -->
 
-    <!-- review modal -->
-    <div class="modal fade visa-reviews-section review-modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <div class="modal-title fs-5 fw-semibold" id="exampleModalLabel">Customer Reviews</div>
-                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row visa-reviews-wrapper">
-                        <div class="col-12">
-                            <div class="visa-review-card h-100">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
-                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
-                                            L
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
-                                        <div class="visa-review-date">14 Dec, 2024 </div>
-                                    </div>
-                                </div>
-                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
-                                    The visa service was exceptional
-                                </div>
-                                <div class="visa-review-details">
-                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="visa-review-card h-100">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
-                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
-                                            L
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
-                                        <div class="visa-review-date">14 Dec, 2024 </div>
-                                    </div>
-                                </div>
-                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
-                                    The visa service was exceptional
-                                </div>
-                                <div class="visa-review-details">
-                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="visa-review-card h-100">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
-                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
-                                            L
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
-                                        <div class="visa-review-date">14 Dec, 2024 </div>
-                                    </div>
-                                </div>
-                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
-                                    The visa service was exceptional
-                                </div>
-                                <div class="visa-review-details">
-                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="visa-review-card h-100">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
-                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
-                                            L
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
-                                        <div class="visa-review-date">14 Dec, 2024 </div>
-                                    </div>
-                                </div>
-                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
-                                    The visa service was exceptional
-                                </div>
-                                <div class="visa-review-details">
-                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="visa-review-card h-100">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
-                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
-                                            L
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
-                                        <div class="visa-review-date">14 Dec, 2024 </div>
-                                    </div>
-                                </div>
-                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
-                                    The visa service was exceptional
-                                </div>
-                                <div class="visa-review-details">
-                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="visa-review-card h-100">
-                                <div class="d-flex align-items-center gap-2">
-                                    <div class="d-flex align-items-center justify-content-center visa-review-card-icon-main rounded-circle">
-                                        <div class="visa-review-card-icon d-flex align-items-center justify-content-center rounded-circle">
-                                            L
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="fw-medium visa-reviewer-name text-black">Lizzie Yin-Hua Huang</div>
-                                        <div class="visa-review-date">14 Dec, 2024 </div>
-                                    </div>
-                                </div>
-                                <div class="fw-semibold text-black visa-review-card-heading text-truncate">
-                                    The visa service was exceptional
-                                </div>
-                                <div class="visa-review-details">
-                                    <p>The visa service was exceptional. Initially, I applied for the visa on my own, but the process got stuck without much information. The staff took full ownership of the situation and guided me on the necessary steps. Ultimately, I had to cancel my first application, but they quickly reapplied on my behalf and managed to secure the visa within just two days. The team was incredibly nice, polite, and highly responsive throughout the process. I would highly recommend their services to anyone!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- js files -->
     <script src="assets/libs/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/libs/swiper/swiper-bundle.min.js"></script>
     <script src="assets/libs/select2/select2.min.js"></script>
     <script src="assets/libs/dropzone/dropzone.min.js"></script>
+    <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+    <script src="assets/libs/iti-input/intlTelInput.min.js"></script>
 
     <!-- hero input  -->
     <script>
@@ -724,26 +589,6 @@
         });
 
     </script> 
-
-    <!-- hero text change -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const textElement = document.getElementById('animated-text');
-            const messages = [
-                'Your Trusted Visa Partner',
-                'Visas Simplified, Globally',
-                'Hassle-Free Visa Services',
-                'On Time, Every Time'
-            ];
-            let currentIndex = 0;
-            function changeText() {
-                textElement.textContent = messages[currentIndex];
-                currentIndex = (currentIndex + 1) % messages.length;
-            }
-            setInterval(changeText, 2000);
-        });
-
-    </script>
 
     <!-- minus plus input -->
     <script>
@@ -926,6 +771,49 @@
         dropzone3.on("success", function(file, response) {
           console.log("File 3 uploaded:", response);
         });
+    </script>
+
+    <!-- datepicker js  -->
+    <script>
+        flatpickr("#datepicker", {
+            disable: [
+                function(date) {
+                    // Disable dates before today
+                    const today = new Date();
+                    today.setHours(0, 0, 0, 0); // Set hours to start of the day
+                    return (date < today);
+                }
+            ],
+            dateFormat: "Y-m-d",
+            onChange: function(selectedDates, dateStr, instance) {
+                const today = new Date();
+                today.setHours(0, 0, 0, 0);
+                if (selectedDates.length === 1 && selectedDates[0].getTime() === today.getTime()) {
+                    instance.set("disable", []);
+                    document.getElementById("datepicker").classList.add("custom-class");
+                } else {
+                    instance.set("disable", [
+                        function(date) {
+                            const today = new Date();
+                            today.setHours(0, 0, 0, 0);
+                            return (date < today);
+                        }
+                    ]);
+                    document.getElementById("datepicker").classList.remove("custom-class");
+                }
+            }
+        });
+    </script>
+
+    <!-- iti input -->
+    <script>
+        const input = document.querySelector("#phone");
+        const iti = window.intlTelInput(input, {
+          preferredCountries: ["us", "gb", "ca"], // Set default countries
+          utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/js/utils.js", // For formatting/validation
+        });
+        const phoneNumber = iti.getNumber();
+        console.log(phoneNumber); // Logs the formatted phone number
     </script>
 </body>
 </html>

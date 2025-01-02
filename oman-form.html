@@ -56,7 +56,7 @@
                     <div class="form-container">
                         <div class="form-section-heading-main mb-4 pb-md-2 pb-1 fw-bold position-relative text-center d-flex align-items-center justify-content-center">
                             <img src="assets/img/airplane-icon-color.svg" alt="airplane" height="20">
-                            <h1 class="form-section-heading mb-0 fw-semibold">Azerbaijan Visa Application Form</h1>
+                            <h1 class="form-section-heading mb-0 fw-semibold">Oman Visa Application Form</h1>
                         </div>
                         <div class="position-relative">
                             <div class="tab-header form-tab d-flex align-items-center justify-content-between">
@@ -99,40 +99,74 @@
                             <div class="tab active">
                                 <div class="form-card">
                                     <div class="form-card-subheading fw-semibold border-bottom">
+                                        Package Details
+                                    </div>
+                                    <div class="row form-row g-lg-4 g-3 align-items-center">
+                                        <div class="col-sm-6">
+                                            <div class="form-input-group">
+                                                <label for="select_type" class="input-label">Select Entry Type  <span class="text-red">*</span> </label>
+                                                <select class="form-select form-control shadow-none form-input w-100" name="entry_type" id="select_type">
+                                                    <option value=" ">Select Entry Type</option>
+                                                  @foreach($packages as $package)
+                                                    <option value="{{$package->package_name}}">{{$package->package_name}}</option>
+                                                  @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-input-group">
+                                                <label for="service_type" class="input-label">Select Service Type <span class="text-red">*</span> </label>
+                                                <select class="form-select form-control shadow-none form-input w-100" name="service_type" id="service_type">
+                                                  <option value="">--Select Service Type--</option>
+                                                  <option value="regular">Regular(Time 02 - 03 Days)</option>
+                                                  <option value="express">Express(Time 04 - 12 Hours)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-card mt-4">
+                                    <div class="form-card-subheading fw-semibold border-bottom">
                                         Personal Details
                                     </div>
                                     <div class="row form-row g-lg-4 g-3 align-items-center">
                                         <div class="col-sm-6">
                                             <div class="form-input-group">
-                                                <label for="first_name" class="input-label">First / Middle Name <span class="text-red">*</span></label>
+                                               <label for="" class="input-label">I am a Citizen of  <span class="text-red">*</span> </label>
+                                               <select class="select2 w-100 border-0" name="country_of" id="countryof">
+                                                  <option value=" ">Select Country</option>
+                                                  @foreach($countries as $country)
+                                                  <option value="{{$country->country_name}}">{{$country->country_name}}</option>
+                                                  @endforeach
+                                               </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                        <div class="form-input-group">
+                                            <label for="" class="input-label">I am Travelling From <span class="text-red">*</span> </label>
+                                            <select class="select2 w-100 border-0" name="country_from" id="countryfrom">
+                                                <option value=" ">Select Country</option>
+                                                @foreach($countries as $country)
+                                                <option value="{{$country->country_name}}">{{$country->country_name}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-input-group">
+                                                <label for="full_name" class="input-label">Applicant Full Name <span class="text-red">*</span></label>
                                                 <div class="input-container position-relative">
-                                                   <input type="text" id="first_name" name="first name" class="form-control shadow-none form-input" placeholder="Your First / Middle Name">
+                                                   <input type="text" id="full_name" name="first name" class="form-control shadow-none form-input" placeholder=" Applicant Full Name">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-input-group">
-                                                <label for="last_name" class="input-label">Surname / Last Name <span class="text-red">*</span></label>
-                                                <div class="input-container position-relative">
-                                                   <input type="text" id="last_name" name="first name" class="form-control shadow-none form-input" placeholder="Your Surname / Last Name">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-input-group">
-                                               <label for="" class="input-label">Date Of Birth <span class="text-red">*</span></label>
-                                               <div class="date-input position-relative bg-white">
-                                                  <input type="text" name="travel_date" id="datepicker" class="form-control datepicker bg-transparent position-relative z-2 shadow-none form-input" placeholder="Select Date">
-                                               </div>
-                                            </div>
-                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-input-group">
-                                                <label for="gender" class="input-label">Gender <span class="text-red">*</span> </label>
+                                                <label for="marital_status" class="input-label">Marital Status <span class="text-red">*</span> </label>
                                                 <select class="form-select form-control shadow-none form-input w-100" name="gender" id="service_type">
-                                                  <option value="" disabled selected>--Select Gender--</option>
-                                                  <option value="male">Male</option>
-                                                  <option value="female">Female</option>
+                                                  <option value="" disabled selected>--Select Marital Status--</option>
+                                                  <option value="single">Single</option>
+                                                  <option value="married">Married</option>
                                                   <option value="other">Other</option>
                                                 </select>
                                             </div>
@@ -153,28 +187,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-input-group">
-                                               <label for="" class="input-label">I am a Citizen of  <span class="text-red">*</span> </label>
-                                               <select class="select2 w-100 border-0" name="country_of" id="countryof">
-                                                  <option value=" ">Select Country</option>
-                                                  @foreach($countries as $country)
-                                                  <option value="{{$country->country_name}}">{{$country->country_name}}</option>
-                                                  @endforeach
-                                               </select>
-                                            </div>
-                                         </div>
-                                         <div class="col-sm-6">
-                                            <div class="form-input-group">
-                                               <label for="" class="input-label">I am Travelling From <span class="text-red">*</span> </label>
-                                               <select class="select2 w-100 border-0" name="country_from" id="countryfrom">
-                                                  <option value=" ">Select Country</option>
-                                                  @foreach($countries as $country)
-                                                  <option value="{{$country->country_name}}">{{$country->country_name}}</option>
-                                                  @endforeach
-                                               </select>
-                                            </div>
-                                         </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -194,15 +207,15 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-input-group">
-                                                <label for="passport_expire_date" class="input-label">Passport Expire Date<span class="text-red">*</span></label>
-                                                <div class="date-input position-relative bg-white">
-                                                    <input type="text" name="travel_date" id="passport_expire_date" class="form-control datepicker2 bg-transparent position-relative z-2 shadow-none form-input" placeholder="Select Date">
-                                                </div>
+                                               <label for="profession" class="input-label">Profession  <span class="text-red">*</span></label>
+                                               <div class="input-container position-relative">
+                                                  <input id="profession" type="text" name="name" class="form-control shadow-none form-input" placeholder="Your Profession ">
+                                               </div>
                                             </div>
-                                        </div>
+                                         </div>
                                         <div class="col-sm-6">
                                             <div class="form-input-group">
-                                                <label for="arrival_date" class="input-label">Expated Date Of Arrival<span class="text-red">*</span></label>
+                                                <label for="arrival_date" class="input-label">Travel Date To Oman<span class="text-red">*</span></label>
                                                 <div class="date-input position-relative bg-white">
                                                     <input type="text" name="arrival_date" id="arrival_date" class="form-control datepicker2 bg-transparent position-relative z-2 shadow-none form-input" placeholder="Select Date">
                                                 </div>
@@ -215,15 +228,7 @@
                                                   <input id="purpose_of_travel" type="text" name="name" class="form-control shadow-none form-input" placeholder="Your Purpose Of Travel">
                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-input-group">
-                                               <label for="address_azerbaijan" class="input-label">Address In Azerbaijan <span class="text-red">*</span></label>
-                                               <div class="input-container position-relative">
-                                                  <input id="address_azerbaijan" type="text" name="name" class="form-control shadow-none form-input" placeholder="Your Address In Azerbaijan">
-                                               </div>
-                                            </div>
-                                        </div>     
+                                        </div>    
                                     </div>
                                     <div>
                                         <div class="form-card-title border-0 fw-semibold">
@@ -241,6 +246,16 @@
                                                         <img src="assets/img/passport-icon.svg" alt="passport" class="h-100">
                                                     </div>
                                                     <div class="fw-medium dropzone-title text-nowrap">Upload Passport</div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                            <form action="/upload" class="dropzone text-center d-flex align-items-center justify-content-center" id="dropzone-box-2">
+                                                <div class="dz-message">
+                                                    <div class="dropzone-icon">
+                                                        <img src="assets/img/photo-icon.svg" alt="passport" class="h-100">
+                                                    </div>
+                                                    <div class="fw-medium dropzone-title text-nowrap">Upload Photo</div>
                                                 </div>
                                             </form>
                                         </div>
@@ -719,12 +734,12 @@
     </div>
     <!-- ***** bottom end ***** -->
 
-    <!-- azerbaijan add another modal -->
-    <div class="modal fade azerbaijan-addanother-modal" id="azerbaijan_add_another" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- oman add another modal -->
+    <div class="modal fade azerbaijan-addanother-modal oman-addanother-modal" id="azerbaijan_add_another" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-title fw-semibold" id="exampleModalLabel">Azerbaijan Add Another Applicant</div>
+                    <div class="modal-title fw-semibold" id="exampleModalLabel">Oman Add Another Applicant</div>
                     <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -732,117 +747,28 @@
                         <div class="row form-row g-lg-4 g-3 align-items-center">
                             <div class="col-sm-6">
                                 <div class="form-input-group">
-                                    <label for="first_name" class="input-label">First / Middle Name <span class="text-red">*</span></label>
+                                    <label for="another_applicant_full_name" class="input-label">Applicant Full Name  <span class="text-red">*</span></label>
                                     <div class="input-container position-relative">
-                                       <input type="text" id="first_name" name="first name" class="form-control shadow-none form-input" placeholder="Your First / Middle Name">
+                                       <input type="text" id="another_applicant_full_name" name="first name" class="form-control shadow-none form-input" placeholder=" Applicant Full Name ">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-input-group">
-                                    <label for="last_name" class="input-label">Surname / Last Name <span class="text-red">*</span></label>
+                                    <label for="passport_no_another_applicant" class="input-label">Passport Number <span class="text-red">*</span></label>
                                     <div class="input-container position-relative">
-                                       <input type="text" id="last_name" name="first name" class="form-control shadow-none form-input" placeholder="Your Surname / Last Name">
+                                       <input type="text" id="passport_no_another_applicant" name="first name" class="form-control shadow-none form-input" placeholder="Your Passport Number">
                                     </div>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-input-group">
-                                   <label for="" class="input-label">Date Of Birth <span class="text-red">*</span></label>
-                                   <div class="date-input position-relative bg-white">
-                                      <input type="text" name="travel_date" id="datepicker" class="form-control datepicker bg-transparent position-relative z-2 shadow-none form-input" placeholder="Select Date">
-                                   </div>
-                                </div>
-                             </div>
-                            <div class="col-sm-6">
-                                <div class="form-input-group">
-                                    <label for="gender" class="input-label">Gender <span class="text-red">*</span> </label>
-                                    <select class="form-select form-control shadow-none form-input w-100" name="gender" id="service_type">
-                                      <option value="" disabled selected>--Select Gender--</option>
-                                      <option value="male">Male</option>
-                                      <option value="female">Female</option>
-                                      <option value="other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-input-group">
-                                    <label for="email" class="input-label"> Email Address <span class="text-red">*</span></label>
+                                    <label for="profession_another_applicant" class="input-label">Profession <span class="text-red">*</span></label>
                                     <div class="input-container position-relative">
-                                       <input type="email" id="email" name="first name" class="form-control shadow-none form-input" placeholder="Your Email Address">
+                                       <input type="text" id="profession_another_applicant" name="first name" class="form-control shadow-none form-input" placeholder="Your Profession ">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-input-group form-input-call-group">
-                                    <label for="phone" class="input-label">Mobile / WhatsApp Number <span class="text-red">*</span></label>
-                                    <div class="input-container position-relative">
-                                        <input type="tel" class="form-control shadow-none form-input w-100" placeholder=" Mobile / WhatsApp Number " id="phone" name="phone">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-input-group">
-                                   <label for="" class="input-label">I am a Citizen of  <span class="text-red">*</span> </label>
-                                   <select class="select2 w-100 border-0" name="country_of" id="countryof">
-                                      <option value=" ">Select Country</option>
-                                      @foreach($countries as $country)
-                                      <option value="{{$country->country_name}}">{{$country->country_name}}</option>
-                                      @endforeach
-                                   </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-input-group">
-                                   <label for="" class="input-label">I am Travelling From <span class="text-red">*</span> </label>
-                                   <select class="select2 w-100 border-0" name="country_from" id="countryfrom">
-                                      <option value=" ">Select Country</option>
-                                      @foreach($countries as $country)
-                                      <option value="{{$country->country_name}}">{{$country->country_name}}</option>
-                                      @endforeach
-                                   </select>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <div class="form-input-group">
-                                   <label for="passport_number" class="input-label">Passport Number <span class="text-red">*</span></label>
-                                   <div class="input-container position-relative">
-                                      <input id="passport_number" type="text" name="name" class="form-control shadow-none form-input" placeholder="Your Passport Number">
-                                   </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                 <div class="form-input-group">
-                                     <label for="passport_expire_date" class="input-label">Passport Expire Date<span class="text-red">*</span></label>
-                                     <div class="date-input position-relative bg-white">
-                                         <input type="text" name="travel_date" id="passport_expire_date" class="form-control datepicker2 bg-transparent position-relative z-2 shadow-none form-input" placeholder="Select Date">
-                                     </div>
-                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                 <div class="form-input-group">
-                                     <label for="arrival_date" class="input-label">Expated Date Of Arrival<span class="text-red">*</span></label>
-                                     <div class="date-input position-relative bg-white">
-                                         <input type="text" name="arrival_date" id="arrival_date" class="form-control datepicker2 bg-transparent position-relative z-2 shadow-none form-input" placeholder="Select Date">
-                                     </div>
-                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                 <div class="form-input-group">
-                                    <label for="purpose_of_travel" class="input-label">Purpose Of Travel <span class="text-red">*</span></label>
-                                    <div class="input-container position-relative">
-                                       <input id="purpose_of_travel" type="text" name="name" class="form-control shadow-none form-input" placeholder="Your Purpose Of Travel">
-                                    </div>
-                                 </div>
-                            </div>
-                            <div class="col-sm-6">
-                                 <div class="form-input-group">
-                                    <label for="address_azerbaijan" class="input-label">Address In Azerbaijan <span class="text-red">*</span></label>
-                                    <div class="input-container position-relative">
-                                       <input id="address_azerbaijan" type="text" name="name" class="form-control shadow-none form-input" placeholder="Your Address In Azerbaijan">
-                                    </div>
-                                 </div>
-                            </div> 
+                            </div>   
                         </div>
                         <div>
                             <div class="form-card-title border-0 fw-semibold text-center">
