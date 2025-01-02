@@ -1584,6 +1584,12 @@ body , html{
 
 
 /***** form section start *****/
+.form-section .form-section-heading-main {
+    gap: 7px;
+}
+.form-section .form-section-heading {
+    font-size: 26px;
+}
 .form-card{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     padding: 20px;
@@ -1646,6 +1652,9 @@ body , html{
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
 }
+.form-input-group .select2-container {
+    width: 100% !important;
+}
 .form-card .form-btn-main {
     margin-top: 30px;
     gap: 15px;
@@ -1697,6 +1706,64 @@ body , html{
     line-height: 27px;
     margin-top: 20px;
 }
+.form-tab .tab {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+.form-tab .tab.active {
+    display: block;
+    opacity: 1;
+}
+.tab-header .step {
+    width: 25%;
+}
+.tab-header .step .step-inner {
+    background: #f1f1f1;
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+.tab-header .step.active .step-inner {
+    background:var(--theme2);
+    color: #fff;
+}
+.tab-header .step.completed .step-inner {
+    background:  var(--theme1);
+    color: #fff;
+}
+.tab-header .step::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--theme1);
+    height: 7px;
+    width: 0%;
+    transition: all 0.3s ease-in-out;
+}
+.tab-header .step.completed::before {
+    width: 100%;
+}
+.progress-bar-container {
+    width: 100%;
+    background: #f1f1f1;
+    height: 7px;
+    border-radius: 5px;
+    overflow: hidden;
+    top: 50%;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+.progress-bar {
+    height: 100%;
+    width: 0;
+    background: var(--theme1);
+    transition: width 0.4s ease;
+}
+
 /***** form section end *****/
 
 

@@ -33,12 +33,6 @@
       opacity: 1;
     }
 
-    .tab-header {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-
     .tab-header div {
       flex: 1;
       text-align: center;
@@ -162,23 +156,20 @@
 <body>
 
   <div class="form-container">
-    <div class="tab-header">
-      <div class="step active" data-step="0">Step 1</div>
-      <div class="step" data-step="1">Step 2</div>
-      <div class="step" data-step="2">Step 3</div>
-      <div class="step" data-step="3">Step 4</div>
-    </div>
+      <div class="tab-header">
+        <div class="step active" data-step="0">Step 1</div>
+        <div class="step" data-step="1">Step 2</div>
+        <div class="step" data-step="2">Step 3</div>
+        <div class="step" data-step="3">Step 4</div>
+      </div>
 
     <!-- Progress Bar -->
     <div class="progress-bar-container">
       <div class="progress-bar" id="progressBar"></div>
     </div>
 
-    <form id="multi-step-form">
-      <div class="tab active">
-        
-      
-      </div>
+    <div id="multi-step-form">
+      <div class="tab active"></div>
       <div class="tab">
         <div class="tab-content">
           <h3>Step 2</h3>
@@ -197,13 +188,12 @@
           <p><label for="address">Address:</label><br><textarea id="address" name="address" required></textarea></p>
         </div>
       </div>
-
       <div class="button-container">
         <button type="button" class="btn-prev" id="prevBtn" onclick="navigateTab(-1)">Previous</button>
         <button type="button" class="btn-next" id="nextBtn" onclick="navigateTab(1)">Next</button>
         <button type="submit" class="btn-submit" style="display: none;">Submit</button>
       </div>
-    </form>
+    </div>
   </div>
 
   <script>
@@ -214,7 +204,6 @@
     const nextBtn = document.getElementById('nextBtn');
     const submitBtn = document.querySelector('.btn-submit');
     const progressBar = document.getElementById('progressBar');
-
     function showTab(n) {
       tabs.forEach((tab, index) => {
         tab.classList.remove('active');
@@ -222,7 +211,6 @@
           setTimeout(() => tab.classList.add('active'), 100); // Delay for fade effect
         }
       });
-
       steps.forEach((step, index) => {
         step.classList.remove('active', 'completed');
         if (index === n) {
@@ -231,14 +219,11 @@
           step.classList.add('completed');
         }
       });
-
       prevBtn.style.display = n === 0 ? 'none' : 'inline-block';
       nextBtn.style.display = n === tabs.length - 1 ? 'none' : 'inline-block';
       submitBtn.style.display = n === tabs.length - 1 ? 'inline-block' : 'none';
-
       updateProgressBar(n);
     }
-
     function navigateTab(n) {
       if (n === 1 && !validateForm()) return;
       currentTab += n;
@@ -248,7 +233,6 @@
       }
       showTab(currentTab);
     }
-
     function validateForm() {
       const currentInputs = tabs[currentTab].querySelectorAll('input, textarea');
       let valid = true;
@@ -260,12 +244,10 @@
       });
       return valid;
     }
-
     function updateProgressBar(step) {
       const progressPercentage = ((step + 1) / tabs.length) * 100;
       progressBar.style.width = `${progressPercentage}%`;
     }
-
     document.addEventListener('DOMContentLoaded', () => showTab(currentTab));
   </script>
 

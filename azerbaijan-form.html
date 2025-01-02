@@ -43,183 +43,178 @@
     <!-- ***** navbar end ***** -->
 
     <!-- ***** visa main section start ***** -->
-    <main class="mt-5">
+    <main class="mt-5 form-section">
         <div class="container">
             <div class="row gx-xl-5">
                 <div class="col-xl-8 pe-xl-5">
-                    <div class="form-card">
-                        <div class="form-card-heading-main fw-bold position-relative text-center d-flex align-items-center justify-content-center">
+                    <div class="form-container">
+                        <div class="position-relative">
+                            <div class="tab-header form-tab d-flex align-items-center justify-content-between">
+                                <div class="step position-relative active" data-step="0"> 
+                                    <div class="step-inner d-flex align-items-center justify-content-center rounded-circle position-relative fw-medium"></div>
+                                </div>
+                                <div class="step position-relative" data-step="1"> 
+                                    <div class="step-inner d-flex align-items-center justify-content-center rounded-circle position-relative fw-medium"></div>
+                                </div>
+                                <div class="step position-relative" data-step="2"> 
+                                    <div class="step-inner d-flex align-items-center justify-content-center rounded-circle position-relative fw-medium"></div>                                
+                                </div>
+                                <div class="step position-relative d-flex fl" data-step="3">
+                                    <div class="step-inner d-flex align-items-center justify-content-center rounded-circle position-relative fw-medium"></div>
+                                </div>
+                            </div>
+                            <div class="progress-bar-container position-absolute">
+                                <div class="progress-bar" id="progressBar"></div>
+                            </div>
+                        </div>
+                        <div class="form-section-heading-main mt-4 pt-2 fw-bold position-relative text-center d-flex align-items-center justify-content-center">
                             <img src="assets/img/airplane-icon-color.svg" alt="airplane" height="20">
-                            <h1 class="form-card-heading mb-0 fw-semibold">Azerbaijan Application Form</h1>
+                            <h1 class="form-section-heading mb-0 fw-semibold">Azerbaijan Application Form</h1>
                         </div>
-                        <div class="row form-row mt-3 g-lg-4 g-3 align-items-center">
-                            <div class="col-md-4 col-sm-6">
-                                <div class="form-input-group">
-                                    <label for="select_type" class="input-label">Select Entry Type  <span class="text-red">*</span> </label>
-                                    <select class="form-select form-control shadow-none form-input w-100" name="entry_type" id="select_type">
-                                        <option value=" ">Select Entry Type</option>
-                                      @foreach($packages as $package)
-                                        <option value="{{$package->package_name}}">{{$package->package_name}}</option>
-                                      @endforeach
-                                    </select>
+                        <div id="multi-step-form" class="form-tab mt-3">
+                            <div class="tab active">
+                                <div class="form-card">
+                                    
+                                    <div class="row form-row g-lg-4 g-3 align-items-center">
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-input-group">
+                                                <label for="select_type" class="input-label">Select Entry Type  <span class="text-red">*</span> </label>
+                                                <select class="form-select form-control shadow-none form-input w-100" name="entry_type" id="select_type">
+                                                    <option value=" ">Select Entry Type</option>
+                                                  @foreach($packages as $package)
+                                                    <option value="{{$package->package_name}}">{{$package->package_name}}</option>
+                                                  @endforeach
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 col-sm-6">
+                                            <div class="form-input-group">
+                                                <label for="service_type" class="input-label">Select Service Type <span class="text-red">*</span> </label>
+                                                <select class="form-select form-control shadow-none form-input w-100" name="service_type" id="service_type">
+                                                  <option value="">--Select Service Type--</option>
+                                                  <option value="regular">Regular(Time 02 - 03 Days)</option>
+                                                  <option value="express">Express(Time 04 - 12 Hours)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="d-flex align-items-center gap-2 visa-form-price mt-md-3 fw-medium">
+                                                Visa Fee :
+                                                <div class="sidebar-data-price" id="custom-price"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                           <div class="form-input-group">
+                                              <label for="" class="input-label">I am a Citizen of  <span class="text-red">*</span> </label>
+                                              <select class="select2 w-100 border-0" name="country_of" id="countryof">
+                                                 <option value=" ">Select Country</option>
+                                                 @foreach($countries as $country)
+                                                 <option value="{{$country->country_name}}">{{$country->country_name}}</option>
+                                                 @endforeach
+                                              </select>
+                                           </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                           <div class="form-input-group">
+                                              <label for="" class="input-label">I am Travelling From <span class="text-red">*</span> </label>
+                                              <select class="select2 w-100 border-0" name="country_from" id="countryfrom">
+                                                 <option value=" ">Select Country</option>
+                                                 @foreach($countries as $country)
+                                                 <option value="{{$country->country_name}}">{{$country->country_name}}</option>
+                                                 @endforeach
+                                              </select>
+                                           </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                           <div class="form-input-group">
+                                              <label for="" class="input-label" >Applicant Full Name <span class="text-red">*</span></label>
+                                              <div class="input-container position-relative">
+                                                 <input type="text" name="name" class="form-control shadow-none form-input" placeholder="Applicant Full Name">
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                           <div class="form-input-group">
+                                              <label for="" class="input-label">Your Email Address <span class="text-red">*</span></label>
+                                              <div class="input-container position-relative">
+                                                 <input type="email" name="email" class="form-control shadow-none form-input" placeholder="Your Email Address">
+                                              </div>
+                                           </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="form-input-group">
-                                    <label for="service_type" class="input-label">Select Service Type <span class="text-red">*</span> </label>
-                                    <select class="form-select form-control shadow-none form-input w-100" name="service_type" id="service_type">
-                                      <option value="">--Select Service Type--</option>
-                                      <option value="regular">Regular(Time 02 - 03 Days)</option>
-                                      <option value="express">Express(Time 04 - 12 Hours)</option>
-                                    </select>
+                            <div class="tab">
+                                <div class="form-card">
+                                    <div class="row form-row g-lg-4 g-3 align-items-center">
+                                        <div class="col-sm-6">
+                                           <div class="form-input-group">
+                                              <label for="" class="input-label" >Applicant Full Name <span class="text-red">*</span></label>
+                                              <div class="input-container position-relative">
+                                                 <input type="text" name="name" class="form-control shadow-none form-input" placeholder="Applicant Full Name">
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                           <div class="form-input-group">
+                                              <label for="" class="input-label">Your Email Address <span class="text-red">*</span></label>
+                                              <div class="input-container position-relative">
+                                                 <input type="email" name="email" class="form-control shadow-none form-input" placeholder="Your Email Address">
+                                              </div>
+                                           </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="d-flex align-items-center gap-2 visa-form-price mt-md-3 fw-medium">
-                                    Visa Fee :
-                                    <div class="sidebar-data-price" id="custom-price"></div>
+                            <div class="tab">
+                                <div class="form-card">   
+                                    <div class="row form-row g-lg-4 g-3 align-items-center">
+                                        <div class="col-sm-6">
+                                           <div class="form-input-group">
+                                              <label for="" class="input-label" >Applicant Full Name <span class="text-red">*</span></label>
+                                              <div class="input-container position-relative">
+                                                 <input type="text" name="name" class="form-control shadow-none form-input" placeholder="Applicant Full Name">
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                           <div class="form-input-group">
+                                              <label for="" class="input-label">Your Email Address <span class="text-red">*</span></label>
+                                              <div class="input-container position-relative">
+                                                 <input type="email" name="email" class="form-control shadow-none form-input" placeholder="Your Email Address">
+                                              </div>
+                                           </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-sm-6">
-                               <div class="form-input-group">
-                                  <label for="" class="input-label">I am a Citizen of  <span class="text-red">*</span> </label>
-                                  <select class="select2 w-100 border-0" name="country_of" id="countryof">
-                                     <option value=" ">Select Country</option>
-                                     @foreach($countries as $country)
-                                     <option value="{{$country->country_name}}">{{$country->country_name}}</option>
-                                     @endforeach
-                                  </select>
-                               </div>
-                            </div>
-                            <div class="col-sm-6">
-                               <div class="form-input-group">
-                                  <label for="" class="input-label">I am Travelling From <span class="text-red">*</span> </label>
-                                  <select class="select2 w-100 border-0" name="country_from" id="countryfrom">
-                                     <option value=" ">Select Country</option>
-                                     @foreach($countries as $country)
-                                     <option value="{{$country->country_name}}">{{$country->country_name}}</option>
-                                     @endforeach
-                                  </select>
-                               </div>
-                            </div>
-                            <div class="col-sm-6">
-                               <div class="form-input-group">
-                                  <label for="" class="input-label" >Applicant Full Name <span class="text-red">*</span></label>
-                                  <div class="input-container position-relative">
-                                     <input type="text" name="name" class="form-control shadow-none form-input" placeholder="Applicant Full Name">
-                                  </div>
-                               </div>
-                            </div>
-                            <div class="col-sm-6">
-                               <div class="form-input-group">
-                                  <label for="" class="input-label">Your Email Address <span class="text-red">*</span></label>
-                                  <div class="input-container position-relative">
-                                     <input type="email" name="email" class="form-control shadow-none form-input" placeholder="Your Email Address">
-                                  </div>
-                               </div>
-                            </div>
-                            <div class="col-sm-6">
-                               <div class="form-input-group">
-                                  <label for="marital-status" class="input-label">Marital Status <span class="text-red">*</span></label>
-                                  <div class="input-container input-container-two position-relative">
-                                     <select name="marital" id="marital-status" class="form-select shadow-none form-input">
-                                        <option value="" selected disabled>Select Marital Status </option>
-                                        <option value="single">Single </option>
-                                        <option value="married">Married</option>
-                                        <option value="other">Other</option>
-                                     </select>
-                                  </div>
-                               </div>
-                            </div>
-                            <div class="col-sm-6">
-                               <div class="form-input-group form-input-call-group">
-                                  <label for="" class="input-label">Mobile / WhatsApp Number <span class="text-red">*</span></label>
-                                  <div class="input-container position-relative">
-                                     <input type="tel" class="form-control shadow-none form-input w-100" placeholder=" Mobile / WhatsApp Number " id="txtphone" name="phone">
-                                     <input type="hidden" id="countrycode" name="countrycode">
-                                     <input type="hidden" id="fullphone" name="fullphone">
-                                  </div>
-                               </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-input-group">
-                                 <label for="" class="input-label">Passport <span class="text-red">*</span></label>
-                                 <div class="input-container position-relative">
-                                    <input type="text" name="passport" class="form-control shadow-none form-input" placeholder="Passport Number">
-                                 </div>
-                              </div>
-                            </div>
-                            <div class="col-sm-6">
-                              <div class="form-input-group">
-                                 <label for="" class="input-label">Profession <span class="text-red">*</span></label>
-                                 <div class="input-container position-relative">
-                                    <input type="text" name="profession" class="form-control shadow-none form-input" placeholder="Profession">
-                                 </div>
-                              </div>
-                           </div>
-                            <div class="col-sm-6">
-                              <div class="form-input-group">
-                                 <label for="" class="input-label">Travel Date To UAE<span class="text-red">*</span></label>
-                                 <div class="date-input position-relative bg-white">
-                                    <div class="input-container input-container-two position-relative">
-                                       <input type="text" name="travel_date" id="datepicker" class="form-control datepicker bg-transparent position-relative z-2 shadow-none form-input" placeholder="Select Date">
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                            <div class="col-sm-6">
-                              <div class="form-input-group">
-                                 <label for="" class="input-label">Purpose of Travel <span class="text-red">*</span></label>
-                                 <div class="input-container position-relative">
-                                    <input type="text" name="purpose" class="form-control shadow-none form-input" placeholder="Purpose of Travel">
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="form-card-title border-bottom fw-semibold text-center">
-                            Please Upload The Following Documents
-                        </div>
-                        <div class="row mt-0 g-3">
-                            <div class="col-md-4 col-sm-6">
-                                <form action="/upload" class="dropzone text-center d-flex align-items-center justify-content-center" id="dropzone-box-1">
-                                    <div class="dz-message">
-                                        <div class="dropzone-icon">
-                                            <img src="assets/img/passport-icon.svg" alt="passport" class="h-100">
+                            <div class="tab">
+                                <div class="form-card">                                    
+                                    <div class="row form-row g-lg-4 g-3 align-items-center">
+                                        <div class="col-sm-6">
+                                           <div class="form-input-group">
+                                              <label for="" class="input-label" >Applicant Full Name <span class="text-red">*</span></label>
+                                              <div class="input-container position-relative">
+                                                 <input type="text" name="name" class="form-control shadow-none form-input" placeholder="Applicant Full Name">
+                                              </div>
+                                           </div>
                                         </div>
-                                        <div class="fw-medium dropzone-title text-nowrap">Upload Passport</div>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <form action="/upload" class="dropzone text-center d-flex align-items-center justify-content-center" id="dropzone-box-2">
-                                    <div class="dz-message">
-                                        <div class="dropzone-icon">
-                                            <img src="assets/img/photo-icon.svg" alt="passport" class="h-100">
+                                        <div class="col-sm-6">
+                                           <div class="form-input-group">
+                                              <label for="" class="input-label">Your Email Address <span class="text-red">*</span></label>
+                                              <div class="input-container position-relative">
+                                                 <input type="email" name="email" class="form-control shadow-none form-input" placeholder="Your Email Address">
+                                              </div>
+                                           </div>
                                         </div>
-                                        <div class="fw-medium dropzone-title text-nowrap">Upload Photo</div>
                                     </div>
-                                </form>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <form action="/upload" class="dropzone text-center d-flex align-items-center justify-content-center" id="dropzone-box-3">
-                                    <div class="dz-message">
-                                        <div class="dropzone-icon">
-                                            <img src="assets/img/document-icon.svg" alt="passport" class="h-100">
-                                        </div>
-                                        <div class="fw-medium dropzone-title text-nowrap">Other Document/ National ID</div>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
-                        <div class="form-note-card bg-light border rounded-2">
-                            <p class="file-note mb-0"><b><i class="fa-solid fa-circle-exclamation me-1"></i>NOTE:</b> Upload of passport and photograph are not mandatory to complete the visa application form. You can provide us these documents later also on email:
-                            <a href="mailto:info@vokit.com" target="_blank">info@vokit.com </a> or on WhatsApp
-                            <a href="https://api.whatsapp.com/send?phone=971565016625" target="_blank"> +971-565016625 </a>
-                            </p>
-                        </div>
-                        <div class="d-flex flex-sm-row flex-column form-btn-main align-items-center justify-content-center">
-                            <button class="form-btn form-btn-one fw-medium d-flex align-items-center"><i class="fa-solid fa-user-plus"></i>Add Another Applicant</button>
-                            <button class="form-btn form-btn-two fw-medium d-flex align-items-center"><i class="fa-solid fa-check"></i>Coutinue To Payment</button>
+                        <div class="button-container mt-4">
+                            <button type="button" class="btn-prev" id="prevBtn" onclick="navigateTab(-1)">Previous</button>
+                            <button type="button" class="btn-next" id="nextBtn" onclick="navigateTab(1)">Next</button>
+                            <button type="submit" class="btn-submit" style="display: none;">Submit</button>
                         </div>
                     </div>
                 </div>
@@ -435,6 +430,7 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -885,7 +881,6 @@
 
     <!-- select2 -->
     <script>
-        // Initialize Select2 on the select element
         $(document).ready(function() {
           $('.select2').select2();
         });
@@ -926,6 +921,56 @@
         dropzone3.on("success", function(file, response) {
           console.log("File 3 uploaded:", response);
         });
+    </script>
+
+    <!-- form tab -->
+    <script>
+        let currentTab = 0;
+        const tabs = document.querySelectorAll('.tab');
+        const steps = document.querySelectorAll('.step');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const submitBtn = document.querySelector('.btn-submit');
+        function showTab(n) {
+            tabs.forEach((tab, index) => {
+                tab.classList.remove('active');
+                if (index === n) {
+                    setTimeout(() => tab.classList.add('active'), 100); // Delay for fade effect
+                }
+            });
+            steps.forEach((step, index) => {
+                step.classList.remove('active', 'completed');
+                if (index === n) {
+                    step.classList.add('active');
+                } else if (index < n) {
+                    step.classList.add('completed');
+                }
+            });
+            prevBtn.style.display = n === 0 ? 'none' : 'inline-block';
+            nextBtn.style.display = n === tabs.length - 1 ? 'none' : 'inline-block';
+            submitBtn.style.display = n === tabs.length - 1 ? 'inline-block' : 'none';
+        }
+        function navigateTab(n) {
+            if (n === 1 && !validateForm()) return;
+            currentTab += n;
+            if (currentTab >= tabs.length) {
+                document.getElementById('multi-step-form').submit();
+                return false;
+            }
+            showTab(currentTab);
+        }
+        function validateForm() {
+            const currentInputs = tabs[currentTab].querySelectorAll('input, textarea');
+            let valid = true;
+            currentInputs.forEach(input => {
+                if (!input.checkValidity()) {
+                    valid = false;
+                    input.reportValidity();
+                }
+            });
+            return valid;
+        }
+        document.addEventListener('DOMContentLoaded', () => showTab(currentTab));
     </script>
 </body>
 </html>
