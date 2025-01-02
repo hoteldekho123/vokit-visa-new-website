@@ -1634,6 +1634,9 @@ body , html{
     font-size: 15px;
     padding-left: 2px;
 }
+.form-input-group .text-red {
+    color: red;
+}
 .form-input-group .form-input {
     height: 44px;
     font-size: 14px;
