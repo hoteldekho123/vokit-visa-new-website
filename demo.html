@@ -3,253 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>4-Step Form with Animated Progress Bar</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Visa On Time Guarantee</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-    }
-
-    .form-container {
-      max-width: 600px;
-      margin: 50px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .tab {
-      display: none;
-      opacity: 0;
-      transition: opacity 0.4s ease-in-out;
-    }
-
-    .tab.active {
-      display: block;
-      opacity: 1;
-    }
-
-    .tab-header div {
-      flex: 1;
-      text-align: center;
-      padding: 10px;
-      background: #f1f1f1;
-      border-radius: 5px;
-      margin: 0 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .tab-header div.active {
-      background: #007bff;
-      color: #fff;
-    }
-
-    .tab-header div.completed {
-      background: #28a745;
-      color: #fff;
-    }
-
-    .progress-bar-container {
-      width: 100%;
-      background: #f1f1f1;
-      height: 10px;
-      border-radius: 5px;
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
-
-    .progress-bar {
-      height: 100%;
-      width: 0;
-      background: #007bff;
-      transition: width 0.4s ease;
-    }
-
-    .tab-content {
-      margin-bottom: 20px;
-    }
-
-    .button-container {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .button-container button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    .btn-prev {
-      background: #6c757d;
-      color: #fff;
-    }
-
-    .btn-next {
-      background: #007bff;
-      color: #fff;
-    }
-
-    .btn-prev:disabled {
-      background: #ccc;
-      cursor: not-allowed;
-    }
-
-    .btn-next:hover {
-      background: #0056b3;
-    }
-
-    .btn-prev:hover {
-      background: #5a6268;
-    }
-
-    .btn-submit {
-      background: #28a745;
-    }
-
-    .btn-submit:hover {
-      background: #218838;
-    }
-    .flip-card {
-    background-color: transparent;
-    width: 150px;
-    height: 150px;
-    perspective: 1000px;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
 }
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
+
+header {
+  text-align: center;
+  background-color: #3498db;
+  color: white;
+  padding: 2rem 0;
 }
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeIn 2s ease-in-out;
 }
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background: white;
+
+.animated-section {
+  padding: 2rem;
+  background-color: #fce4ec;
+  text-align: center;
+  animation: slideIn 1.5s ease-in-out  ;
 }
-.flip-card-back {
-    transform: rotateY(180deg);
-    background: #f7f7f7;
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #3498db;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
   </style>
 </head>
 <body>
-
-  <div class="form-container">
-      <div class="tab-header">
-        <div class="step active" data-step="0">Step 1</div>
-        <div class="step" data-step="1">Step 2</div>
-        <div class="step" data-step="2">Step 3</div>
-        <div class="step" data-step="3">Step 4</div>
-      </div>
-
-    <!-- Progress Bar -->
-    <div class="progress-bar-container">
-      <div class="progress-bar" id="progressBar"></div>
+  <header class="hero">
+    <div class="container">
+      <h1 class="hero-heading">Visa On Time, Every Time</h1>
+      <p class="hero-subtext">Experience the fastest and most reliable visa processing service tailored for your needs.</p>
     </div>
+  </header>
 
-    <div id="multi-step-form">
-      <div class="tab active"></div>
-      <div class="tab">
-        <div class="tab-content">
-          <h3>Step 2</h3>
-          <p><label for="email">Email:</label><br><input type="email" id="email" name="email" required></p>
+  <section class="section guarantee">
+    <div class="container">
+      <h2 class="section-title">Our Guarantee</h2>
+      <p class="section-text">We ensure timely delivery of your visa with a 100% money-back guarantee if we fail to deliver on time.</p>
+    </div>
+  </section>
+
+  <section class="section how-it-works">
+    <div class="container">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <h3 class="step-title">Step 1</h3>
+          <p class="step-text">Submit your application online with the required documents.</p>
         </div>
-      </div>
-      <div class="tab">
-        <div class="tab-content">
-          <h3>Step 3</h3>
-          <p><label for="phone">Phone:</label><br><input type="text" id="phone" name="phone" required></p>
+        <div class="step">
+          <h3 class="step-title">Step 2</h3>
+          <p class="step-text">Our team processes your application with precision and care.</p>
         </div>
-      </div>
-      <div class="tab">
-        <div class="tab-content">
-          <h3>Step 4</h3>
-          <p><label for="address">Address:</label><br><textarea id="address" name="address" required></textarea></p>
+        <div class="step">
+          <h3 class="step-title">Step 3</h3>
+          <p class="step-text">Receive your visa on time, every time.</p>
         </div>
-      </div>
-      <div class="button-container">
-        <button type="button" class="btn-prev" id="prevBtn" onclick="navigateTab(-1)">Previous</button>
-        <button type="button" class="btn-next" id="nextBtn" onclick="navigateTab(1)">Next</button>
-        <button type="submit" class="btn-submit" style="display: none;">Submit</button>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="section faq">
+    <div class="container">
+      <h2 class="section-title">FAQs</h2>
+      <p class="section-text">Find answers to commonly asked questions about our visa services.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">&copy; 2025 Your Company. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
-    let currentTab = 0;
-    const tabs = document.querySelectorAll('.tab');
-    const steps = document.querySelectorAll('.step');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const submitBtn = document.querySelector('.btn-submit');
-    const progressBar = document.getElementById('progressBar');
-    function showTab(n) {
-      tabs.forEach((tab, index) => {
-        tab.classList.remove('active');
-        if (index === n) {
-          setTimeout(() => tab.classList.add('active'), 100); // Delay for fade effect
-        }
-      });
-      steps.forEach((step, index) => {
-        step.classList.remove('active', 'completed');
-        if (index === n) {
-          step.classList.add('active');
-        } else if (index < n) {
-          step.classList.add('completed');
-        }
-      });
-      prevBtn.style.display = n === 0 ? 'none' : 'inline-block';
-      nextBtn.style.display = n === tabs.length - 1 ? 'none' : 'inline-block';
-      submitBtn.style.display = n === tabs.length - 1 ? 'inline-block' : 'none';
-      updateProgressBar(n);
-    }
-    function navigateTab(n) {
-      if (n === 1 && !validateForm()) return;
-      currentTab += n;
-      if (currentTab >= tabs.length) {
-        document.getElementById('multi-step-form').submit();
-        return false;
-      }
-      showTab(currentTab);
-    }
-    function validateForm() {
-      const currentInputs = tabs[currentTab].querySelectorAll('input, textarea');
-      let valid = true;
-      currentInputs.forEach(input => {
-        if (!input.checkValidity()) {
-          valid = false;
-          input.reportValidity();
-        }
-      });
-      return valid;
-    }
-    function updateProgressBar(step) {
-      const progressPercentage = ((step + 1) / tabs.length) * 100;
-      progressBar.style.width = `${progressPercentage}%`;
-    }
-    document.addEventListener('DOMContentLoaded', () => showTab(currentTab));
-  </script>
+    document.addEventListener("DOMContentLoaded", () => {
+  gsap.from(".animate-heading", { y: -50, opacity: 0, duration: 1 });
+  gsap.from(".animated-section", { x: -100, opacity: 0, duration: 1.5 });
+});
 
+  </script>
 </body>
 </html>

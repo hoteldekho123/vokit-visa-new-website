@@ -34,9 +34,9 @@
         line-height: 28px;
     }
     .heading-main .heading::before {
-        top: 4px;
-        height: 19px;
-        width: 19px;
+        top: 5.5px;
+        height: 17.5px;
+        width: 17.5px;
     }
     .common-gap {
         margin-top: 40px;
@@ -102,6 +102,18 @@
         height: 210px;
     }
     /* country section end */
+
+    /* visa document section start */
+    .visa-docs-card {
+        padding: 8px 25px;
+    }
+    .visa-docs-card .visa-docs-card-icon {
+        font-size: 17px;
+    }
+    .visa-docs-card .visa-docs-card-title  {
+        font-size: 14px;
+    }
+    /* visa document section end */
 
     /* step section start */
     .step-apply-main {
@@ -285,7 +297,10 @@
         font-size: 13px;
     }
     .visa-price-card .visa-price-detail-main {
-        gap: 13px;
+        gap: 15px;
+    }
+    .visa-price-card .visa-price-details {
+        font-size: 13px;
     }
     .visa-price-card .visa-price-title {
         font-size: 17px;
@@ -382,6 +397,10 @@
     }
     .visa-faq-section .accordion-body {
         padding: 13px;
+    }
+    .visa-faq-section .accordion-body p {
+        font-size: 14px;
+        line-height: 27px;
     }
     .visa-sidebar .visa-sidebar-icon img {
         height: 32px;
@@ -732,6 +751,41 @@
         font-size: 16px;
     }
     /***** add another modal end *****/
+
+    /***** track section start *****/
+    .track-section {
+        padding-block: 40px;
+        height: auto;
+        background-image: none;
+        background-color: var(--theme1);
+    }
+    .track-section .track-heading-main img {
+        height: 17px;
+        margin-top: -2px;
+    }
+    .track-section .track-heading {
+        font-size: 18px;
+    }
+    .track-section .track-title {
+        line-height: 25px;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .track-section .track-inner-card {
+        padding: 12px;
+    }
+    .track-section .track-group {
+        height: 45px;
+        margin-top: 4px;
+    }
+    .track-section .track-group .track-input {
+        font-size: 14px;
+    }
+    .track-section .track-group .track-btn {
+        font-size: 14px;
+        padding-inline: 15px;
+    }
+    /***** track section end *****/
 }
 
 @media (max-width:567px){

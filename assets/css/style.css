@@ -1643,6 +1643,9 @@ body , html{
     border-color: #b3b3b3;
     border-radius: 8px;
 }
+.iti__flag {
+    background-image: url(../img/flags.webp);
+}
 .form-input-group .select2-selection {
     height: 44px !important;
     display: flex !important;
@@ -2640,3 +2643,55 @@ body , html{
     max-width: 60%;
 }
 /***** add another modal end *****/
+
+
+/***** error section start *****/
+.error-section {
+    background-color: var(--theme1);
+    padding-top: 160px;
+    height: 100vh;
+    padding-bottom: 50px;
+}
+.error-section::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url(../img/circles-set.png) no-repeat;
+    background-position: bottom center;
+    opacity: 0.3;
+    z-index: 0;
+    background-size: contain;
+}
+.error-section .error-heading {
+    font-size: 110px;
+    color: #fff;
+    line-height: normal;
+}
+.error-section .error-title {
+    font-size: 27px;
+    color: #fff;
+    margin-top: 15px;
+}
+.error-section .error-para {
+    margin-top: 10px;
+    color: #fff;
+    line-height: 27px;
+    font-size: 15px;
+}
+.error-section .error-btn {
+    background-color: #fff;
+    color: #000;
+    font-size: 15.5px;
+    padding: 16px 40px;
+    border-radius: 30px;
+    gap: 12px;
+    transition: all 0.3s ease-in-out;
+}
+.error-section .error-btn:hover {
+    transform: translateY(-10px);
+}
+/***** error section end *****/
