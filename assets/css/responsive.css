@@ -786,6 +786,28 @@
         padding-inline: 15px;
     }
     /***** track section end *****/
+
+    /***** error section start *****/
+    .error-section {
+        padding-top: 140px;
+    }
+    .error-section .error-heading {
+        font-size: 70px;
+    }
+    .error-section .error-title {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    .error-section .error-para {
+        line-height: 25px;
+        font-size: 14px;
+    }
+    .error-section .error-btn {
+        font-size: 14px;
+        padding: 13px 35px;
+        gap: 8px;
+    }
+    /***** error section end *****/
 }
 
 @media (max-width:567px){
@@ -793,8 +815,9 @@
         width: 100%;
        justify-content: center;
     }
-     /***** add another modal start *****/
-     .azerbaijan-addanother-modal .modal-dialog {
+
+    /***** add another modal start *****/
+    .azerbaijan-addanother-modal .modal-dialog {
         max-width: 100%;
     }
     .azerbaijan-addanother-modal .modal-title {
